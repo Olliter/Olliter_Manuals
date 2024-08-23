@@ -167,12 +167,13 @@ Each UDP package consists of a label prefix followed by the payload data. The la
    - **Structure:** 
      - `receivers` - Indicates that the data is related to receivers.
      - `get` - Specifies that the data represents a request for status information.
-     - `{receiver_index}` - The index of the receiver (e.g., `0`, `1`, `2`, `3`).
+     - `{receiver_index}` - The index of the receiver (e.g., `1`, `2`, `3`, `4`).
      - `|` - Separator between the receiver index and the payload.
 
    **Example:** 
+
    ```
-   receivers|get|0|{json_payload}
+   receivers|get|1|{json_payload}
    ```
 
 2. **Panadapter Data**
@@ -188,7 +189,7 @@ Each UDP package consists of a label prefix followed by the payload data. The la
 
    **Example:**
    ```
-   receivers|panadapter|0|{compressed_json_payload}
+   receivers|panadapter|1|{compressed_json_payload}
    ```
 
 ### Examples of UDP Package Labeling
