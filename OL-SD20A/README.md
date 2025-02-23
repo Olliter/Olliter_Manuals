@@ -246,7 +246,7 @@ for some reason](#i-get-a-weird-error-at-startup-telling-my-database-cannot-be-l
 
 # Disclaimer for Proper Use of Amateur SDR Transceiver
 
-> !WARNING
+> [!WARNING]
 > Please read carefully before using the SDR transceiver
 
 ## Proper Connection and Installation
