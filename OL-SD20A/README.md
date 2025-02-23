@@ -12,149 +12,142 @@ automaticamente](./resources/images/media/image2.jpg)
 
 1. [Contents of this manual](#contents-of-this-manual)
 
-2. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
+1. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
 
-[• Proper Connection and Installation
-[4]](#proper-connection-and-installation)
+    - [Proper Connection and Installation](#proper-connection-and-installation)
 
-[• Liability [4]]
+    - [Liability]
 
-[• Warranty and Damage [4]](#warranty-and-damage)
+    - [Warranty and Damage](#warranty-and-damage)
 
-[• Electrostatic Discharge (ESD) Precautions
-[4]](#electrostatic-discharge-esd-precautions)
+    - [Electrostatic Discharge (ESD) Precautions](#electrostatic-discharge-esd-precautions)
 
-[• Safety and Compliance
-[4]](#safety-and-compliance)
+    - [Safety and Compliance](#safety-and-compliance)
 
-[• Acknowledgement [4]](#acknowledgement)
+    - [Acknowledgement](#acknowledgement)
 
-[3. Software license [4]](#_Toc2034863503)
+1. [Software license](#_Toc2034863503)
 
-[• License terms [5]](#license-terms)
+    - [License terms](#license-terms)
 
-[• Warranty disclaimer [5]](#warranty-disclaimer)
+    - [Warranty disclaimer](#warranty-disclaimer)
 
-[• Obtaining the source code
-[5]](#obtaining-the-source-code)
+    - [Obtaining the source code
+](#obtaining-the-source-code)
 
-[• Full GNU GPL version 3.0 license
-[6]](#full-gnu-gpl-version-3.0-license)
+    - [Full GNU GPL version 3.0 license
+](#full-gnu-gpl-version-3.0-license)
 
-[• Contact information [13]](#contact-information)
+    - [Contact information [13]](#contact-information)
 
-[4. Hardware license [14]](#hardware-license)
+1. [Hardware license [14]](#hardware-license)
 
-[• Intellectual property rights
+    - [Intellectual property rights
 [15]](#intellectual-property-rights)
 
-[• Warranty disclaimer
+    - [Warranty disclaimer
 [15]](#warranty-disclaimer-1)
 
-[• Right to repair [15]](#right-to-repair)
+    - [Right to repair [15]](#right-to-repair)
 
-[• Requesting hardware assistance
+    - [Requesting hardware assistance
 [15]](#requesting-hardware-assistance)
 
-[• License grant [15]](#license-grant)
+    - [License grant [15]](#license-grant)
 
-[• Restrictions [16]](#restrictions)
+    - [Restrictions [16]](#restrictions)
 
-[• Limitation of Liability
-[16]](#limitation-of-liability)
+    - [Limitation of Liability[16]](#limitation-of-liability)
 
-[• Indemnification [16]](#indemnification)
+    - [Indemnification [16]](#indemnification)
 
-[• Termination [16]](#termination)
+    - [Termination [16]](#termination)
 
-[• Governing law [16]](#governing-law)
+    - [Governing law [16]](#governing-law)
 
-[• Entire Agreement [17]](#entire-agreement)
+    - [Entire Agreement [17]](#entire-agreement)
 
-[• Amendments [17]](#amendments)
+    - [Amendments [17]](#amendments)
 
-[• Contact information
-[17]](#contact-information-1)
+    - [Contact information[17]](#contact-information-1)
 
-[5. Important user notice
-[17]](#important-user-notice)
+1. [Important user notice[17]](#important-user-notice)
 
-[6. Introduction [18]](#_Toc1360849860)
+1. [Introduction [18]](#_Toc1360849860)
 
-[7. Device overview [18]](#device-overview)
+1. [Device overview [18]](#device-overview)
 
-[• Front panel [19]](#front-panel)
+    - [Front panel [19]](#front-panel)
 
-[o Front panel LEDs [19]](#front-panel-leds)
+        [Front panel LEDs [19]](#front-panel-leds)
 
-[o Front speakers [20]](#_Toc1852837891)
+        [Front speakers [20]](#_Toc1852837891)
 
-[• Back panel [20]](#back-panel)
+    - [Back panel [20]](#back-panel)
 
-[• Connectors description
+    - [Connectors description
 [22]](#connectors-description)
 
-[o Morse key jack [22]](#morse-key-jack)
+        [Morse key jack [22]](#morse-key-jack)
 
-[o Headphones output [22]](#headphones-output)
+        [Headphones output [22]](#headphones-output)
 
-[o Microphone input [23]](#microphone-input)
+        [Microphone input [23]](#microphone-input)
 
-[o Transverter interfaces
+        [Transverter interfaces
 [24]](#transverter-interfaces)
 
-[o EXT IN [25]](#ext-in)
+        [EXT IN [25]](#ext-in)
 
-[o 10MHz references [27]](#mhz-references)
+        [10MHz references [27]](#mhz-references)
 
-[o PA Band connector [27]](#pa-band-connector)
+        [PA Band connector [27]](#pa-band-connector)
 
-[o ACC Connector [28]](#acc-connector)
+        [ACC Connector [28]](#acc-connector)
 
-[o OC connector [29]](#oc-connector)
+        [OC connector [29]](#oc-connector)
 
-[o Power connector [31]](#power-connector)
+        [Power connector [31]](#power-connector)
 
-[o Antenna connectors [31]](#antenna-connectors)
+        [Antenna connectors [31]](#antenna-connectors)
 
-[8. System requirements
+1. [System requirements
 [31]](#system-requirements)
 
-[• Software requirements
+    - [Software requirements
 [32]](#software-requirements)
 
-[o Operating system requirements
+        [Operating system requirements
 [33]](#operating-system-requirements)
 
-[o .NET 8 [33]](#net-8)
+        [.NET 8 [33]](#net-8)
 
-[o Microsoft Visual C++ Redistributable
+        [Microsoft Visual C++ Redistributable
 [33]](#microsoft-visual-c-redistributable)
 
-[• Hardware requirements
+    - [Hardware requirements
 [33]](#hardware-requirements)
 
-[• Network requirements
+    - [Network requirements
 [34]](#network-requirements)
 
-[9. Installing OL-Master
+1. [Installing OL-Master
 [35]](#installing-ol-master)
 
-[10. Wiring the transceiver
-[37]](#wiring-the-transceiver)
+[10. Wiring the transceiver[37]](#wiring-the-transceiver)
 
-[• Connecting of the PureSignal cable
+    - [Connecting of the PureSignal cable
 [38]](#connecting-of-the-puresignal-cable)
 
-[• Connecting the power supply
+    - [Connecting the power supply
 [39]](#connecting-the-power-supply)
 
-[• Connecting the antenna
+    - [Connecting the antenna
 [40]](#connecting-the-antenna)
 
-[• Ethernet connection [41]](#ethernet-connection)
+    - [Ethernet connection [41]](#ethernet-connection)
 
-[• Connecting the microphone
+    - [Connecting the microphone
 [42]](#connecting-the-microphone)
 
 [11. Configuring the firewall
@@ -163,154 +156,154 @@ automaticamente](./resources/images/media/image2.jpg)
 [12. Connection of the SDR to the PC
 [48]](#connection-of-the-sdr-to-the-pc)
 
-[• Default Olliter SDR IP address
+    - [Default Olliter SDR IP address
 [48]](#default-olliter-sdr-ip-address)
 
-[• Sample Ethernet connection
+    - [Sample Ethernet connection
 [48]](#sample-ethernet-connection)
 
-[• Changing the Olliter SDR IP address
+    - [Changing the Olliter SDR IP address
 [48]](#changing-the-olliter-sdr-ip-address)
 
-[o Connect the device to the PC
+        [Connect the device to the PC
 [49]](#connect-the-device-to-the-pc)
 
-[o Manually set the IP address of the PC
+        [Manually set the IP address of the PC
 [49]](#manually-set-the-ip-address-of-the-pc)
 
-[o Setting the device address using OL-Master
+        [Setting the device address using OL-Master
 [52]](#setting-the-device-address-using-ol-master)
 
-[o Restore the default IP settings of the PC
+        [Restore the default IP settings of the PC
 [54]](#restore-the-default-ip-settings-of-the-pc)
 
 [13. Usage of OL-Master [58]](#usage-of-ol-master)
 
-[• Configuring OL-Master
+    - [Configuring OL-Master
 [59]](#configuring-ol-master)
 
-[o Configuring the Olliter SDR address
+        [Configuring the Olliter SDR address
 [59]](#configuring-the-olliter-sdr-address)
 
-[o Configuring the operator settings
+        [Configuring the operator settings
 [60]](#configuring-the-operator-settings)
 
-[o Configuring the audio interface
+        [Configuring the audio interface
 [61]](#configuring-the-audio-interface)
 
-[o Configuring the receiver bandwidth
+        [Configuring the receiver bandwidth
 [63]](#configuring-the-receiver-bandwidth)
 
-[o Configuring the refresh rate
+        [Configuring the refresh rate
 [63]](#configuring-the-refresh-rate)
 
-[• Starting the device [64]](#starting-the-device)
+    - [Starting the device [64]](#starting-the-device)
 
-[• Controlling the transceiver
+    - [Controlling the transceiver
 [65]](#controlling-the-transceiver)
 
-[o Selecting a different band
+        [Selecting a different band
 [66]](#selecting-a-different-band)
 
-[o Tuning a frequency [67]](#tuning-a-frequency)
+        [Tuning a frequency [67]](#tuning-a-frequency)
 
-[o Setting the visualization mode
+        [Setting the visualization mode
 [68]](#setting-the-visualization-mode)
 
-[o Interacting with the spectrum
+        [Interacting with the spectrum
 [69]](#interacting-with-the-spectrum)
 
-[o Setting the receiver mode
+        [Setting the receiver mode
 [70]](#setting-the-receiver-mode)
 
-[o Adding additional receivers
+        [Adding additional receivers
 [71]](#adding-additional-receivers)
 
-[o Adjusting the receivers volume
+        [Adjusting the receivers volume
 [72]](#adjusting-the-receivers-volume)
 
-[o DSP options [73]](#dsp-options)
+        [DSP options [73]](#dsp-options)
 
-[• Firmware upgrade [74]](#firmware-upgrade)
+    - [Firmware upgrade [74]](#firmware-upgrade)
 
 [14. General recommendations
 [77]](#general-recommendations)
 
-[• Digital modes (FT8) [78]](#digital-modes-ft8)
+    - [Digital modes (FT8) [78]](#digital-modes-ft8)
 
-[o Using Virtual Audio Cable (VAC)
+        [Using Virtual Audio Cable (VAC)
 [78]](#using-virtual-audio-cable-vac)
 
-[o Audio Levels and Filters
+        [Audio Levels and Filters
 [78]](#audio-levels-and-filters)
 
-[o Transmit and Receive Filters
+        [Transmit and Receive Filters
 [78]](#transmit-and-receive-filters)
 
-[• SSB mode [79]](#ssb-mode)
+    - [SSB mode [79]](#ssb-mode)
 
-[o Microphone Voltage Considerations
+        [Microphone Voltage Considerations
 [79]](#microphone-voltage-considerations)
 
-[o Switching from FT8 to SSB
+        [Switching from FT8 to SSB
 [79]](#switching-from-ft8-to-ssb)
 
-[o Audio Processing Settings for SSB
+        [Audio Processing Settings for SSB
 [79]](#audio-processing-settings-for-ssb)
 
-[o Transmitting Filter Settings
+        [Transmitting Filter Settings
 [79]](#transmitting-filter-settings)
 
 [15. Troubleshooting [79]](#troubleshooting)
 
-[• Olliter SDR Not Powering Up
+    - [Olliter SDR Not Powering Up
 [80]](#olliter-sdr-not-powering-up)
 
-[• OL-Master reporting an error at startup
+    - [OL-Master reporting an error at startup
 [80]](#ol-master-reporting-an-error-at-startup)
 
-[• No voice from the front-panel microphone when transmitting
+    - [No voice from the front-panel microphone when transmitting
 [80]](#no-voice-from-the-front-panel-microphone-when-transmitting)
 
-[o VAC is enabled on the receiver
+        [VAC is enabled on the receiver
 [81]](#vac-is-enabled-on-the-receiver)
 
-[o Wrong microphone style
+        [Wrong microphone style
 [81]](#wrong-microphone-style)
 
-[o Improper microphone gain setting
+        [Improper microphone gain setting
 [81]](#improper-microphone-gain-setting)
 
-[• Additional windows (like EiBi or Cluster) are not showing up
+    - [Additional windows (like EiBi or Cluster) are not showing up
 [81]](#additional-windows-like-eibi-or-cluster-are-not-showing-up)
 
-[• User interface is not updating or feels slow
+    - [User interface is not updating or feels slow
 [82]](#user-interface-is-not-updating-or-feels-slow)
 
-[• Audio from the speakers feels clicky or saturated
+    - [Audio from the speakers feels clicky or saturated
 [82]](#audio-from-the-speakers-feels-clicky-or-saturated)
 
-[• I connected the transceiver to a different PC and all settings were
+    - [I connected the transceiver to a different PC and all settings were
 reset
 [83]](#i-connected-the-transceiver-to-a-different-pc-and-all-settings-were-reset)
 
-[• I get a weird error at startup telling my database cannot be loaded
+    - [I get a weird error at startup telling my database cannot be loaded
 for some reason
 [83]](#i-get-a-weird-error-at-startup-telling-my-database-cannot-be-loaded-for-some-reason)
 
-[• You can't stop using the Olliter SDR transceiver
+    - [You can't stop using the Olliter SDR transceiver
 [83]](#you-cant-stop-using-the-olliter-sdr-transceiver)
 
 [16. Additional resources [83]](#_Toc1091918595)
 
-[• Olliter website [84]](#olliter-website)
+    - [Olliter website [84]](#olliter-website)
 
-[• Olliter YouTube channel
+    - [Olliter YouTube channel
 [84]](#olliter-youtube-channel)
 
-[• Olliter on Facebook [84]](#olliter-on-facebook)
+    - [Olliter on Facebook [84]](#olliter-on-facebook)
 
-[• Olliter on Instagram
+    - [Olliter on Instagram
 [84]](#olliter-on-instagram)
 
 # Disclaimer for Proper Use of Amateur SDR Transceiver
