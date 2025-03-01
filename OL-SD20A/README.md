@@ -1928,13 +1928,13 @@ microphone voltage.
     voice transmission is 300 Hz to 2700 Hz; this range provides a
     balance between intelligibility and bandwidth usage.
 
-# Troubleshooting
+## Troubleshooting
 
 This chapter contains some issues that may occur while operating the
 transceiver, if the proposed solution does not work for you, please get
 in touch with the customer care department.
 
-## Olliter SDR Not Powering Up
+### Olliter SDR Not Powering Up
 
 Some linear power supplies with large filtering capacitors can cause the
 Olliter SDR to power up improperly if it is connected before the power
@@ -1966,7 +1966,7 @@ By following these steps, the protection circuit should reset, and the
 Olliter SDR should power up correctly. If the issue persists, ensure all
 connections are secure and the power supply is functioning correctly.
 
-## OL-Master reporting an error at startup
+### OL-Master reporting an error at startup
 
 If the OL-Master software throws an error at startup stating "Cannot
 load DLL 'ChannelMaster', cannot find the specified module" means that
@@ -1975,7 +1975,22 @@ some dependencies are not satisfied.
 **Solution**: Refer to the System requirements chapter and make sure all
 software and hardware requirements are met.
 
-## No voice from the front-panel microphone when transmitting
+### OL-Master software crashed
+
+If the OL-Master software crashes, it may be due to a variety of reasons, to help us diagnose the issue, please follow these steps:
+
+- Navigate to the `%appdata%/OL-Master/Logs` folder
+- Create a ZIP file containing all the files in the folder (all txt files and the `CrashDumps` folder)
+- Send the ZIP file to the customer care department
+
+The following additional details will help us diagnose the issue and provide a solution:
+
+- The operating system version
+- The hardware configuration of the PC
+- The version of the OL-Master software
+- The steps that led to the crash (or what was being done when the crash occurred)
+
+### No voice from the front-panel microphone when transmitting
 
 This issue can relate to multiple reasons, both software and hardware.
 
@@ -1997,7 +2012,7 @@ request a new microphone wiring kit.
 
 **Solution**: verify the microphone wiring that was installed
 
-- Wrong microphone voltage
+### Wrong microphone voltage
 
 Different microphone brands have different settings, make sure the right
 microphone supply voltage was selected in the Setup menu.
@@ -2015,7 +2030,7 @@ the adjustment range of the main slider.
 
 **Solution**: verify the microphone gain.
 
-## Additional windows (like EiBi or Cluster) are not showing up
+### Additional windows (like EiBi or Cluster) are not showing up
 
 Windows sometimes "hides" some UI elements outside the screen
 boundaries, just restore the window position to show it up.
@@ -2035,7 +2050,7 @@ your main screen fully maximized, click on the title bar and drag it
 anywhere to return to its normal size. The new location should be stored
 in the database and recovered at the next reopening.
 
-## User interface is not updating or feels slow
+### User interface is not updating or feels slow
 
 If the UI is laggy or unresponsive, it may be caused by a CPU overload,
 the bottom bar of OL-Master shows the CPU utilization, if this is too
@@ -2055,7 +2070,7 @@ adequately powerful PC.
 **Solution**: Reduce the sample rate, close all background applications
 or consider a PC hardware upgrade
 
-## Audio from the speakers feels clicky or saturated
+### Audio from the speakers feels clicky or saturated
 
 Audio levels is monitored by the AGC algorithm, if the AGC is set to any
 manual setting and the volume is too high, the audio will be saturated
@@ -2063,7 +2078,7 @@ and sound bad.
 
 **Solution**: lower the audio volume or enable AGC
 
-## I connected the transceiver to a different PC and all settings were reset
+### I connected the transceiver to a different PC and all settings were reset
 
 Settings of the transceiver are not stored in the transceiver itself,
 they are stored in an xml file which lives in the *%appdata%/OL-Master*
@@ -2072,7 +2087,7 @@ different devices where OL-Master is installed
 
 **Solution**: copy the database file to the new PC
 
-## I get a weird error at startup telling my database cannot be loaded for some reason
+### I get a weird error at startup telling my database cannot be loaded for some reason
 
 The database probably got corrupted due to some hardware or software
 issues, automatic backups are created by the software in the
@@ -2082,7 +2097,7 @@ previous configuration
 
 **Solution**: restore one of the automatic backups of the database
 
-## You can't stop using the Olliter SDR transceiver
+### You can't stop using the Olliter SDR transceiver
 
 We're glad that you got to this point, if you can't stop using the
 Olliter SDR, it means that our engineers have worked really hard to get
@@ -2093,13 +2108,13 @@ our team using the Olliter website
 will be notified at every new software release or be the first one to
 test our new hardware.
 
-3.  []{#_Toc1091918595 .anchor}Additional resources
+## Additional resources
 
 Some additional material was developed by our engineers to help you
 troubleshoot or configure some sections of the software, here are some
 links that every user should check out:
 
-## Olliter website
+### Olliter website
 
 This is the official website where all news are published, here you can
 find manuals, software and all the information that are created for our
@@ -2111,7 +2126,7 @@ Downloads section: <https://www.olliter.com/download.html>
 
 OL-SDR page: <https://www.olliter.com/sdr.html>
 
-## Olliter YouTube channel
+### Olliter YouTube channel
 
 This is the main source of information on how to configure third-party
 software (like WSJT-X, CW-Skimmer or DX-Lab).
@@ -2122,14 +2137,14 @@ Link to the Olliter YouTube channel:
 Link to the OL-Master Playlists:
 <https://www.youtube.com/@OLLITER-EU/playlists>
 
-## Olliter on Facebook
+### Olliter on Facebook
 
 Here you can find some news about our devices, plus some previews of the
 devices that are being developed or tested.
 
 Link to the Olliter Facebook page: <https://www.facebook.com/Olliter/>
 
-## Olliter on Instagram
+### Olliter on Instagram
 
 Wanna see some cool stuff? Some pictures from events, presentations or
 our laboratories? Instagram is the place for you.
