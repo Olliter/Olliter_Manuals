@@ -244,19 +244,19 @@ for some reason](#i-get-a-weird-error-at-startup-telling-my-database-cannot-be-l
 
     - [Olliter on Instagram](#olliter-on-instagram)
 
-# Disclaimer for Proper Use of Amateur SDR Transceiver
+## Disclaimer for Proper Use of Amateur SDR Transceiver
 
 > [!WARNING]
 > Please read carefully before using the SDR transceiver
 
-## Proper Connection and Installation
+### Proper Connection and Installation
 
 The connection and installation of the SDR transceiver are the sole
 responsibility of the user. It is crucial that all connections are made
 by the user in accordance with industry standards and best practices to
 ensure the safety and proper functionality of the equipment.
 
-## Liability
+### Liability
 
 *Olliter SAgl* shall not be held liable for any damages resulting from the
 improper use or incorrect installation of the SDR transceiver, whether
@@ -264,7 +264,7 @@ such damages occur to the user or any third parties. This includes, but
 is not limited to, physical damage to the equipment, loss of data, or
 any other consequential damages.
 
-## Warranty and Damage
+### Warranty and Damage
 
 In the event of equipment damage, if it is determined that the cause of
 damage was improper use or incorrect connection by the user, Olliter
@@ -272,7 +272,7 @@ SAgl will not honor any warranty claims. Users are strongly encouraged
 to follow all usage instructions and safety guidelines to prevent
 voiding the warranty.
 
-## Electrostatic Discharge (ESD) Precautions
+### Electrostatic Discharge (ESD) Precautions
 
 Users must take appropriate precautions to protect the SDR transceiver
 from electrostatic discharge (ESD). Failure to implement ESD protection
@@ -281,14 +281,14 @@ include, but are not limited to, using an ESD wrist strap when handling
 connectors or any interface of the device, properly grounding all
 equipment, and working on an ESD-safe surface.
 
-## Safety and Compliance
+### Safety and Compliance
 
 Users must ensure that their use of the SDR transceiver complies with
 all local laws and regulations. This includes adhering to frequency
 allocation rules, power output restrictions, and any other regulatory
 requirements pertaining to the operation of amateur radio equipment.
 
-## Acknowledgement
+### Acknowledgement
 
 By using the SDR transceiver, you acknowledge that you have read and
 understood this disclaimer and agree to comply with all guidelines and
@@ -296,7 +296,7 @@ precautions outlined herein. Failure to do so may result in equipment
 damage, legal consequences, or personal injury, for which OLLITER will
 not be responsible.
 
-### 1. Software license
+### Software license
 
 This software contains GNU GPL code, meaning any derivative must share
 the same license terms. Here are the licensing terms related to
@@ -316,7 +316,7 @@ addresses:
 Terms of this license are also reported in the Full GNU GPL version 3.0
 license chapter.
 
-## License terms
+#### License terms
 
 This software, OL-Master, is derived from PowerSDR. The original
 PowerSDR software and our derived version are distributed under the
@@ -333,14 +333,14 @@ Under the terms of the GPL, you are granted the following rights:
 
 - Freedom to Distribute Modified Versions: You may distribute copies of your modified versions to others under the same license. By doing this, you can give the whole community a chance to benefit from your changes.
 
-## Warranty disclaimer
+#### Software warranty disclaimer
 
 This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
 Public License for more details.
 
-## Obtaining the source code
+#### Obtaining the source code
 
 In compliance with the GPL, the complete corresponding source code for
 this software is available. The source code includes all the necessary
@@ -367,40 +367,25 @@ such as through version control platforms, online file-sharing services,
 or on the Olliter website. While these options are not yet available, we
 will inform our users as soon as they are implemented.
 
-## Full GNU GPL version 3.0 license
+#### Full GNU GPL version 3.0 license
 
 Please see: [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
-## Contact information
-
-For any questions regarding the Software license terms, please contact
-us at:
-
-```txt
-Olliter Laboratory SAgl
-
-Amsler 1,
-
-CH-7304 Maienfeld
-```
-
-Or, via email at the following address: <legal@olliter.com>
-
-# Hardware license
+### Hardware license
 
 The hardware component, comprising the SDR device and associated
 accessories, is manufactured by *Olliter SAgl*. Our engineers have
 meticulously designed, developed, and tested this product to optimize
 performance as an amateur radio communication device.
 
-## Intellectual property rights
+#### Intellectual property rights
 
 *Olliter SAgl* retains exclusive ownership of all intellectual property
 rights pertaining to the hardware\'s design and implementation. This
 agreement grants you a limited license to use the hardware, but
 ownership remains with *Olliter SAgl*.
 
-## Warranty disclaimer
+#### Hardware warranty disclaimer
 
 *Olliter SAgl* offers a limited warranty covering manufacturing defects.
 The warranty period aligns with applicable consumer protection laws in
@@ -411,7 +396,7 @@ This warranty does not encompass damages resulting from misuse,
 accidents, unauthorized modifications, or ordinary wear and tear
 (including but not limited to knobs, switches, and fuses).
 
-## Right to repair
+#### Right to repair
 
 In compliance with EU regulations, *Olliter SAgl* will provide spare parts
 and repair manuals for a minimum of two years post-product
@@ -425,12 +410,12 @@ adhere to applicable Right to Repair regulations in our markets. Our aim
 is to empower users with the necessary information and resources to
 maintain device functionality for an extended period.
 
-## Requesting hardware assistance
+#### Requesting hardware assistance
 
 To report a defect, please contact <hello@olliter.com> for technical
 support or authorized repair center information.
 
-## License grant
+#### License grant
 
 *Olliter SAgl* grants you a non-exclusive, non-transferable, limited
 license to use the hardware solely for its intended purpose as outlined
@@ -442,7 +427,7 @@ in the accompanying documentation. This license includes the right to:
 - Seek repair services from independent repair shops in addition to
     *Olliter SAgl*\'s authorized service providers.
 
-## Restrictions
+#### Restrictions
 
 By utilizing the Olliter SDR transceiver, you agree to:
 
@@ -456,7 +441,7 @@ By utilizing the Olliter SDR transceiver, you agree to:
 
 - Preserve all proprietary notices and labels on the hardware.
 
-## Limitation of Liability
+#### Limitation of Liability
 
 To the fullest extent permitted by law, *Olliter SAgl* shall not be held
 liable for any indirect, incidental, special, consequential, or punitive
@@ -471,52 +456,49 @@ use, goodwill, or other intangible assets, arising from:
     discharge, improper external device connections, fire, or
     weather-related incidents).
 
-## Indemnification
+#### Indemnification
 
 You agree to indemnify and hold harmless *Olliter SAgl* from any claims,
 liabilities, damages, losses, expenses, including reasonable attorney
 fees, arising from your hardware use or agreement violations.
 
-## Termination
+#### Termination
 
 This agreement remains in effect until terminated by either party. Your
 failure to comply with agreement terms automatically terminates your
 rights without notice. Upon termination, you must cease all hardware use
 and destroy accompanying documentation.
 
-## Governing law
+#### Governing law
 
 Swiss law governs this agreement, excluding conflict of law principles.
 Any legal disputes arise exclusively in Swiss courts.
 
-## Entire Agreement
+#### Entire Agreement
 
 This agreement constitutes the entire understanding between you and
 *Olliter SAgl* regarding hardware use, superseding all prior or
 contemporaneous agreements (written or oral).
 
-## Amendments
+#### Amendments
 
 *Olliter SAgl* reserves the right to modify this agreement with prior
 notice. Continued hardware use post-amendment implies acceptance of the
 revised terms.
 
-## Contact information
+### Contact information
 
 If you have any questions about this hardware agreement, please contact:
 
-*Olliter Laboratory SAgl*
+```txt
+Olliter Laboratory SAgl
+Amsler 1,
+CH-7304 Maienfeld
+```
 
-*Amsler 1,*
+Or, via email at the following address: [legal@olliter.com](mailto:legal@olliter.com)
 
-*CH-7304 Maienfeld*
-
-Or, via email at the following address:
-
-*<legal@olliter.com>\
-*
-
-# Important user notice
+## Important user notice
 
 This radio is designed to comply with your country\'s radio regulations.
 It operates on frequencies allocated exclusively for amateur radio use.
@@ -529,7 +511,7 @@ defibrillators. If you suspect any interference with your medical device
 while operating this radio, immediately cease transmission and seek
 medical attention if necessary.
 
-2.  []{#_Toc1360849860 .anchor}Introduction
+## Introduction
 
 The main purpose of this guide is to help you configuring for the first
 time your Olliter SDR Transceiver.
@@ -538,50 +520,49 @@ This guide may not fully cover the hardware configuration of the device
 or every feature available on the software, it will cover the first
 steps to connect the SDR transceiver, receive and transmit.
 
-[\]{.underline}
-
-# Device overview
+## Device overview
 
 This chapter covers the input and output of the Olliter SDR transceiver
 to guide the user when interfacing with external devices.
 
-## Front panel
+### Front panel
 
 ![](./resources/images/3284ef3277303db02603912d273051ec195d35ad.png)
-1.  Morse key input
 
-2.  Headphones output
+1. Morse key input
 
-3.  Microphone input
+2. Headphones output
 
-4.  Connection LED
+3. Microphone input
 
-5.  Power button
+4. Connection LED
 
-6.  Adjustable legs
+5. Power button
 
-7.  Left speaker
+6. Adjustable legs
 
-8.  Standby LED
+7. Left speaker
 
-9.  Power-on LED
+8. Standby LED
+
+9. Power-on LED
 
 10. Right speaker
 
-### Front panel LEDs
+#### Front panel LEDs
 
 The front panel offers four different LEDs, each LED have a different
 meaning
 
 ![](./resources/images/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
-1.  Connection status: this LED is ON when OL-Master is communicating
-    with the transceiver
 
-2.  Transmission: this LED is ON when the device is transmitting
+1. Connection status: this LED is ON when OL-Master is communicating with the transceiver
 
-3.  Stand-by: this LED is ON when voltage is applied to the device
+2. Transmission: this LED is ON when the device is transmitting
 
-4.  Power-on: this LED is ON when the power button is pressed and stays
+3. Stand-by: this LED is ON when voltage is applied to the device
+
+4. Power-on: this LED is ON when the power button is pressed and stays
     on when the device is operating (even if not communicating with
     OL-Master)
 
@@ -594,9 +575,10 @@ These speakers are controlled by OL-Master and can be used to play the
 demodulated signal that is tuned. The onboard speakers can be enabled or
 disabled from OL-Master, volume control is also provided by the software
 
-## Back panel
+### Back panel
 
 ![](./resources/images/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
+
 1.  Receiving line for the transverter interface 1
 
 2.  Transmitting line for the transverter interface 1
@@ -657,145 +639,81 @@ disabled from OL-Master, volume control is also provided by the software
 
 27. Ethernet interface (1Gbps only)
 
-## Connectors description
+#### Connectors description
 
 Here is a description of the inputs and outputs of the Olliter SDR
 transceiver. Some of these connections are highly sensitive to ESD,
 overvoltage, short-circuit, overcurrent and more, please take all the
 recommended measures when connecting external devices.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The warranty for your Olliter SDR device will be voided if our
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   customer assistance department determines that the device has
-  been damaged or rendered inoperative due to improper connection
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  of external devices.
-  
+> [!WARNING]
+> The warranty for your Olliter SDR device will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to improper connection of external devices.
 
-  
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The warranty for your Olliter SDR will be voided if our customer
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   assistance department determines that the device has been
-  damaged or rendered inoperative due to connection of external
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  devices that generate or absorb excessive current or voltage
-  
+> [!WARNING]
+> The warranty for your Olliter SDR will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to connection of external devices that generate or absorb excessive current or voltage
 
-  
+#### Morse key jack
 
-### Morse key jack
+This ¼ inch (6.35mm) jack is used to connect either a paddle or a straight key. When using a paddle, the DOT and DASHES can be swapped from the CW menu of OL-Master settings.
 
-This ¼ inch (6.35mm) jack is used to connect either a paddle or a
-straight key. When using a paddle, the DOT and DASHES can be swapped
-from the CW menu of OL-Master settings.
+This connector uses either 5V or 3V3 pull-up resistors. Voltage can be selected by moving the internal "3.3 -- 5V I/O" jumper.
 
-This connector uses either 5V or 3V3 pull-up resistors. Voltage can be
-selected by moving the internal "3.3 -- 5V I/O" jumper.
+![Morse key jack wiring diagram](./resources/images/media/image8.png)
 
-![](./resources/images/media/image8.png)
-### Headphones output
+#### Headphones output
 
 This output is designed to drive standard headphones with a nominal
 impedance of 16Ω impedance, output level is 50mW for a -75dB THD.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Prolonged use of headphones at high volume can cause permanent
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   hearing dagame. Adjust the volume to a safe level to protect
-  your ears.
-  
+> [!WARNING]
+> Prolonged use of headphones at high volume can cause permanent hearing dagame. Adjust the volume to a safe level to protect your ears.
 
-  
+![Headphones jack wiring diagram](./resources/images/media/image9.png)
 
-![](./resources/images/media/image9.png)
-### Microphone input
+#### Microphone input
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  If the transceiver was ordered with a Icom wiring, a Yaesu
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   microphone cannot be used and vice-versa. Using a different
-  microphone style can damage the transceiver and/or the
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  microphone.
-  
+> [!WARNING]
+> If the transceiver was ordered with a Icom wiring, a Yaesu microphone cannot be used and vice-versa. Using a different microphone style can damage the transceiver and/or the microphone.
 
-  
+This input should be chosen when placing the order for the Olliter SDR transceiver. This input is designed to work with either Icom (such as the SM-30) or Yaesu (such as M-70) microphones.
 
-This input should be chosen when placing the order for the Olliter SDR
-transceiver. This input is designed to work with either Icom (such as
-the SM-30) or Yaesu (such as M-70) microphones.
+In addition to the microphone wiring that was requested, and independently from the user choice, a balanced input for a dynamic capsule is also available on the same connector.
 
-In addition to the microphone wiring that was requested, and
-independently from the user choice, a balanced input for a dynamic
-capsule is also available on the same connector.
+> [!WARNING]
+> Before connecting any kind of microphone to the transceiver, please adjust the voltage settings in the Setup menu of OL-Master software. Incorrect voltage settings may damage the transceiver and/or the microphone.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Before connecting any kind of microphone to the transceiver,
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   please adjust the voltage settings in the Setup menu of
-  OL-Master software. Incorrect voltage settings may damage the
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  transceiver and/or the microphone.
-  
-
-  
-
-Selection between 5V, 8V or none can be toggled in the Setup menu of
-OL-Master.
+Selection between 5V, 8V or none can be toggled in the Setup menu of OL-Master.
 
 Advanced features (like up/down, scan, etc.) are not available.
 
-  ------------------------------------------------------------------------------
-  Transceiver        -       -       -       -     
-  that was        -       -       -       -       -  
-  ordered with        -       -       -       -    
-  Icom wiring        -       -       -       -     
-  ------------- ---------------------------------- -----------------------------
-  Pin        -  Icom SM-30        -       -       -  Dynamic microphone
+| Pin | Transceiver (Icom Wiring)       | Icom SM-30 Dynamic Microphone |
+|-----|--------------------------------|------------------------------|
+| 1   | Microphone signal             | Balanced input +             |
+| 2   | +8V microphone power          | N.C.                         |
+| 3   | N.C.                           | N.C.                         |
+| 4   | N.C.                           | Balanced input -             |
+| 5   | PTT signal                     | PTT signal                   |
+| 6   | PTT GND                        | PTT GND                      |
+| 7   | Microphone GND                 | GND                          |
+| 8   | N.C.                           | N.C.                         |
 
-  1        -    Microphone signal        -       - Balanced input +
+| Pin | Transceiver (Yaesu Wiring)      | Yaesu M-70 Dynamic Microphone |
+|-----|--------------------------------|------------------------------|
+| 1   | N.C.                           | N.C.                         |
+| 2   | +5V microphone power           | N.C.                         |
+| 3   | N.C.                           | N.C.                         |
+| 4   | N.C.                           | Balanced input -             |
+| 5   | PTT GND                        | PTT GND                      |
+| 6   | PTT Signal                     | PTT Signal                   |
+| 7   | Microphone GND                 | GND                          |
+| 8   | Microphone signal              | Balanced input +             |
 
-  2        -    +8V microphone power        -      N.C.
+*Icom and the Icom logo are registered trademarks of Icom Incorporated (Japan)*
 
-  3        -    N.C.        -       -       -      N.C.
+*Yaesu and the Yaesu logo are registered trademarks of Yaesu Musen Co., Ltd.*
 
-  4        -    N.C.        -       -       -      Balanced input -
-
-  5        -    PTT signal        -       -       -  PTT signal
-
-  6        -    PTT GND        -       -       -   PTT GND
-
-  7        -    Microphone GND        -       -    GND
-
-  8        -    N.C.        -       -       -      N.C.
-  ------------------------------------------------------------------------------
-
-  ------------------------------------------------------------------------------
-  Transceiver        -       -       -       -     
-  that was        -       -       -       -       -  
-  ordered with        -       -       -       -    
-  Yaesu wiring        -       -       -       -    
-  ------------- ---------------------------------- -----------------------------
-  Pin        -  Yaesu M-70        -       -       -  Dynamic microphone
-
-  1        -    N.C.        -       -       -      N.C.
-
-  2        -    +5V microphone power        -      N.C.
-
-  3        -    N.C.        -       -       -      N.C.
-
-  4        -    N.C.        -       -       -      Balanced input -
-
-  5        -    PTT GND        -       -       -   PTT GND
-
-  6        -    PTT Signal        -       -       -  PTT Signal
-
-  7        -    Microphone GND        -       -    GND
-
-  8        -    Microphone signal        -       - Balanced input +
-  ------------------------------------------------------------------------------
-
-Icom and the Icom logo are registered trademarks of Icom Incorporated
-(Japan)
-
-Yaesu and the Yaesu logo are registered trademarks of Yaesu Musen Co.,
-Ltd.
-
-### Transverter interfaces
+#### Transverter interfaces
 
 The transverter input and outputs are designed to drive external devices
 to provide additional bands to the transceiver.
@@ -815,15 +733,11 @@ Power slider in OL-Master).
 Transverters can be configured using the dedicated section of the
 OL-Master software.
 
-### EXT IN
+#### EXT IN
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The EXT IN connector provide direct access to the ADC2 device
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   inside the transceiver, excessive power input can permanently
-  damage the internal circuits
-  
-
-  
+> [!WARNING]The EXT IN connector provide direct access to the ADC2 device
+> inside the transceiver, excessive power input can permanently
+> damage the internal circuits
 
 This input provides an unfiltered path to the CH2 line of the
 transceiver, it is typically used to interface with external devices
@@ -832,9 +746,11 @@ where filters are already installed (such as panadapter interfaces).
 To enable this feature please select RX2 as receiver channel for the
 receiver that is going to be used.
 
-![](./resources/images/a439cba54074365622555ccec2c8991a7e11e642.png)
-![](./resources/images/da21b99e161e2b4cd65470df5445514e460e2c5a.png)
-### 10MHz references
+![CH -> RX mapping in Setup form](./resources/images/a439cba54074365622555ccec2c8991a7e11e642.png)
+
+![EXT Input Active on RX in Setup form](./resources/images/da21b99e161e2b4cd65470df5445514e460e2c5a.png)
+
+#### 10MHz references
 
 The Olliter SDR transceiver can be connected to an external 10MHz
 reference to provide better frequency stability, this is very convenient
@@ -850,44 +766,31 @@ only be used as a frequency reference, and it was not designed to
 provide more than 20mA. This output comes from the internal TCXO when no
 external reference is applied.
 
-### PA Band connector
+#### PA Band connector
 
-This connector offers some digital outputs that can be used to drive
-external antenna switches or amplifiers.
+This connector offers some digital outputs that can be used to drive external antenna switches or amplifiers.
 
-These outputs can be programmed by the user using the Setup menu of
-OL-Master.
+These outputs can be programmed by the user using the Setup menu of OL-Master.
 
 These outputs are normally in a LOW state using a pull-down resistor.
 
-The voltage that is provided by this port depends on the internal "3.3
--- 5V I/O" jumper. Maximum available current is limited with a 220Ω
-series resistor.
+The voltage that is provided by this port depends on the internal "3.3 -- 5V I/O" jumper. Maximum available current is limited with a 220Ω series resistor.
 
-![](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
-  -----------------------------------------------------------------------
-  DB9 Pin        -  Software output
-  ----------------- -----------------------------------------------------
-  1        -       -  Digital out 1
+![DB9 Standard wiring diagram](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
-  2        -       -  Digital out 2
+| DB9 Pin | Software Output  |
+|---------|-----------------|
+| 1       | Digital out 1   |
+| 2       | Digital out 2   |
+| 3       | Digital out 3   |
+| 4       | Digital out 4   |
+| 5       | GND            |
+| 6       | Digital out 5   |
+| 7       | Digital out 6   |
+| 8       | Digital out 7   |
+| 9       | Digital out 8   |
 
-  3        -       -  Digital out 3
-
-  4        -       -  Digital out 4
-
-  5        -       -  GND
-
-  6        -       -  Digital out 5
-
-  7        -       -  Digital out 6
-
-  8        -       -  Digital out 7
-
-  9        -       -  Digital out 8
-  -----------------------------------------------------------------------
-
-### ACC Connector
+#### ACC Connector
 
 This connector offers some inputs to control several features of the
 SDR, such as PTT controls for RX2, RX3 and RX4, an external inhibit
@@ -899,13 +802,10 @@ The voltage that can be applied to the digital input port depends on the
 internal "3.3 -- 5V I/O" jumper. In any case, it should never exceed the
 configured voltage.
 
-  ------------------------------------------------------------------------
-        -       -    3.3V I/O        -       -  5V I/O
-  ------------------ -------------------------- --------------------------
-  Low state        - 0V to 0.8V        -       -  0V to 1.5V
-
-  High state        -  2V to 3.3V        -       -  3.5V to 5V
-  ------------------------------------------------------------------------
+| State       | 3.3V I/O Range | 5V I/O Range  |
+|------------|---------------|--------------|
+| Low state  | 0V to 0.8V    | 0V to 1.5V   |
+| High state | 2V to 3.3V    | 3.5V to 5V   |
 
 The voltage range for both ADC0 and ADC1 is 0V to 3.3V. Excessive
 voltage can cause severe damage to the ADC circuitry.
@@ -913,30 +813,22 @@ voltage can cause severe damage to the ADC circuitry.
 Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9
 have an internal 4.7KΩ pull-down resistor.
 
-![](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
-  -----------------------------------------------------------------------
-  DB9 Pin        -  Software output
-  ----------------- -----------------------------------------------------
-  1        -       -  GND
+![DB15 standard pinout](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
-  2        -       -  N.C.
+| DB9 Pin | Software Output           |
+|---------|---------------------------|
+| 1       | GND                        |
+| 2       | N.C.                       |
+| 3       | ADC in 1                   |
+| 4       | ADC in 0                   |
+| 5       | GND                        |
+| 6       | PTT RX2 (active LOW)       |
+| 7       | PTT RX4 (active HIGH)      |
+| 8       | PTT RX3 (active LOW)       |
+| 9       | Ext Inhibit (active HIGH)  |
 
-  3        -       -  ADC in 1
 
-  4        -       -  ADC in 0
-
-  5        -       -  GND
-
-  6        -       -  PTT RX2 (active LOW)
-
-  7        -       -  PTT RX4 (active HIGH)
-
-  8        -       -  PTT RX3 (active LOW)
-
-  9        -       -  Ext Inhibit (active HIGH)
-  -----------------------------------------------------------------------
-
-### OC connector
+#### OC connector
 
 This connector offers 8 open-collector outputs that can be used to drive
 external accessories like power amplifiers or antenna relays.
@@ -947,50 +839,37 @@ DC.
 The 13.8V DC lines are derived from the main power supply and are
 protected by a 250mA resettable fuse.
 
-![](./resources/images/media/image11.png)
-  -----------------------------------------------------------------------
-  DB15 Pin        -   Software output
-  ------------------- ---------------------------------------------------
-  1        -       -  GND
+![DB15 standard pinout diagram](./resources/images/media/image11.png)
 
-  2        -       -  OUT 2
+| DB15 Pin | Software Output          |
+|----------|--------------------------|
+| 1        | GND                      |
+| 2        | OUT 2                    |
+| 3        | OUT 4                    |
+| 4        | OUT 6                    |
+| 5        | OUT 8                    |
+| 6        | GND                      |
+| 7        | GND                      |
+| 8        | 13.8V                    |
+| 9        | OUT 1                    |
+| 10       | OUT 3                    |
+| 11       | OUT 5                    |
+| 12       | OUT 7                    |
+| 13       | Open-collector common    |
+| 14       | GND                      |
+| 15       | 13.8V                    |
 
-  3        -       -  OUT 4
-
-  4        -       -  OUT 6
-
-  5        -       -  OUT 8
-
-  6        -       -  GND
-
-  7        -       -  GND
-
-  8        -       -  13.8V
-
-  9        -       -  OUT 1
-
-  10        -       - OUT 3
-
-  11        -       - OUT 5
-
-  12        -       - OUT 7
-
-  13        -       - Open-collector common
-
-  14        -       - GND
-
-  15        -       - 13.8V
-  -----------------------------------------------------------------------
 
 External relay connection example:
 
 ![](./resources/images/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
-### Power connector
+
+#### Power connector
 
 Please refer to the Connecting the power supply chapter for further
 information
 
-### Antenna connectors
+#### Antenna connectors
 
 These four BNC connectors are used by the transceiver to receive and
 transmit. Different bands can receive or transmit on different antennas,
@@ -999,7 +878,7 @@ OL-Master.
 
 Please refer to the Connecting the antenna for further information
 
-# System requirements
+## System requirements
 
 An SDR transceiver requires a control device to work, the hardware of
 the transceiver is used to convert analog RF signals to an IQ stream
@@ -1013,10 +892,9 @@ like microphones, headphones and Morse key or paddle.
 
 A simplified schematic representation of the SDR device is shown below.
 
-![Immagine che contiene testo, schermo, diagramma, schermata Descrizione
-generata
-automaticamente](./resources/images/c208c3c638ae2571c37c170f0810465abafe36ee.png)
-## Software requirements
+![Schematic representation of the SDR functions](./resources/images/c208c3c638ae2571c37c170f0810465abafe36ee.png)
+
+### Software requirements
 
 As any SDR device, one of the main components is the PC that is used to
 control the device, the same PC is also used to decode and process the
@@ -1024,325 +902,74 @@ raw digital stream of data to usable audio stream. This decode process
 requires some minimum software and hardware requirements that should be
 met.
 
-### Operating system requirements
+#### Operating system requirements
 
-The OL-Master application was developed for Microsoft Windows 10 or
-later. Virtualization of such operating systems is also supported, if
-the host machine is capable enough.
+The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported, if the host machine is capable enough.
 
-Compatibility with Microsoft Windows 8.1 or previous versions of
-Microsoft Windows cannot be ensured due to lack of support for .NET
-Framework 4.8.1 which was used to develop the application.
+Compatibility with Microsoft Windows 8.1 or previous versions of Microsoft Windows cannot be ensured due to lack of support for the latest .NET modules which was used to develop the application.
 
-### .NET 8
+#### .NET 8
 
-The operating system should be updated to the latest version and the
-.NET8 must be installed on the machine (latest update of the .NET8 can
-be downloaded from the following URL
-<https://dotnet.microsoft.com/en-us/download/visual-studio-sdks>).
-Depending on the system configuration, both the .NET8 SDK and .NET8
-Runtime might be needed.
+The operating system should be updated to the latest version and the .NET8 must be installed on the machine (latest update of the .NET8 can be downloaded from the Microsoft).
 
-### Microsoft Visual C++ Redistributable
+Depending on the system configuration, both the .NET8 SDK and .NET8 Runtime might be needed.
 
-Some components of the software were written using highly optimized C++
-code, this requires the latest version of the Microsoft Visual C++
-Redistributable package to be installed and updated. The latest version
-of this package can be downloaded from the following URL:
-<https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
+- .NET8 Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/runtime-desktop-8.0.13-windows-x64-installer>
+- .NET8 SDK Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer>
+
+#### Microsoft Visual C++ Redistributable
+
+Some components of the software were written using highly optimized C++ code, this requires the latest version of the Microsoft Visual C++ Redistributable package to be installed and updated. The latest version of this package can be downloaded from the following URL:
+
+- VC Redist: <https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
 .
 
 As per the moment this manual was written, the latest available version
 is 14.40.33810.0.
 
-## Hardware requirements
+### Hardware requirements
 
-Recommended hardware setup is an 7^th^ generation Intel Core i5 or
-later, with at least 16GB of RAM and 1GB of available storage space
-(disk usage may vary depending on additional features like recordings,
-cluster, EIBI and more).
+Recommended hardware setup is an 7^th^ generation Intel Core i5 or later, with at least 16GB of RAM and 1GB of available storage space (disk usage may vary depending on additional features like recordings, cluster, EIBI and more).
 
-Ethernet interface at 1Gbps on the control PC is mandatory if using more
-than one receiver window. Ethernet interface at 1Gbps is mandatory to
-configure the IP address of the device if connected directly to the
-control PC.
+Ethernet interface at 1Gbps on the control PC is mandatory if using more than one receiver window. Ethernet interface at 1Gbps is mandatory to configure the IP address of the device if connected directly to the control PC.
 
-## Network requirements
+### Network requirements
 
-An ethernet interface capable of 1Gbps [is mandatory]{.underline} for
-the transceiver to communicate with the control device (PC), a properly
-configured ethernet switch with interfaces at 1Gbps is suggested to be
-used in between the SDR and the PC.
+An ethernet interface capable of 1Gbps **is mandatory** for the transceiver to communicate with the control device (PC), a properly configured ethernet switch with interfaces at 1Gbps is suggested to be used in between the SDR and the PC.
 
-Please note, the transceiver [does not support negotiating any speed
-lower than 1Gbps]{.underline} with the control device or the
-switch/router that is plugged into.
+Please note, the transceiver **does not support negotiating any speed lower than 1Gbps** with the control device or the switch/router that is plugged into.
 
-An ethernet cable CAT5 or superior is highly recommended to interface
-the SDR to the switch/router and the PC.
+An ethernet cable CAT5 or superior is highly recommended to interface the SDR to the switch/router and the PC.
 
-To ensure best performances, use high quality switch or router and
-cables, make sure the whole network from the SDR to the master PC is
-capable of continuously communicate at 1Gbps.
+To ensure best performances, use high quality switch or router and cables, make sure the whole network from the SDR to the master PC is capable of continuously communicate at 1Gbps.
 
-An internet connection is not required if not using external services
-(like clusters or EIBI).
+An internet connection is not required if not using external services (like clusters or EIBI).
 
-A network connection diagram is available at the Sample Ethernet
-connection. chapter.
+A network connection diagram is available at the [Sample Ethernet connection](#Sample Ethernet connection) chapter.
 
-# Installing OL-Master
+## Installing OL-Master
 
 After buying an Olliter SDR, you should receive the setup file for
 OL-Master, this is the main application that controls the SDR and must
 be installed on the PC.
 
-![Olliter setup
-file](./resources/images/15a34c54f5fdc8760e8ca4c1e772a68a2118758a.png)
+![Olliter setup file](./resources/images/15a34c54f5fdc8760e8ca4c1e772a68a2118758a.png)
+
 Double click the executable to start the installer, administrative
 privileges are mandatory to install the software. Follow the on-screen
 instructions to proceed with the installation.
 
-![](./resources/images/2c2db219748179cb712d2579dcff50c848ac0230.png)
-![](./resources/images/5f228f61610cbb24ebdc9df574ec8a5385319e14.png)
-![](./resources/images/d9fd212c0273127827a90e0fd34e3259949a8e96.png)
-![](./resources/images/85191356186f190b5d11ff91f44fb13f69b8b502.png)
-Setup is now completed, before starting the software, please read
-carefully the next chapter.
+![Setup step 1](./resources/images/2c2db219748179cb712d2579dcff50c848ac0230.png)
 
-# Wiring the transceiver
+![Setup step 2](./resources/images/5f228f61610cbb24ebdc9df574ec8a5385319e14.png)
 
-+-----+----------------------------------------------------------------+
-| ![  | Electrostatic Discharge (ESD) can cause severe damage to       |
-| war | electrical circuits, potentially leading to costly repairs or  |
-| nin | replacements. Always take measures to protect your equipment.  |
-| g - | These safety measures include but are not limited to:        - |
-| 2S  |        -       -       -       -       -       -       -       - |
-| .I. | - Proper grounding: make sure all equipment and workstations |
-| So  |     are properly grounded        -       -       -       -     |
-| ftw |        -       -       -       -       -       -       -       - |
-| are | - Avoid static-inducing clothing: avoid wearing synthetic    |
-| e   |     materials that generate static electricity        -       -  |
-| S   |        -       -       -       -       -       -       -       - |
-| erv | - Handle components with care: touch components only by      |
-| izi |     their edges or the grounding case avoiding touching pins   |
-| per |     and circuitry        -       -       -       -       -     |
-| l   |        -       -       -       -       -       -       -       - |
-| \'I |        -       -       -       -       -       -       -       - |
-| nge |        -       -       -       -       -       -       -       - |
-| gne |        -       -       -       -       -       -       -       - |
-| ria |        -       -       -       -       -       -       -       - |
-| S   |        -       -       -       -       -       -       -       - |
-| .r. |        -       -       -       -       -       -       -       - |
-| l.] |        -       -       -       -       -       -       -       - |
-| (ve |        -       -       -       -       -       -       -       - |
-| rto |        -       -       -       -       -       -       -       - |
-| pal |        -       -       -       -       -       -       -       - |
-| _5c |        -       -       -       -       -       -       -       - |
-| e2d |        -       -       -       -       -       -       -       - |
-| e31 |        -       -       -       -       -       -       -       - |
-| d1c |        -       -       -       -       -       -       -       - |
-| 441 |        -       -       -       -       -       -       -       - |
-| 468 |        -       -       -       -       -       -       -       - |
-| 8b9 |        -       -       -       -       -       -       -       - |
-| bd6 |        -       -       -       -       -       -       -       - |
-| e7a |        -       -       -       -       -       -       -       - |
-| 120 |        -       -       -       -       -       -       -       - |
-| 5f3 |        -       -       -       -       -       -       -       - |
-| /0c |        -       -       -       -       -       -       -       - |
-| de3 |        -       -       -       -       -       -       -       - |
-| 65b |        -       -       -       -       -       -       -       - |
-| bde |        -       -       -       -       -       -       -       - |
-| 16b |        -       -       -       -       -       -       -       - |
-| 18c |        -       -       -       -       -       -       -       - |
-| ec1 |        -       -       -       -       -       -       -       - |
-| e54 |        -       -       -       -       -       -       -       - |
-| 762 |        -       -       -       -       -       -       -       - |
-| 98a |        -       -       -       -       -       -       -       - |
-| 322 |        -       -       -       -       -       -       -       - |
-| f1d |        -       -       -       -       -       -       -       - |
-| a9d |        -       -       -       -       -       -       -       - |
-| ae. |        -       -       -       -       -       -       -       - |
-| png |        -       -       -       -       -       -       -       - |
-| ){w |        -       -       -       -       -       -       -       - |
-| idt |        -       -       -       -       -       -       -       - |
-| h=" |        -       -       -       -       -       -       -       - |
-| 0.4 |        -       -       -       -       -       -       -       - |
-| 173 |        -       -       -       -       -       -       -       - |
-| 611 |        -       -       -       -       -       -       -       - |
-| 111 |        -       -       -       -       -       -       -       - |
-| 111 |        -       -       -       -       -       -       -       - |
-| 111 |        -       -       -       -       -       -       -       - |
-| in" |        -       -       -       -       -       -       -       - |
-| h   |        -       -       -       -       -       -       -       - |
-| eig |        -       -       -       -       -       -       -       - |
-| ht= |        -       -       -       -       -       -       -       - |
-| "0. |        -       -       -       -       -       -       -       - |
-| 365 |        -       -       -       -       -       -       -       - |
-| 277 |        -       -       -       -       -       -       -       - |
-| 777 |        -       -       -       -       -       -       -       - |
-| 777 |        -       -       -       -       -       -       -       - |
-| 777 |        -       -       -       -       -       -       -       - |
-| 76i |        -       -       -       -       -       -       -       - |
-| n"} |        -       -       -       -       -       -       -       - |
-|     |        -       -       -       -       -       -       -       - |
-| ![3 |        -       -       -       -       -       -       -       - |
-| ESD |        -       -       -       -       -       -       -       - |
-| S   |        -       -       -       -       -       -       -       - |
-| ymb |        -       -       -       -       -       -       -       - |
-| ols |        -       -       -       -       -       -       -       - |
-| You |        -       -       -       -       -       -       -       - |
-| N   |        -       -       -       -       -       -       -       - |
-| eed |        -       -       -       -       -       -       -       - |
-| to  |        -       -       -       -       -       -       -       - |
-| K   |        -       -       -       -       -       -       -       - |
-| now |        -       -       -       -       -       -       -       - |
-| ! - |        -       -       -       -       -       -       -       - |
-| De  |        -       -       -       -       -       -       -       - |
-| sco |        -       -       -       -       -       -       -       - |
-| Eur |        -       -       -       -       -       -       -       - |
-| ope |        -       -       -       -       -       -       -       - |
-| Blo |        -       -       -       -       -       -       -       - |
-| g]( |        -       -       -       -       -       -       -       - |
-| ver |        -       -       -       -       -       -       -       - |
-| top |        -       -       -       -       -       -       -       - |
-| al_ |        -       -       -       -       -       -       -       - |
-| 5ce |        -       -       -       -       -       -       -       - |
-| 2de |        -       -       -       -       -       -       -       - |
-| 31d |        -       -       -       -       -       -       -       - |
-| 1c4 |        -       -       -       -       -       -       -       - |
-| 414 |        -       -       -       -       -       -       -       - |
-| 688 |        -       -       -       -       -       -       -       - |
-| b9b |        -       -       -       -       -       -       -       - |
-| d6e |        -       -       -       -       -       -       -       - |
-| 7a1 |        -       -       -       -       -       -       -       - |
-| 205 |        -       -       -       -       -       -       -       - |
-| f3/ |        -       -       -       -       -       -       -       - |
-| 27e |        -       -       -       -       -       -       -       - |
-| f60 |        -       -       -       -       -       -       -       - |
-| 031 |        -       -       -       -       -       -       -       - |
-| f01 |        -       -       -       -       -       -       -       - |
-| b24 |        -       -       -       -       -       -       -       - |
-| b2f |        -       -       -       -       -       -       -       - |
-| 9c9 |        -       -       -       -       -       -       -       - |
-| 65f |        -       -       -       -       -       -       -       - |
-| ed6 |        -       -       -       -       -       -       -       - |
-| 525 |        -       -       -       -       -       -       -       - |
-| 96d |        -       -       -       -       -       -       -       - |
-| 561 |        -       -       -       -       -       -       -       - |
-| 700 |        -       -       -       -       -       -       -       - |
-| 1.p |        -       -       -       -       -       -       -       - |
-| ng) |        -       -       -       -       -       -       -       - |
-| {wi |        -       -       -       -       -       -       -       - |
-| dth |        -       -       -       -       -       -       -       - |
-| ="0 |        -       -       -       -       -       -       -       - |
-| .36 |        -       -       -       -       -       -       -       - |
-| 567 |        -       -       -       -       -       -       -       - |
-| 038 |        -       -       -       -       -       -       -       - |
-| 495 |        -       -       -       -       -       -       -       - |
-| 188 |        -       -       -       -       -       -       -       - |
-| 103 |        -       -       -       -       -       -       -       - |
-| in" |        -       -       -       -       -       -       -       - |
-| h   |        -       -       -       -       -       -       -       - |
-| eig |        -       -       -       -       -       -       -       - |
-| ht= |        -       -       -       -       -       -       -       - |
-| "0. |        -       -       -       -       -       -       -       - |
-| 365 |        -       -       -       -       -       -       -       - |
-| 670 |        -       -       -       -       -       -       -       - |
-| 384 |        -       -       -       -       -       -       -       - |
-| 951 |        -       -       -       -       -       -       -       - |
-| 881 |        -       -       -       -       -       -       -       - |
-| 03i |        -       -       -       -       -       -       -       - |
-| n"} |        -       -       -       -       -       -       -       - |
-+=====+================================================================+
-+-----+----------------------------------------------------------------+
+![Setup step 3](./resources/images/d9fd212c0273127827a90e0fd34e3259949a8e96.png)
 
-Connecting the transceiver is simple but a couple of considerations and
-safety measures are needed, please read carefully the wiring
-instructions to prevent damages to the Olliter SDR.
+![Setup step 4](./resources/images/85191356186f190b5d11ff91f44fb13f69b8b502.png)
 
-## Connecting of the PureSignal cable
+Setup is now completed, before starting the software, please read carefully the next chapter.
 
-To achieve optimal transmission quality and reduce the spurious
-emissions, the Pure Signal technology is supported by the Olliter SDR
-transceiver.
-
-![Pure
-Signal-2](./resources/images/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
-Pure Signal is the name given to the theory and implementation of the
-clean transmission logic developed by the OpenHPSDR team and implemented
-in both the Olliter SDR software and transceiver. The algorithm behind
-the Pure Signal technology is quite simple, when both the drive applied
-to the Digital-to-analogue converter (DAC) and the output as measured at
-the antenna are known it is possible to modify the drive so that the
-output is as clean as possible.
-
-The Pure Signal technology is enabled by connecting the PS IN with the
-PS OUT using the provided SMA to SMA coaxial cable.
-
-![](./resources/images/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
-## Connecting the power supply
-
-The Olliter SDR was designed to operate from a stable and constant power
-supply which is capable of continuously delivering 13.8V at 5A for the
-20W model.
-
-An integrated protection circuit is added to the transceiver which can
-help in protecting the radio from excessive voltage fluctuations by
-cutting the power line and turning off the device.
-
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The integrated protection circuit should not be considered a
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   surge, lightning or electrostatic protection, it was designed to
-  protect the circuitry from excessive or low voltages which may
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  negatively impact the transceiver performances.
-  
-
-  
-
-Connect the power supply to the Olliter SDR by using high-quality
-Anderson PowerPole® connectors. Wire size should be chosen according to
-the length of the connection, here are our suggestions:
-
-- Wires shorter than 2 meters (6.5ft) long will require 2mm^2^ (AWG14)
-    wires
-
-- Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm^2^
-    wires
-
-- Wires longer than 4 meters (13ft) are not recommended as they may
-    pick up excessive noise from the surrounding environment or cause
-    excessive voltage fluctuations
-
-![](./resources/images/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
-Make sure to connect all the needed wires before turning on the power
-supply.
-
-If the transceiver does not show the red (standby) light after applying
-power, please refer to the Troubleshooting chapter.
-
-## Connecting the antenna
-
-Up to 4 antennas can be connected to the Olliter SDR, these can be
-configured in software to allow receiving and transmitting on different
-bands with different antennas.
-
-To begin, connect an antenna using a male BNC connector to the ANT1
-socket.
-
-![](./resources/images/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
-## Ethernet connection
-
-To interface the transceiver with the local network, please refer to the
-Connection of the SDR to the PC chapter of this manual.
-
-## Connecting the microphone
-
-Each device comes with a dedicated microphone wiring which should be
-selected when ordering the transceiver, use the front 8-pin socket to
-connect the microphone.
-
-# Configuring the firewall
+### Configuring the firewall
 
 Network communication to the device is performed using UDP protocol, a
 security system exception must be created for the software to work
@@ -1353,19 +980,23 @@ Open the Windows firewall settings.
 ![Immagine che contiene testo, schermata, software, Software
 multimediale Descrizione generata
 automaticamente](./resources/images/media/image22.png)
+
 Select "Inbound connection rules" on the left menu.
 
 ![](./resources/images/media/image23.png)
+
 Click on "New rule" on the right menu.
 
 ![Immagine che contiene testo, schermata, software, Icona del computer
 Descrizione generata
 automaticamente](./resources/images/media/image24.png)
+
 Select \"Program" and click "next".
 
 ![Immagine che contiene testo, schermata, software, Icona del computer
 Descrizione generata
 automaticamente](./resources/images/media/image25.png)
+
 Click on "Browse" and navigate to "C:\\Program
 Files\\Olliter\\Ol-master.exe"
 
@@ -1375,16 +1006,19 @@ automaticamente](./resources/images/media/image26.png)
 ![Immagine che contiene testo, schermata, software, Software
 multimediale Descrizione generata
 automaticamente](./resources/images/media/image27.png)
+
 Click on "Next"
 
 ![Immagine che contiene testo, schermata, software, Icona del computer
 Descrizione generata
 automaticamente](./resources/images/media/image28.png)
+
 Select "Allow connections" and click "Next".
 
 ![Immagine che contiene testo, elettronica, schermata, software
 Descrizione generata
 automaticamente](./resources/images/media/image29.png)
+
 Now select the kind of network that you are using, by default it should
 be "Private", if you are using a different kind of network, please
 select the option that best fits your configuration.
@@ -1392,18 +1026,112 @@ select the option that best fits your configuration.
 ![Immagine che contiene testo, schermata, software, Icona del computer
 Descrizione generata
 automaticamente](./resources/images/media/image30.png)
+
 Insert any name you like and then click on "Complete".
 
 ![Immagine che contiene testo, schermata, software, schermo Descrizione
 generata
 automaticamente](./resources/images/media/image31.png)
-# Connection of the SDR to the PC
+
+## Wiring the transceiver
+
+> [!WARNING]
+> Electrostatic Discharge (ESD) can cause severe damage to electrical circuits, potentially leading to costly repairs or replacements. Always take measures to protect your equipment. These safety measures include but are not limited to:
+>
+> - Proper grounding: make sure all equipment and workstations are properly grounded
+> - Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity  
+> - Handle components with care: touch components only by their edges or the grounding case avoiding touching pins and circuitry
+
+Connecting the transceiver is simple but a couple of considerations and
+safety measures are needed, please read carefully the wiring
+instructions to prevent damages to the Olliter SDR.
+
+### Connecting of the PureSignal cable
+
+To achieve optimal transmission quality and reduce the spurious
+emissions, the Pure Signal technology is supported by the Olliter SDR
+transceiver.
+
+![Pure Signal-2](./resources/images/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
+
+Pure Signal is the name given to the theory and implementation of the 
+clean transmission logic developed by the OpenHPSDR team and implemented
+in both the Olliter SDR software and transceiver. The algorithm behind
+the Pure Signal technology is quite simple, when both the drive applied
+to the Digital-to-analogue converter (DAC) and the output as measured at
+the antenna are known it is possible to modify the drive so that the
+output is as clean as possible.
+
+The Pure Signal technology is enabled by connecting the PS IN with the
+PS OUT using the provided SMA to SMA coaxial cable.
+
+![Pure signal connectors on the back of the transceiver](./resources/images/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
+
+### Connecting the power supply
+
+The Olliter SDR was designed to operate from a stable and constant power
+supply which is capable of continuously delivering 13.8V at 5A for the
+20W model.
+
+An integrated protection circuit is added to the transceiver which can
+help in protecting the radio from excessive voltage fluctuations by
+cutting the power line and turning off the device.
+
+> [!WARNING]The integrated protection circuit should not be considered a
+> surge, lightning or electrostatic protection, it was designed to
+> protect the circuitry from excessive or low voltages which may
+> negatively impact the transceiver performances.
+
+Connect the power supply to the Olliter SDR by using high-quality
+Anderson PowerPole® connectors. Wire size should be chosen according to
+the length of the connection, here are our suggestions:
+
+- Wires shorter than 2 meters (6.5ft) long will require 2mm^2^ (AWG14) wires
+
+- Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm^2^ wires
+
+- Wires longer than 4 meters (13ft) are not recommended as they may
+    pick up excessive noise from the surrounding environment or cause
+    excessive voltage fluctuations
+
+![DC plug on the back of the transceiver](./resources/images/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
+
+Make sure to connect all the needed wires before turning on the power
+supply.
+
+If the transceiver does not show the red (standby) light after applying
+power, please refer to the Troubleshooting chapter.
+
+### Connecting the antenna
+
+Up to 4 antennas can be connected to the Olliter SDR, these can be
+configured in software to allow receiving and transmitting on different
+bands with different antennas.
+
+To begin, connect an antenna using a male BNC connector to the ANT1
+socket.
+
+![](./resources/images/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
+
+### Connecting the ethernet cable
+
+To interface the transceiver with the local network, please refer to the
+Connection of the SDR to the PC chapter of this manual.
+
+### Connecting the microphone
+
+Each device comes with a dedicated microphone wiring which should be
+selected when ordering the transceiver, use the front 8-pin socket to
+connect the microphone.
+
+
+## Connection of the SDR to the PC
 
 Connection of the transceiver to the PC is performed using an
 Ethernet/IP protocol, make sure to use high quality network equipment
 and cables to achieve best results.
 
-## Default Olliter SDR IP address
+### Default Olliter SDR IP address
 
 The transceiver comes with a preconfigured IP address set to
 192.168.1.111, if this address is valid on your local network (meaning
@@ -1412,22 +1140,22 @@ mask is 255.255.255.0), you can just plug the device to the local
 network and skip the IP address setup guide.
 
   
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Before applying any voltage to the SDR, connect the device to
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   your home switch/router using a high-quality CAT5 (or superior)
+> [!WARNING]Before applying any voltage to the SDR, connect the device to
+  your home switch/router using a high-quality CAT5 (or superior)
   ethernet cable
   
 
   
 
   
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The transceiver can only communicate at 1Gbps, if the
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   switch/router or the master PC does not support such speed, the
+> [!WARNING]The transceiver can only communicate at 1Gbps, if the
+  switch/router or the master PC does not support such speed, the
   connection may be unavailable or unstable
   
 
   
 
-## Sample Ethernet connection
+### Sample Ethernet connection
 
 The following schematic illustrates the recommended connection of the
 SDR device to the PC.
@@ -1437,13 +1165,13 @@ SDR device to the PC.
 > automaticamente](./resources/images/a42f45266f8b697997a33d50c3cad1939f357c95.png){width="5.357465004374453in"
 > height="2.8049146981627295in"}
 
-## Changing the Olliter SDR IP address
+### Changing the Olliter SDR IP address
 
 Management of the IP address is performed using OL-Master, if the
 default IP address (192.168.1.111) is not valid or available on your
 local network, follow this procedure to change it to a valid one.
 
-### Connect the device to the PC
+#### Connect the device to the PC
 
 Using a straight CAT5 Ethernet cable, connect the Olliter SDR to the PC
 (make sure the PC has an Ethernet interface that supports 1Gbps
@@ -1452,7 +1180,8 @@ communication)
 ![Immagine che contiene elettronica, testo, computer, Schermo del
 computer Descrizione generata
 automaticamente](./resources/images/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png)
-### Manually set the IP address of the PC
+
+#### Manually set the IP address of the PC
 
 On the Windows PC, open Control Panel and select "Network and internet".
 
@@ -1487,7 +1216,7 @@ Descrizione generata
 automaticamente](./resources/images/media/image39.png)
 Click "Ok" on all dialogs to save the settings and execute OL-Master
 
-### Setting the device address using OL-Master
+#### Setting the device address using OL-Master
 
 Once the device is plugged, and the Ethernet interface is configured,
 turn on the transceiver and wait a couple of seconds for the device to
@@ -1523,7 +1252,8 @@ settings to the device, the SDR should now reboot.
 
 ![Firmware & IP
 Address](./resources/images/media/image43.tmp)
-### Restore the default IP settings of the PC
+
+#### Restore the default IP settings of the PC
 
 Once the IP address of the transceiver is properly configured to a valid
 address, the master PC can be reconfigured to DHCP mode or the original
@@ -1541,7 +1271,6 @@ Click on "Change adapter settings" on the left side.
 
 ![Centro connessioni di rete e
 condivisione](./resources/images/media/image36.tmp)
-- 
 
 Right click the Ethernet interface that was used to connect the SDR
 device and open the Properties menu.
@@ -1549,23 +1278,26 @@ device and open the Properties menu.
 ![Immagine che contiene testo, schermata, software, Icona del computer
 Descrizione generata
 automaticamente](./resources/images/media/image37.png)
+
 Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then
 click on "Properties".
 
 ![Immagine che contiene testo, elettronica, schermata, software
 Descrizione generata
 automaticamente](./resources/images/media/image38.png)
+
 Restore the previous IP address settings as needed.
 
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image44.png)
+
 Now, please connect the Olliter SDR as shown in the Sample Ethernet
 connection. chapter.
 
-# Usage of OL-Master
+## Usage of OL-Master
 
-## Configuring OL-Master
+### Configuring OL-Master
 
 All the following settings are accessed using the Setup menu of the
 OL-Master application, in OL-Master, click the Setup menu, then follow
@@ -1578,7 +1310,8 @@ Settings are persisted using the *Save* or the *Save and Close* buttons.
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image46.png)
-### Configuring the Olliter SDR address
+
+#### Configuring the Olliter SDR address
 
 In *General* \> *HW Config* make sure the "*Use static IP Address*"
 option is enabled, then insert the IP address of the Olliter SDR that
@@ -1594,7 +1327,8 @@ button on the right), click Save and close the dialog box.
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image47.png)
-### Configuring the operator settings
+
+#### Configuring the operator settings
 
 In *General* \> *Options*, set the callsign and grid locator of the
 station.
@@ -1602,7 +1336,8 @@ station.
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image48.png)
-### Configuring the audio interface
+
+#### Configuring the audio interface
 
 If the user wants to enable the audio to be routed to the master PC, the
 following procedure is needed.
@@ -1621,7 +1356,8 @@ If a microphone is connected to the radio, the RX Only option can be
 checked to exclude audio transmission from the PC
 
 ![](./resources/images/da0f40fd02c37219095ae9af50a9567f14234e42.png)
-### Configuring the receiver bandwidth
+
+#### Configuring the receiver bandwidth
 
 The SDR is capable of receiving and displaying a wide area of the RF
 spectrum, the receiver span can be configured in *General* \> *HW
@@ -1634,8 +1370,8 @@ selected, the displayed spectrum will be roughly 180KHz.
 The recommended sample rate is 192000 samples per second.
 
   
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  As the sample rate is increased, more system and network
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   resources will be required by the software, please adjust the
+> [!WARNING]As the sample rate is increased, more system and network
+  resources will be required by the software, please adjust the
   settings accordingly
   
 
@@ -1644,15 +1380,16 @@ The recommended sample rate is 192000 samples per second.
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image52.png)
-### Configuring the refresh rate
+
+#### Configuring the refresh rate
 
 The refresh rate of the receivers windows can be adjusted in *Display*
 \> *General*. The suggested value is between 10 and 20 frames per
 second.
 
   
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Increasing the refresh rate can significantly impact the system
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   load, if the system starts lagging or the UI starts behaving,
+> [!WARNING]Increasing the refresh rate can significantly impact the system
+  load, if the system starts lagging or the UI starts behaving,
   reduce the "Main Display FPS" value
   
 
@@ -1661,7 +1398,8 @@ second.
 ![Immagine che contiene testo, elettronica, schermo, schermata
 Descrizione generata
 automaticamente](./resources/images/media/image53.png)
-## Starting the device
+
+### Starting the device
 
 Once the device settings were configured by the user, the device can now
 be started using the PWR button, the spectrum should animate, and audio
@@ -1671,14 +1409,15 @@ will start.
 CH1](./resources/images/media/image54.tmp)
 [\]{.underline}
 
-## Controlling the transceiver
+### Controlling the transceiver
 
 This chapter will cover the main settings of the OL-Master software,
 such as changing band, changing mode or interacting with the spectrum.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/4ea9dd2ed4ac68c4fed3fe430336de573f890ea6.png)
-### Selecting a different band
+
+#### Selecting a different band
 
 The transceiver can operate on all amateur bands of HF plus the 50MHz
 (6mt) band. The received band can be selected using the dedicated
@@ -1686,7 +1425,8 @@ buttons.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image56.tmp)
-### Tuning a frequency
+
+#### Tuning a frequency
 
 There are multiple ways to tune the received frequency, the main ones
 are by panning the receiver spectrum or by selecting the frequency using
@@ -1696,14 +1436,16 @@ the dedicated numeric input.
 CH1](./resources/images/media/image57.tmp){width="5.559701443569554in"
 height="3.8447200349956256in"}![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image57.tmp)
-### Setting the visualization mode
+
+#### Setting the visualization mode
 
 Different viewing modes can be selected for the receivers, each band
 will save the view setting that is restored every time the band is
 recalled.
 
 ![](./resources/images/media/image58.png)
-### Interacting with the spectrum
+
+#### Interacting with the spectrum
 
 The receiver spectrum can be interacted using the spectrum controls,
 these allows zooming, panning and setting the tune step.
@@ -1715,7 +1457,8 @@ mode[.]{.underline}
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image59.tmp)
-### Setting the receiver mode
+
+#### Setting the receiver mode
 
 All main operative modes are supported by the transceiver, this can be
 selected using the dedicated buttons.
@@ -1726,32 +1469,31 @@ Then, for each operating mode, the bandwidth can be adjusted as needed.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image61.tmp)
-### Adding additional receivers
+
+#### Adding additional receivers
 
 RX1 is located in the main window of the software, additional receivers
 can be enabled using the RX2, RX3 and RX4 buttons in the main window.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Using additional receivers may significantly impact the system
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   load, if the system starts to lag, reduce the number of
-  receivers, or reduce the sample rate.
-  
-
-  
+> [!WARNING]Using additional receivers may significantly impact the system
+> load, if the system starts to lag, reduce the number of
+> receivers, or reduce the sample rate.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image62.tmp)
 ![Immagine che contiene schermata, testo, Software multimediale,
 software Descrizione generata
 automaticamente](./resources/images/a49589dfb85f23b5e752a1e7b76355ed175bc99b.png)
-### Adjusting the receivers volume
+
+#### Adjusting the receivers volume
 
 The main and sub volumes, per each receiver can be configured using the
 *Volume* controls group.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image64.tmp)
-### DSP options
+
+#### DSP options
 
 Multiple software-based filters can be added to any receiver mode, these
 can significantly improve the reception of a given signal. Some filters
@@ -1761,90 +1503,74 @@ dedicated buttons.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
 CH1](./resources/images/media/image65.tmp)
-## Firmware upgrade
+
+### Firmware upgrade
 
 Upgrade of the firmware is performed using the OL-Master application
 with a dedicated menu.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Although the Olliter SDR has a recovery mode that can be enabled
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   in case of major firmware failures, the firmware upgrade is a
-  delicate process that requires some attention. Please read this
-        -       -       -       -       -       -       -       -       -       -       -       -       -       -       -       -  chapter carefully before starting the procedure.
-  
+> [!WARNING]Although the Olliter SDR has a recovery mode that can be enabled
+> in case of major firmware failures, the firmware upgrade is a
+> delicate process that requires some attention. Please read this
+> chapter carefully before starting the procedure.
 
-  
-
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Make sure to close all background apps and to have a reliable
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   power source for both the PC and the transceiver before
-  attempting a firmware upgrade.
-  
-
-  
+> [!WARNING]Make sure to close all background apps and to have a reliable
+> power source for both the PC and the transceiver before
+> attempting a firmware upgrade.
 
 Extract the ZIP file containing the firmware anywhere on the local PC to
 get the *.hex* file which contains the new firmware.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  Extract the file on the local hard drive, do not use USB sticks,
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   network drive or other unreliable locations that may create
-  latency or issues.
-  
-
-  
+> [!WARNING]Extract the file on the local hard drive, do not use USB sticks,
+> network drive or other unreliable locations that may create
+> latency or issues.
 
 Once the file is extracted you should see something like this:
 
 ![](./resources/images/2deb3313b882db5c6cb6f0fdd90a51e9d879e76f.png)
+
 Make sure the transceiver is ON and reachable on the local network, then
 open OL-Master and select the *FW Maintenance* menu. The SDR should be
 detected automatically by the software.
 
 ![](./resources/images/1ee15ab771b6ea80b7b1ae20172ddb0194170c44.png)
+
 Using the Select button, navigate to the .hex file that was just
 extracted and select it.
 
 ![](./resources/images/659766a21245bc4e387668b3b92ac18462d10dc8.png)
+
 Once the file is selected, click the Program button to start the upgrade
 procedure.
 
-  
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  The upgrade procedure will take about a minute, please be
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   patient.
-  
-  
-
-  
+> [!WARNING]The upgrade procedure will take about a minute, please be
+> patient.
 
 ![](./resources/images/42461e5c391b24857e1eba8fd208316b921cd597.png)
+
 At first, the software will erase the content of the FPGA, this is a
 monolithic task, so the software may look like it's frozen, please be
 patient and just wait for the process to complete. Once the erase task
 is completed, you should see the progress bar moving, and when it
 reaches 100%, the transceiver should be restarted automatically.
-
   
-  ![warning - 2S.I. Software e Servizi per l\'Ingegneria        -       -       -       -       -       -       -       -       -  If the process hangs after some minutes, or if any error occurs,
-  S.r.l.](./resources/images/0cde365bbde16b18cec1e5476298a322f1da9dae.png)   please contact our customer assistance to get further
-  assistance.
-  
-
-  
+> [!WARNING]If the process hangs after some minutes, or if any error occurs,
+> please contact our customer assistance to get further
+> assistance.
 
 Wait for the upgrade window to close automatically after a couple of
 seconds, then the process is complete, and the transceiver can be used
 as normal.
 
-# General recommendations 
+## General recommendations
 
-## Digital modes (FT8)
+### Digital modes (FT8)
 
 The following steps outline the proper configuration of the Olliter SDR
 for operating in FT8 mode. Ensure that the settings are applied
 carefully to avoid issues with audio processing and transmission.
 
-### Using Virtual Audio Cable (VAC)
+#### Using Virtual Audio Cable (VAC)
 
 - VAC RX1: Set the software to use VAC RX1 (or RX2, RX3, or RX4) for
     audio input, but do not use the \"Common VAC\" setting. This
@@ -1857,7 +1583,7 @@ carefully to avoid issues with audio processing and transmission.
     system uses bidirectional VAC, it is possible to use a single VAC
     for both input and output.
 
-### Audio Levels and Filters
+#### Audio Levels and Filters
 
 - Compressor and Leveler: In FT8 mode, disable both the Compressor and
     Leveler. These audio processors are not required in FT8 and may
@@ -1871,7 +1597,7 @@ carefully to avoid issues with audio processing and transmission.
     the transmitted signal is clear and within the normal operational
     range for FT8 transmissions.
 
-### Transmit and Receive Filters
+#### Transmit and Receive Filters
 
 - TX Audio Filter: When WSJT-X is set to Radio -\> Split: NONE, the TX
     audio filter of the Olliter SDR must be adjusted to match the RX
@@ -1888,13 +1614,13 @@ carefully to avoid issues with audio processing and transmission.
     freely, but note that it will limit the FT8 band visible on WSJT-X
     or similar software.
 
-## SSB mode
+### SSB mode
 
 When switching from FT8 or other digital modes to SSB, several
 adjustments need to be made to ensure optimal audio performance. Follow
 these instructions for setting up the Olliter SDR for SSB operations.
 
-### Microphone Voltage Considerations
+#### Microphone Voltage Considerations
 
 - Yaesu Microphones: Typically require 5V for proper operation.
 
@@ -1904,13 +1630,13 @@ these instructions for setting up the Olliter SDR for SSB operations.
 Please refer to the Microphone input chapter to see how to change the
 microphone voltage.
 
-### Switching from FT8 to SSB
+#### Switching from FT8 to SSB
 
 - Deactivate VAC: After using FT8 or other digital modes, ensure that
     VAC RX1 (or RX2, RX3, RX4) is deactivated before switching to SSB.
     Failure to do so may prevent audio from being transmitted properly.
 
-### Audio Processing Settings for SSB
+#### Audio Processing Settings for SSB
 
 - Leveler: Reactivate the Leveler when operating in SSB mode. The
     recommended setting is 7 dB, which helps maintain consistent output
@@ -1921,7 +1647,7 @@ microphone voltage.
     dB, or even 10 dB, especially when using the PureSignal feature.
     This improves the overall signal clarity and transmission quality.
 
-### Transmitting Filter Settings
+#### Transmitting Filter Settings
 
 - TX Audio Filter: In the Setup -\> Transmitting menu, adjust the TX
     audio filter according to your preferences. The default range for
