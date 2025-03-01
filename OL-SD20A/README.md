@@ -11,238 +11,51 @@ automaticamente](./resources/images/media/image2.jpg)
 ## Contents of this manual
 
 1. [Contents of this manual](#contents-of-this-manual)
-
-1. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
-
-    - [Proper Connection and Installation](#proper-connection-and-installation)
-
-    - [Liability](#liability)
-
-    - [Warranty and Damage](#warranty-and-damage)
-
-    - [Electrostatic Discharge (ESD) Precautions](#electrostatic-discharge-esd-precautions)
-
-    - [Safety and Compliance](#safety-and-compliance)
-
-    - [Acknowledgement](#acknowledgement)
-
-1. [Software license](#_Toc2034863503)
-
-    - [License terms](#license-terms)
-
-    - [Warranty disclaimer](#warranty-disclaimer)
-
-    - [Obtaining the source code](#obtaining-the-source-code)
-
-    - [Full GNU GPL version 3.0 license](#full-gnu-gpl-version-3.0-license)
-
-    - [Contact information](#contact-information)
-
-1. [Hardware license](#hardware-license)
-
-    - [Intellectual property rights](#intellectual-property-rights)
-
-    - [Warranty disclaimer](#warranty-disclaimer-1)
-
-    - [Right to repair](#right-to-repair)
-
-    - [Requesting hardware assistance](#requesting-hardware-assistance)
-
-    - [License grant](#license-grant)
-
-    - [Restrictions](#restrictions)
-
-    - [Limitation of Liability](#limitation-of-liability)
-
-    - [Indemnification](#indemnification)
-
-    - [Termination](#termination)
-
-    - [Governing law](#governing-law)
-
-    - [Entire Agreement](#entire-agreement)
-
-    - [Amendments](#amendments)
-
-    - [Contact information](#contact-information-1)
-
-1. [Important user notice](#important-user-notice)
-
-1. [Introduction](#_Toc1360849860)
-
-1. [Device overview](#device-overview)
-
-    - [Front panel](#front-panel)
-
-        - [Front panel LEDs](#front-panel-leds)
-
-        - [Front speakers](#_Toc1852837891)
-
-    - [Back panel](#back-panel)
-
-    - [Connectors description](#connectors-description)
-
-        - [Morse key jack](#morse-key-jack)
-
-        - [Headphones output](#headphones-output)
-
-        - [Microphone input](#microphone-input)
-
-        - [Transverter interfaces](#transverter-interfaces)
-
-        - [EXT IN](#ext-in)
-
-        - [10MHz references](#mhz-references)
-
-        - [PA Band connector](#pa-band-connector)
-
-        - [ACC Connector](#acc-connector)
-
-        - [OC connector](#oc-connector)
-
-        - [Power connector](#power-connector)
-
-        - [Antenna connectors](#antenna-connectors)
-
-1. [System requirements](#system-requirements)
-
-    - [Software requirements](#software-requirements)
-
-        - [Operating system requirements](#operating-system-requirements)
-
-        - [.NET 8](#net-8)
-
-        - [Microsoft Visual C++ Redistributable](#microsoft-visual-c-redistributable)
-
-    - [Hardware requirements](#hardware-requirements)
-
-    - [Network requirements](#network-requirements)
-
-1. [Installing OL-Master](#installing-ol-master)
-
-1. [Wiring the transceiver](#wiring-the-transceiver)
-
-    - [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
-
-    - [Connecting the power supply](#connecting-the-power-supply)
-
-    - [Connecting the antenna](#connecting-the-antenna)
-
-    - [Ethernet connection](#ethernet-connection)
-
-    - [Connecting the microphone](#connecting-the-microphone)
-
-1. [Configuring the firewall](#configuring-the-firewall)
-
-1. [Connection of the SDR to the PC](#connection-of-the-sdr-to-the-pc)
-
-    - [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
-
-    - [Sample Ethernet connection](#sample-ethernet-connection)
-
-    - [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
-
-        - [Connect the device to the PC](#connect-the-device-to-the-pc)
-
-        - [Manually set the IP address of the PC](#manually-set-the-ip-address-of-the-pc)
-
-        - [Setting the device address using OL-Master](#setting-the-device-address-using-ol-master)
-
-        - [Restore the default IP settings of the PC](#restore-the-default-ip-settings-of-the-pc)
-
-1. [Usage of OL-Master](#usage-of-ol-master)
-
-    - [Configuring OL-Master](#configuring-ol-master)
-
-        - [Configuring the Olliter SDR address](#configuring-the-olliter-sdr-address)
-
-        - [Configuring the operator settings](#configuring-the-operator-settings)
-
-        - [Configuring the audio interface](#configuring-the-audio-interface)
-
-        - [Configuring the receiver bandwidth](#configuring-the-receiver-bandwidth)
-
-        - [Configuring the refresh rate](#configuring-the-refresh-rate)
-
-    - [Starting the device](#starting-the-device)
-
-    - [Controlling the transceiver](#controlling-the-transceiver)
-
-        - [Selecting a different band](#selecting-a-different-band)
-
-        - [Tuning a frequency](#tuning-a-frequency)
-
-        - [Setting the visualization mode](#setting-the-visualization-mode)
-
-        - [Interacting with the spectrum](#interacting-with-the-spectrum)
-
-        - [Setting the receiver mode](#setting-the-receiver-mode)
-
-        - [Adding additional receivers](#adding-additional-receivers)
-
-        - [Adjusting the receivers volume](#adjusting-the-receivers-volume)
-
-        - [DSP options](#dsp-options)
-
-    - [Firmware upgrade](#firmware-upgrade)
-
-1. [General recommendations](#general-recommendations)
-
-    - [Digital modes (FT8)](#digital-modes-ft8)
-
-        - [Using Virtual Audio Cable (VAC)](#using-virtual-audio-cable-vac)
-
-        - [Audio Levels and Filters](#audio-levels-and-filters)
-
-        - [Transmit and Receive Filters](#transmit-and-receive-filters)
-
-    - [SSB mode](#ssb-mode)
-
-        - [Microphone Voltage Considerations](#microphone-voltage-considerations)
-
-        - [Switching from FT8 to SSB](#switching-from-ft8-to-ssb)
-
-        - [Audio Processing Settings for SSB](#audio-processing-settings-for-ssb)
-
-        - [Transmitting Filter Settings](#transmitting-filter-settings)
-
-1. [Troubleshooting](#troubleshooting)
-
-    - [Olliter SDR Not Powering Up](#olliter-sdr-not-powering-up)
-
-    - [OL-Master reporting an error at startup](#ol-master-reporting-an-error-at-startup)
-
-    - [No voice from the front-panel microphone when transmitting](#no-voice-from-the-front-panel-microphone-when-transmitting)
-
-        - [VAC is enabled on the receiver](#vac-is-enabled-on-the-receiver)
-
-        - [Wrong microphone style](#wrong-microphone-style)
-
-        - [Improper microphone gain setting](#improper-microphone-gain-setting)
-
-    - [Additional windows (like EiBi or Cluster) are not showing up](#additional-windows-like-eibi-or-cluster-are-not-showing-up)
-
-    - [User interface is not updating or feels slow](#user-interface-is-not-updating-or-feels-slow)
-
-    - [Audio from the speakers feels clicky or saturated](#audio-from-the-speakers-feels-clicky-or-saturated)
-
-    - [I connected the transceiver to a different PC and all settings were
-reset](#i-connected-the-transceiver-to-a-different-pc-and-all-settings-were-reset)
-
-    - [I get a weird error at startup telling my database cannot be loaded
-for some reason](#i-get-a-weird-error-at-startup-telling-my-database-cannot-be-loaded-for-some-reason)
-
-    - [You can't stop using the Olliter SDR transceiver](#you-cant-stop-using-the-olliter-sdr-transceiver)
-
-1. [Additional resources](#_Toc1091918595)
-
-    - [Olliter website](#olliter-website)
-
-    - [Olliter YouTube channel](#olliter-youtube-channel)
-
-    - [Olliter on Facebook](#olliter-on-facebook)
-
-    - [Olliter on Instagram](#olliter-on-instagram)
+2. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
+    * [Proper Connection and Installation](#proper-connection-and-installation)  
+    * [Liability](#liability)
+    * [Warranty and Damage](#warranty-and-damage)
+    * [Electrostatic Discharge (ESD) Precautions](#electrostatic-discharge-esd-precautions)
+    * [Safety and Compliance](#safety-and-compliance)
+    * [Acknowledgement](#acknowledgement)
+    * [Software license](#software-license)
+    * [Hardware license](#hardware-license)
+    * [Contact information](#contact-information)
+3. [Important user notice](#important-user-notice)
+4. [Introduction](#introduction)
+5. [Device overview](#device-overview)
+    * [Front panel](#front-panel)
+    * [Back panel](#back-panel)
+6. [System requirements](#system-requirements)
+    * [Software requirements](#software-requirements)
+    * [Hardware requirements](#hardware-requirements)
+    * [Network requirements](#network-requirements)
+7. [Installing OL-Master](#installing-ol-master)
+    * [Configuring the firewall](#configuring-the-firewall)
+8. [Wiring the transceiver](#wiring-the-transceiver)
+    * [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
+    * [Connecting the power supply](#connecting-the-power-supply)
+    * [Connecting the antenna](#connecting-the-antenna)
+    * [Connecting the ethernet cable](#connecting-the-ethernet-cable)
+    * [Connecting the microphone](#connecting-the-microphone)
+9. [Connection of the SDR to the PC](#connection-of-the-sdr-to-the-pc)
+    * [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
+    * [Sample Ethernet connection](#sample-ethernet-connection)
+    * [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
+10. [Usage of OL-Master](#usage-of-ol-master)
+     * [Configuring OL-Master](#configuring-ol-master)
+     * [Starting the device](#starting-the-device)
+     * [Controlling the transceiver](#controlling-the-transceiver)
+     * [Firmware upgrade](#firmware-upgrade)
+11. [General recommendations](#general-recommendations)
+     * [Digital modes (FT8)](#digital-modes-ft8)
+     * [SSB mode](#ssb-mode)
+12. [Troubleshooting](#troubleshooting)
+13. [Additional resources](#additional-resources)
+     * [Olliter website](#olliter-website)
+     * [Olliter YouTube channel](#olliter-youtube-channel)
+     * [Olliter on Facebook](#olliter-on-facebook)
+     * [Olliter on Instagram](#olliter-on-instagram)
 
 ## Disclaimer for Proper Use of Amateur SDR Transceiver
 
