@@ -6,7 +6,37 @@
 
 ## Contents of this manual
 
-
+1. [Important user notice](#important-user-notice)
+2. [Introduction](#introduction)
+3. [System requirements](#system-requirements)
+    * [Software requirements](#software-requirements)
+      * [Operating system requirements](#operating-system-requirements)
+      * [.NET 8](#net-8)
+      * [Microsoft Visual C++ Redistributable](#microsoft-visual-c-redistributable)
+    * [Hardware requirements](#hardware-requirements)
+    * [Network requirements](#network-requirements)
+4. [Installing OL-Master](#installing-ol-master)
+    * [Configuring the firewall](#configuring-the-firewall)
+5. [Usage of OL-Master](#usage-of-ol-master)
+    * [Configuring OL-Master](#configuring-ol-master)
+      * [Configuring the Olliter SDR address](#configuring-the-olliter-sdr-address)
+      * [Configuring the operator settings](#configuring-the-operator-settings)
+      * [Configuring the audio interface](#configuring-the-audio-interface)
+      * [Configuring the receiver bandwidth](#configuring-the-receiver-bandwidth)
+      * [Configuring the refresh rate](#configuring-the-refresh-rate)
+    * [Starting the device](#starting-the-device)
+    * [Controlling the transceiver](#controlling-the-transceiver)
+      * [Selecting a different band](#selecting-a-different-band)
+      * [Tuning a frequency](#tuning-a-frequency)
+      * [Setting the visualization mode](#setting-the-visualization-mode)
+      * [Interacting with the spectrum](#interacting-with-the-spectrum)
+      * [Setting the receiver mode](#setting-the-receiver-mode)
+      * [Adding additional receivers](#adding-additional-receivers)
+      * [Adjusting the receivers volume](#adjusting-the-receivers-volume)
+      * [DSP options](#dsp-options)
+    * [Firmware upgrade](#firmware-upgrade)
+6. [General recommendations](#general-recommendations)
+7. [Troubleshooting](#troubleshooting)
 
 ## Important user notice
 

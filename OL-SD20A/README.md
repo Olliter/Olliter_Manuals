@@ -8,43 +8,42 @@ automaticamente](./resources/images/media/image2.jpg)
 
 ## Contents of this manual
 
-1. [Contents of this manual](#contents-of-this-manual)
-2. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
-3. [Important user notice](#important-user-notice)
-4. [Introduction](#introduction)
-5. [Device overview](#device-overview)
-    * [Front panel](#front-panel)
-    * [Back panel](#back-panel)
-6. [System requirements](#system-requirements)
-    * [Software requirements](#software-requirements)
-    * [Hardware requirements](#hardware-requirements)
-    * [Network requirements](#network-requirements)
-7. [Installing OL-Master](#installing-ol-master)
-    * [Configuring the firewall](#configuring-the-firewall)
-8. [Wiring the transceiver](#wiring-the-transceiver)
-    * [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
-    * [Connecting the power supply](#connecting-the-power-supply)
-    * [Connecting the antenna](#connecting-the-antenna)
-    * [Connecting the ethernet cable](#connecting-the-ethernet-cable)
-    * [Connecting the microphone](#connecting-the-microphone)
-9. [Connection of the SDR to the PC](#connection-of-the-sdr-to-the-pc)
-    * [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
-    * [Sample Ethernet connection](#sample-ethernet-connection)
-    * [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
-10. [Usage of OL-Master](#usage-of-ol-master)
-     * [Configuring OL-Master](#configuring-ol-master)
-     * [Starting the device](#starting-the-device)
-     * [Controlling the transceiver](#controlling-the-transceiver)
-     * [Firmware upgrade](#firmware-upgrade)
-11. [General recommendations](#general-recommendations)
-     * [Digital modes (FT8)](#digital-modes-ft8)
-     * [SSB mode](#ssb-mode)
-12. [Troubleshooting](#troubleshooting)
-13. [Additional resources](#additional-resources)
-     * [Olliter website](#olliter-website)
-     * [Olliter YouTube channel](#olliter-youtube-channel)
-     * [Olliter on Facebook](#olliter-on-facebook)
-     * [Olliter on Instagram](#olliter-on-instagram)
+1. [Introduction](#introduction)
+2. [Device overview](#device-overview)
+    - [Front panel](#front-panel)
+      - [Front panel LEDs](#front-panel-leds)
+      - [Front speakers](#front-speakers)
+    - [Back panel](#back-panel)
+      - [Connectors description](#connectors-description)
+      - [Morse key jack](#morse-key-jack)
+      - [Headphones output](#headphones-output)
+      - [Microphone input](#microphone-input)
+      - [Transverter interfaces](#transverter-interfaces)
+      - [EXT IN](#ext-in)
+      - [10MHz references](#10mhz-references)
+      - [PA Band connector](#pa-band-connector)
+      - [ACC Connector](#acc-connector)
+      - [OC connector](#oc-connector)
+      - [Power connector](#power-connector)
+      - [Antenna connectors](#antenna-connectors)
+3. [System requirements](#system-requirements)
+4. [Wiring the transceiver](#wiring-the-transceiver)
+    - [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
+    - [Connecting the power supply](#connecting-the-power-supply)
+    - [Connecting the antenna](#connecting-the-antenna)
+    - [Connecting the ethernet cable](#connecting-the-ethernet-cable)
+    - [Connecting the microphone](#connecting-the-microphone)
+5. [Connection of the SDR to the PC](#connection-of-the-sdr-to-the-pc)
+    - [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
+    - [Sample Ethernet connection](#sample-ethernet-connection)
+    - [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
+      - [Connect the device to the PC](#connect-the-device-to-the-pc)
+      - [Manually set the IP address of the PC](#manually-set-the-ip-address-of-the-pc)
+      - [Setting the device address using OL-Master](#setting-the-device-address-using-ol-master)
+      - [Restore the default IP settings of the PC](#restore-the-default-ip-settings-of-the-pc)
+6. [Usage of OL-Master](#usage-of-ol-master)
+7. [General recommendations](#general-recommendations)
+8. [Troubleshooting](#troubleshooting)
 
 ## Disclaimer for Proper Use of Amateur SDR Transceiver
 
@@ -55,34 +54,27 @@ For the full hardware and software license, please refer to the following docume
 
 ## Important user notice
 
-This radio is designed to comply with your country\'s radio regulations.
-It operates on frequencies allocated exclusively for amateur radio use.
-To legally operate this radio, you must possess a valid amateur radio
-license of the appropriate class issued by your government.
+* This radio is designed to comply with your country\'s radio regulations.
 
-Radio frequency (RF) emissions from transmitters can potentially
-interfere with electronic devices, including pacemakers and
-defibrillators. If you suspect any interference with your medical device
-while operating this radio, immediately cease transmission and seek
-medical attention if necessary.
+* This radio was designed to operate on frequencies allocated exclusively for amateur radio use.
+
+* To legally operate this radio, you must possess a valid amateur radio license of the appropriate class issued by your government.
+
+* Radio frequency (RF) emissions from transmitters can potentially interfere with electronic devices, including pacemakers and defibrillators. If you suspect any interference with your medical device while operating this radio, immediately cease transmission and seek medical attention if necessary.
 
 ## Introduction
 
-The main purpose of this guide is to help you configuring for the first
-time your Olliter SDR Transceiver.
+The main purpose of this guide is to help you configuring for the first time your Olliter SDR Transceiver.
 
-This guide may not fully cover the hardware configuration of the device
-or every feature available on the software, it will cover the first
-steps to connect the SDR transceiver, receive and transmit.
+This guide may not fully cover the hardware configuration of the device or every feature available on the software, it will cover the first steps to connect the SDR transceiver, receive and transmit.
 
 ## Device overview
 
-This chapter covers the input and output of the Olliter SDR transceiver
-to guide the user when interfacing with external devices.
+This chapter covers the input and output of the Olliter SDR transceiver to guide the user when interfacing with external devices.
 
 ### Front panel
 
-![](./resources/images/3284ef3277303db02603912d273051ec195d35ad.png)
+![Front panel](./resources/images/3284ef3277303db02603912d273051ec195d35ad.png)
 
 1. Morse key input
 
@@ -109,7 +101,7 @@ to guide the user when interfacing with external devices.
 The front panel offers four different LEDs, each LED have a different
 meaning
 
-![](./resources/images/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
+![Front panel LEDs](./resources/images/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
 
 1. Connection status: this LED is ON when OL-Master is communicating with the transceiver
 
@@ -117,46 +109,39 @@ meaning
 
 3. Stand-by: this LED is ON when voltage is applied to the device
 
-4. Power-on: this LED is ON when the power button is pressed and stays
-    on when the device is operating (even if not communicating with
-    OL-Master)
+4. Power-on: this LED is ON when the power button is pressed and stays on when the device is operating (even if not communicating with OL-Master)
 
-If the Power-on LED is not turning on when pressing the power button,
-please refer to the Troubleshooting chapter of this manual
+If the Power-on LED is not turning on when pressing the power button, please refer to the Troubleshooting chapter of this manual
 
-- []{#_Toc1852837891 .anchor}Front speakers
+[Front speakers]{#_Toc1852837891 .anchor}Front speakers
 
-These speakers are controlled by OL-Master and can be used to play the
-demodulated signal that is tuned. The onboard speakers can be enabled or
-disabled from OL-Master, volume control is also provided by the software
+These speakers are controlled by OL-Master and can be used to play the demodulated signal that is tuned. The onboard speakers can be enabled or disabled from OL-Master, volume control is also provided by the software
 
 ### Back panel
 
-![](./resources/images/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
+![Back panel](./resources/images/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
 
-1.  Receiving line for the transverter interface 1
+1. Receiving line for the transverter interface 1
 
-2.  Transmitting line for the transverter interface 1
+2. Transmitting line for the transverter interface 1
 
-3.  Receiving line for the transverter interface 2
+3. Receiving line for the transverter interface 2
 
-4.  Transmitting line for the transverter interface 2
+4. Transmitting line for the transverter interface 2
 
-5.  Pure signal input
+5. Pure signal input
 
-6.  Pure signal output
+6. Pure signal output
 
-7.  EXT IN (unfiltered RF input)
+7. EXT IN (unfiltered RF input)
 
-8.  10MHz input from an external oscillator (GPSDO or rubidium
-    reference)
+8. 10MHz input from an external oscillator (GPSDO or rubidium  reference)
 
-9.  10MHz output for external devices (such as transverters)
+9. 10MHz output for external devices (such as transverters)
 
 10. Open collector I/O (can be configured from OL-Master)
 
-11. Speaker connection (high power output, designed for external 8-ohm
-    speakers)
+11. Speaker connection (high power output, designed for external 8-ohm speakers)
 
 12. Internal or external speaker selector
 
@@ -172,19 +157,15 @@ disabled from OL-Master, volume control is also provided by the software
 
 18. Serial number location
 
-19. Transverter 1 interface (digital inputs and outputs to control
-    external transverters)
+19. Transverter 1 interface (digital inputs and outputs to control external transverters)
 
-20. Transverter 2 interface (digital inputs and outputs to control
-    external transverters)
+20. Transverter 2 interface (digital inputs and outputs to control external transverters)
 
 21. External accessories interface (digital inputs and outputs)
 
-22. RCA audio output (low power output, to be sent to the line-in of
-    external audio devices)
+22. RCA audio output (low power output, to be sent to the line-in of external audio devices)
 
-23. RCA audio input (low power input, to be used as transmitting audio
-    line)
+23. RCA audio input (low power input, to be used as transmitting audio line)
 
 24. Open collector PTT output
 
@@ -196,14 +177,10 @@ disabled from OL-Master, volume control is also provided by the software
 
 #### Connectors description
 
-Here is a description of the inputs and outputs of the Olliter SDR
-transceiver. Some of these connections are highly sensitive to ESD,
-overvoltage, short-circuit, overcurrent and more, please take all the
-recommended measures when connecting external devices.
+Here is a description of the inputs and outputs of the Olliter SDR transceiver. Some of these connections are highly sensitive to ESD, overvoltage, short-circuit, overcurrent and more, please take all the recommended measures when connecting external devices.
 
 > [!WARNING]
 > The warranty for your Olliter SDR device will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to improper connection of external devices.
-
 
 > [!WARNING]
 > The warranty for your Olliter SDR will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to connection of external devices that generate or absorb excessive current or voltage
@@ -242,27 +219,27 @@ Selection between 5V, 8V or none can be toggled in the Setup menu of OL-Master.
 
 Advanced features (like up/down, scan, etc.) are not available.
 
-| Pin | Transceiver (Icom Wiring)       | Icom SM-30 Dynamic Microphone |
+| Pin | Transceiver (Icom Wiring) | Icom SM-30 Dynamic Microphone |
 |-----|--------------------------------|------------------------------|
-| 1   | Microphone signal             | Balanced input +             |
-| 2   | +8V microphone power          | N.C.                         |
-| 3   | N.C.                           | N.C.                         |
-| 4   | N.C.                           | Balanced input -             |
-| 5   | PTT signal                     | PTT signal                   |
-| 6   | PTT GND                        | PTT GND                      |
-| 7   | Microphone GND                 | GND                          |
-| 8   | N.C.                           | N.C.                         |
+| 1 | Microphone signal | Balanced input + |
+| 2 | +8V microphone power | N.C. |
+| 3 | N.C. | N.C. |
+| 4 | N.C. | Balanced input - |
+| 5 | PTT signal | PTT signal |
+| 6 | PTT GND | PTT GND |
+| 7 | Microphone GND | GND |
+| 8 | N.C. | N.C. |
 
-| Pin | Transceiver (Yaesu Wiring)      | Yaesu M-70 Dynamic Microphone |
+| Pin | Transceiver (Yaesu Wiring) | Yaesu M-70 Dynamic Microphone |
 |-----|--------------------------------|------------------------------|
-| 1   | N.C.                           | N.C.                         |
-| 2   | +5V microphone power           | N.C.                         |
-| 3   | N.C.                           | N.C.                         |
-| 4   | N.C.                           | Balanced input -             |
-| 5   | PTT GND                        | PTT GND                      |
-| 6   | PTT Signal                     | PTT Signal                   |
-| 7   | Microphone GND                 | GND                          |
-| 8   | Microphone signal              | Balanced input +             |
+| 1 | N.C. | N.C. |
+| 2 | +5V microphone power | N.C. |
+| 3 | N.C. | N.C. |
+| 4 | N.C. | Balanced input - |
+| 5 | PTT GND | PTT GND |
+| 6 | PTT Signal | PTT Signal |
+| 7 | Microphone GND | GND |
+| 8 | Microphone signal | Balanced input + |
 
 *Icom and the Icom logo are registered trademarks of Icom Incorporated (Japan)*
 
@@ -307,19 +284,11 @@ receiver that is going to be used.
 
 #### 10MHz references
 
-The Olliter SDR transceiver can be connected to an external 10MHz
-reference to provide better frequency stability, this is very convenient
-when working with high-frequency devices like microwave transverters.
+The Olliter SDR transceiver can be connected to an external 10MHz reference to provide better frequency stability, this is very convenient when working with high-frequency devices like microwave transverters.
 
-The 10MHz input (labelled as GPS IN) is a 50Ω input between -15dBm and
-+5dBm. This input is protected against overvoltage but using an
-attenuator (if needed) is recommended.
+The 10MHz input (labelled as GPS IN) is a 50Ω input between -15dBm and +5dBm. This input is protected against overvoltage but using an attenuator (if needed) is recommended.
 
-The 10MHz output (labelled as OUT) provides a 3.3V CMOS output with a
-series resistance (used as short-circuit protection). This output can
-only be used as a frequency reference, and it was not designed to
-provide more than 20mA. This output comes from the internal TCXO when no
-external reference is applied.
+The 10MHz output (labelled as OUT) provides a 3.3V CMOS output with a series resistance (used as short-circuit protection). This output can only be used as a frequency reference, and it was not designed to provide more than 20mA. This output comes from the internal TCXO when no external reference is applied.
 
 #### PA Band connector
 
@@ -333,260 +302,92 @@ The voltage that is provided by this port depends on the internal "3.3 -- 5V I/O
 
 ![DB9 Standard wiring diagram](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
-| DB9 Pin | Software Output  |
+| DB9 Pin | Software Output |
 |---------|-----------------|
-| 1       | Digital out 1   |
-| 2       | Digital out 2   |
-| 3       | Digital out 3   |
-| 4       | Digital out 4   |
-| 5       | GND            |
-| 6       | Digital out 5   |
-| 7       | Digital out 6   |
-| 8       | Digital out 7   |
-| 9       | Digital out 8   |
+| 1 | Digital out 1 |
+| 2 | Digital out 2 |
+| 3 | Digital out 3 |
+| 4 | Digital out 4 |
+| 5 | GND |
+| 6 | Digital out 5 |
+| 7 | Digital out 6 |
+| 8 | Digital out 7 |
+| 9 | Digital out 8 |
 
 #### ACC Connector
 
-This connector offers some inputs to control several features of the
-SDR, such as PTT controls for RX2, RX3 and RX4, an external inhibit
-line, and two additional analog inputs that can be used to get
-information from external devices (like temperature probes or flow
-meters).
+This connector offers some inputs to control several features of the SDR, such as PTT controls for RX2, RX3 and RX4, an external inhibit line, and two additional analog inputs that can be used to get information from external devices (like temperature probes or flow meters).
 
-The voltage that can be applied to the digital input port depends on the
-internal "3.3 -- 5V I/O" jumper. In any case, it should never exceed the
-configured voltage.
+The voltage that can be applied to the digital input port depends on the internal "3.3 -- 5V I/O" jumper. In any case, it should never exceed the configured voltage.
 
-| State       | 3.3V I/O Range | 5V I/O Range  |
+| State | 3.3V I/O Range | 5V I/O Range |
 |------------|---------------|--------------|
-| Low state  | 0V to 0.8V    | 0V to 1.5V   |
-| High state | 2V to 3.3V    | 3.5V to 5V   |
+| Low state | 0V to 0.8V | 0V to 1.5V |
+| High state | 2V to 3.3V | 3.5V to 5V |
 
-The voltage range for both ADC0 and ADC1 is 0V to 3.3V. Excessive
-voltage can cause severe damage to the ADC circuitry.
+The voltage range for both ADC0 and ADC1 is 0V to 3.3V. Excessive voltage can cause severe damage to the ADC circuitry.
 
-Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9
-have an internal 4.7KΩ pull-down resistor.
+Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9 have an internal 4.7KΩ pull-down resistor.
 
 ![DB15 standard pinout](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
-| DB9 Pin | Software Output           |
+| DB9 Pin | Software Output |
 |---------|---------------------------|
-| 1       | GND                        |
-| 2       | N.C.                       |
-| 3       | ADC in 1                   |
-| 4       | ADC in 0                   |
-| 5       | GND                        |
-| 6       | PTT RX2 (active LOW)       |
-| 7       | PTT RX4 (active HIGH)      |
-| 8       | PTT RX3 (active LOW)       |
-| 9       | Ext Inhibit (active HIGH)  |
-
+| 1 | GND |
+| 2 | N.C. |
+| 3 | ADC in 1 |
+| 4 | ADC in 0 |
+| 5 | GND |
+| 6 | PTT RX2 (active LOW) |
+| 7 | PTT RX4 (active HIGH) |
+| 8 | PTT RX3 (active LOW) |
+| 9 | Ext Inhibit (active HIGH) |
 
 #### OC connector
 
-This connector offers 8 open-collector outputs that can be used to drive
-external accessories like power amplifiers or antenna relays.
+This connector offers 8 open-collector outputs that can be used to drive external accessories like power amplifiers or antenna relays.
 
-The maximum V~CE~ that can be used at the open-collector outputs is 48V
-DC.
+The maximum V~CE~ that can be used at the open-collector outputs is 48V DC.
 
-The 13.8V DC lines are derived from the main power supply and are
-protected by a 250mA resettable fuse.
+The 13.8V DC lines are derived from the main power supply and are protected by a 250mA resettable fuse.
 
 ![DB15 standard pinout diagram](./resources/images/media/image11.png)
 
-| DB15 Pin | Software Output          |
+| DB15 Pin | Software Output |
 |----------|--------------------------|
-| 1        | GND                      |
-| 2        | OUT 2                    |
-| 3        | OUT 4                    |
-| 4        | OUT 6                    |
-| 5        | OUT 8                    |
-| 6        | GND                      |
-| 7        | GND                      |
-| 8        | 13.8V                    |
-| 9        | OUT 1                    |
-| 10       | OUT 3                    |
-| 11       | OUT 5                    |
-| 12       | OUT 7                    |
-| 13       | Open-collector common    |
-| 14       | GND                      |
-| 15       | 13.8V                    |
-
+| 1 | GND |
+| 2 | OUT 2 |
+| 3 | OUT 4 |
+| 4 | OUT 6 |
+| 5 | OUT 8 |
+| 6 | GND |
+| 7 | GND |
+| 8 | 13.8V |
+| 9 | OUT 1 |
+| 10 | OUT 3 |
+| 11 | OUT 5 |
+| 12 | OUT 7 |
+| 13 | Open-collector common |
+| 14 | GND |
+| 15 | 13.8V |
 
 External relay connection example:
 
-![](./resources/images/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
+![External relay wiring example](./resources/images/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
 
 #### Power connector
 
-Please refer to the Connecting the power supply chapter for further
-information
+Please refer to the Connecting the power supply chapter for further information
 
 #### Antenna connectors
 
-These four BNC connectors are used by the transceiver to receive and
-transmit. Different bands can receive or transmit on different antennas,
-mapping between bands, mode and antenna can be done in the Setup menu of
-OL-Master.
+These four BNC connectors are used by the transceiver to receive and transmit. Different bands can receive or transmit on different antennas, mapping between bands, mode and antenna can be done in the Setup menu of OL-Master.
 
 Please refer to the Connecting the antenna for further information
 
 ## System requirements
 
-An SDR transceiver requires a control device to work, the hardware of
-the transceiver is used to convert analog RF signals to an IQ stream
-that is sent to a software installed on the control device, where it is
-processed to extract an audio signal. When transmitting, the process is
-reversed. The hardware and software need to work together to receive and
-transmit signals using the SDR transceiver.
-
-Some I/O are available on-board to interface with external accessories
-like microphones, headphones and Morse key or paddle.
-
-A simplified schematic representation of the SDR device is shown below.
-
-![Schematic representation of the SDR functions](./resources/images/c208c3c638ae2571c37c170f0810465abafe36ee.png)
-
-### Software requirements
-
-As any SDR device, one of the main components is the PC that is used to
-control the device, the same PC is also used to decode and process the
-raw digital stream of data to usable audio stream. This decode process
-requires some minimum software and hardware requirements that should be
-met.
-
-#### Operating system requirements
-
-The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported, if the host machine is capable enough.
-
-Compatibility with Microsoft Windows 8.1 or previous versions of Microsoft Windows cannot be ensured due to lack of support for the latest .NET modules which was used to develop the application.
-
-#### .NET 8
-
-The operating system should be updated to the latest version and the .NET8 must be installed on the machine (latest update of the .NET8 can be downloaded from the Microsoft).
-
-Depending on the system configuration, both the .NET8 SDK and .NET8 Runtime might be needed.
-
-- .NET8 Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/runtime-desktop-8.0.13-windows-x64-installer>
-- .NET8 SDK Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer>
-
-#### Microsoft Visual C++ Redistributable
-
-Some components of the software were written using highly optimized C++ code, this requires the latest version of the Microsoft Visual C++ Redistributable package to be installed and updated. The latest version of this package can be downloaded from the following URL:
-
-- VC Redist: <https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
-.
-
-As per the moment this manual was written, the latest available version
-is 14.40.33810.0.
-
-### Hardware requirements
-
-Recommended hardware setup is an 7^th^ generation Intel Core i5 or later, with at least 16GB of RAM and 1GB of available storage space (disk usage may vary depending on additional features like recordings, cluster, EIBI and more).
-
-Ethernet interface at 1Gbps on the control PC is mandatory if using more than one receiver window. Ethernet interface at 1Gbps is mandatory to configure the IP address of the device if connected directly to the control PC.
-
-### Network requirements
-
-An ethernet interface capable of 1Gbps **is mandatory** for the transceiver to communicate with the control device (PC), a properly configured ethernet switch with interfaces at 1Gbps is suggested to be used in between the SDR and the PC.
-
-Please note, the transceiver **does not support negotiating any speed lower than 1Gbps** with the control device or the switch/router that is plugged into.
-
-An ethernet cable CAT5 or superior is highly recommended to interface the SDR to the switch/router and the PC.
-
-To ensure best performances, use high quality switch or router and cables, make sure the whole network from the SDR to the master PC is capable of continuously communicate at 1Gbps.
-
-An internet connection is not required if not using external services (like clusters or EIBI).
-
-A network connection diagram is available at the [Sample Ethernet connection](#Sample Ethernet connection) chapter.
-
-## Installing OL-Master
-
-After buying an Olliter SDR, you should receive the setup file for
-OL-Master, this is the main application that controls the SDR and must
-be installed on the PC.
-
-![Olliter setup file](./resources/images/15a34c54f5fdc8760e8ca4c1e772a68a2118758a.png)
-
-Double click the executable to start the installer, administrative
-privileges are mandatory to install the software. Follow the on-screen
-instructions to proceed with the installation.
-
-![Setup step 1](./resources/images/2c2db219748179cb712d2579dcff50c848ac0230.png)
-
-![Setup step 2](./resources/images/5f228f61610cbb24ebdc9df574ec8a5385319e14.png)
-
-![Setup step 3](./resources/images/d9fd212c0273127827a90e0fd34e3259949a8e96.png)
-
-![Setup step 4](./resources/images/85191356186f190b5d11ff91f44fb13f69b8b502.png)
-
-Setup is now completed, before starting the software, please read carefully the next chapter.
-
-### Configuring the firewall
-
-Network communication to the device is performed using UDP protocol, a
-security system exception must be created for the software to work
-reliably.
-
-Open the Windows firewall settings.
-
-![Immagine che contiene testo, schermata, software, Software
-multimediale Descrizione generata
-automaticamente](./resources/images/media/image22.png)
-
-Select "Inbound connection rules" on the left menu.
-
-![](./resources/images/media/image23.png)
-
-Click on "New rule" on the right menu.
-
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image24.png)
-
-Select \"Program" and click "next".
-
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image25.png)
-
-Click on "Browse" and navigate to "C:\\Program
-Files\\Olliter\\Ol-master.exe"
-
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image26.png)
-![Immagine che contiene testo, schermata, software, Software
-multimediale Descrizione generata
-automaticamente](./resources/images/media/image27.png)
-
-Click on "Next"
-
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image28.png)
-
-Select "Allow connections" and click "Next".
-
-![Immagine che contiene testo, elettronica, schermata, software
-Descrizione generata
-automaticamente](./resources/images/media/image29.png)
-
-Now select the kind of network that you are using, by default it should
-be "Private", if you are using a different kind of network, please
-select the option that best fits your configuration.
-
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image30.png)
-
-Insert any name you like and then click on "Complete".
-
-![Immagine che contiene testo, schermata, software, schermo Descrizione
-generata
-automaticamente](./resources/images/media/image31.png)
+A detailed description of the hardware and software requirements needed to run the OL-Master software can be found in the [OL-Master](../OL-Master/README.md) manual.
 
 ## Wiring the transceiver
 
@@ -594,621 +395,182 @@ automaticamente](./resources/images/media/image31.png)
 > Electrostatic Discharge (ESD) can cause severe damage to electrical circuits, potentially leading to costly repairs or replacements. Always take measures to protect your equipment. These safety measures include but are not limited to:
 >
 > - Proper grounding: make sure all equipment and workstations are properly grounded
-> - Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity  
+> - Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity 
 > - Handle components with care: touch components only by their edges or the grounding case avoiding touching pins and circuitry
 
-Connecting the transceiver is simple but a couple of considerations and
-safety measures are needed, please read carefully the wiring
-instructions to prevent damages to the Olliter SDR.
+Connecting the transceiver is simple but a couple of considerations and safety measures are needed, please read carefully the wiring instructions to prevent damages to the Olliter SDR.
 
 ### Connecting of the PureSignal cable
 
-To achieve optimal transmission quality and reduce the spurious
-emissions, the Pure Signal technology is supported by the Olliter SDR
-transceiver.
+To achieve optimal transmission quality and reduce the spurious emissions, the Pure Signal technology is supported by the Olliter SDR transceiver.
 
 ![Pure Signal-2](./resources/images/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
 
-Pure Signal is the name given to the theory and implementation of the 
-clean transmission logic developed by the OpenHPSDR team and implemented
-in both the Olliter SDR software and transceiver. The algorithm behind
-the Pure Signal technology is quite simple, when both the drive applied
-to the Digital-to-analogue converter (DAC) and the output as measured at
-the antenna are known it is possible to modify the drive so that the
-output is as clean as possible.
+Pure Signal is the name given to the theory and implementation of the clean transmission logic developed by the OpenHPSDR team and implemented in both the Olliter SDR software and transceiver. The algorithm behind the Pure Signal technology is quite simple, when both the drive applied to the Digital-to-analogue converter (DAC) and the output as measured at the antenna are known it is possible to modify the drive so that the output is as clean as possible.
 
-The Pure Signal technology is enabled by connecting the PS IN with the
-PS OUT using the provided SMA to SMA coaxial cable.
+The Pure Signal technology is enabled by connecting the PS IN with the PS OUT using the provided SMA to SMA coaxial cable.
 
 ![Pure signal connectors on the back of the transceiver](./resources/images/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
 
 ### Connecting the power supply
 
-The Olliter SDR was designed to operate from a stable and constant power
-supply which is capable of continuously delivering 13.8V at 5A for the
-20W model.
+The Olliter SDR was designed to operate from a stable and constant power supply which is capable of continuously delivering 13.8V at 5A for the 20W model.
 
-An integrated protection circuit is added to the transceiver which can
-help in protecting the radio from excessive voltage fluctuations by
-cutting the power line and turning off the device.
+An integrated protection circuit is added to the transceiver which can help in protecting the radio from excessive voltage fluctuations by cutting the power line and turning off the device.
 
-> [!WARNING]The integrated protection circuit should not be considered a
-> surge, lightning or electrostatic protection, it was designed to
-> protect the circuitry from excessive or low voltages which may
-> negatively impact the transceiver performances.
+> [!WARNING]
+> The integrated protection circuit should not be considered a surge, lightning or electrostatic protection, it was designed to protect the circuitry from excessive or low voltages which may negatively impact the transceiver performances.
 
-Connect the power supply to the Olliter SDR by using high-quality
-Anderson PowerPole® connectors. Wire size should be chosen according to
-the length of the connection, here are our suggestions:
+Connect the power supply to the Olliter SDR by using high-quality Anderson PowerPole® connectors. Wire size should be chosen according to the length of the connection, here are our suggestions:
 
-- Wires shorter than 2 meters (6.5ft) long will require 2mm^2^ (AWG14) wires
+* Wires shorter than 2 meters (6.5ft) long will require 2mm<sup>2</sup> (AWG14) wires
 
-- Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm^2^ wires
+* Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm<sup>2</sup> wires
 
-- Wires longer than 4 meters (13ft) are not recommended as they may
-    pick up excessive noise from the surrounding environment or cause
-    excessive voltage fluctuations
+* Wires longer than 4 meters (13ft) are not recommended as they may pick up excessive noise from the surrounding environment or cause excessive voltage fluctuations
 
 ![DC plug on the back of the transceiver](./resources/images/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
 
-Make sure to connect all the needed wires before turning on the power
-supply.
+Make sure to connect all the needed wires before turning on the power supply.
 
-If the transceiver does not show the red (standby) light after applying
-power, please refer to the Troubleshooting chapter.
+If the transceiver does not show the red (standby) light after applying power, please refer to the Troubleshooting chapter.
 
 ### Connecting the antenna
 
-Up to 4 antennas can be connected to the Olliter SDR, these can be
-configured in software to allow receiving and transmitting on different
-bands with different antennas.
+Up to 4 antennas can be connected to the Olliter SDR, these can be configured in software to allow receiving and transmitting on different bands with different antennas.
 
-To begin, connect an antenna using a male BNC connector to the ANT1
-socket.
+To begin, connect an antenna using a male BNC connector to the ANT1 socket.
 
-![](./resources/images/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
+![Antenna 1 connection](./resources/images/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
 
 ### Connecting the ethernet cable
 
-To interface the transceiver with the local network, please refer to the
-Connection of the SDR to the PC chapter of this manual.
+To interface the transceiver with the local network, please refer to the Connection of the SDR to the PC chapter of this manual.
 
 ### Connecting the microphone
 
-Each device comes with a dedicated microphone wiring which should be
-selected when ordering the transceiver, use the front 8-pin socket to
-connect the microphone.
-
+Each device comes with a dedicated microphone wiring which should be selected when ordering the transceiver, use the front 8-pin socket to connect the microphone.
 
 ## Connection of the SDR to the PC
 
-Connection of the transceiver to the PC is performed using an
-Ethernet/IP protocol, make sure to use high quality network equipment
-and cables to achieve best results.
+Connection of the transceiver to the PC is performed using an Ethernet/IP protocol, make sure to use high quality network equipment and cables to achieve best results.
 
 ### Default Olliter SDR IP address
 
-The transceiver comes with a preconfigured IP address set to
-192.168.1.111, if this address is valid on your local network (meaning
-your local network has an address family like 192.168.1.X and the subnet
-mask is 255.255.255.0), you can just plug the device to the local
-network and skip the IP address setup guide.
+The transceiver comes with a preconfigured IP address set to 192.168.1.111, if this address is valid on your local network (meaning your local network has an address family like 192.168.1.X and the subnet mask is 255.255.255.0), you can just plug the device to the local etwork and skip the IP address setup guide.
 
-  
-> [!WARNING]Before applying any voltage to the SDR, connect the device to
-  your home switch/router using a high-quality CAT5 (or superior)
-  ethernet cable
-  
+> [!WARNING]
+> Before applying any voltage to the SDR, connect the device to your home switch/router using a high-quality CAT5 (or superior) ethernet cable
 
-  
-
-  
-> [!WARNING]The transceiver can only communicate at 1Gbps, if the
-  switch/router or the master PC does not support such speed, the
-  connection may be unavailable or unstable
-  
-
-  
+> [!WARNING]
+> The transceiver can only communicate at 1Gbps, if the switch/router or the master PC does not support such speed, the connection may be unavailable or unstable 
 
 ### Sample Ethernet connection
 
-The following schematic illustrates the recommended connection of the
-SDR device to the PC.
+The following schematic illustrates the recommended connection of the SDR device to the PC.
 
-> ![Immagine che contiene testo, computer, elettronica, Schermo del
-> computer Descrizione generata
-> automaticamente](./resources/images/a42f45266f8b697997a33d50c3cad1939f357c95.png){width="5.357465004374453in"
-> height="2.8049146981627295in"}
+> ![Ethernet connection](./resources/images/a42f45266f8b697997a33d50c3cad1939f357c95.png)
 
 ### Changing the Olliter SDR IP address
 
-Management of the IP address is performed using OL-Master, if the
-default IP address (192.168.1.111) is not valid or available on your
-local network, follow this procedure to change it to a valid one.
+Management of the IP address is performed using OL-Master, if the default IP address (192.168.1.111) is not valid or available on your local network, follow this procedure to change it to a valid one.
 
 #### Connect the device to the PC
 
-Using a straight CAT5 Ethernet cable, connect the Olliter SDR to the PC
-(make sure the PC has an Ethernet interface that supports 1Gbps
-communication)
+Using a straight CAT5 Ethernet cable, connect the Olliter SDR to the PC (make sure the PC has an Ethernet interface that supports 1Gbps communication)
 
-![Immagine che contiene elettronica, testo, computer, Schermo del
-computer Descrizione generata
-automaticamente](./resources/images/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png)
+![Ethernet connection](./resources/images/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png)
 
 #### Manually set the IP address of the PC
 
 On the Windows PC, open Control Panel and select "Network and internet".
 
-![Pannello di
-controllo](./resources/images/media/image34.png)
+![Control panel](./resources/images/media/image34.png)
+
 Select "Network and sharing"
 
-![Rete e
-Internet](./resources/images/media/image35.png)
+![Network and internet](./resources/images/media/image35.png)
+
 Click on "Change adapter settings" on the left side.
 
-![Centro connessioni di rete e
-condivisione](./resources/images/media/image36.png)
-Right click the Ethernet interface that was used to connect the SDR
-device and open the Properties menu.
+![Networks and sharing](./resources/images/media/image36.png)
 
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image37.png)
-Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then
-click on "Properties".
+Right click the Ethernet interface that was used to connect the SDR device and open the Properties menu.
 
-![Immagine che contiene testo, elettronica, schermata, software
-Descrizione generata
-automaticamente](./resources/images/media/image38.png)
-Click on the radio button to enable "Use the following IP address" and
-then input 192.168.1.10 as IP address and 255.255.255.0 as subnet mask.
-Leave default gateway and the DNS empty.
+![TCP/IP V4 settigns](./resources/images/media/image37.png)
 
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image39.png)
+Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then click on "Properties".
+
+![Manual IP settings](./resources/images/media/image38.png)
+
+Click on the radio button to enable "Use the following IP address" and then input 192.168.1.10 as IP address and 255.255.255.0 as subnet mask. Leave default gateway and the DNS empty.
+
+![Confirm settings](./resources/images/media/image39.png)
+
 Click "Ok" on all dialogs to save the settings and execute OL-Master
 
 #### Setting the device address using OL-Master
 
-Once the device is plugged, and the Ethernet interface is configured,
-turn on the transceiver and wait a couple of seconds for the device to
-initialize.
+Once the device is plugged, and the Ethernet interface is configured, turn on the transceiver and wait a couple of seconds for the device to initialize.
 
-After executing the software, an error message will appear, informing
-the user that the connection to the device is not available, click OK to
-proceed.
+After executing the software, an error message will appear, informing the user that the connection to the device is not available, click OK to proceed.
 
-If the dialog does not appear, it means that OL-Master was able to
-discover the device on the local network using UDP broadcast, this does
-not impact the procedure.
+If the dialog does not appear, it means that OL-Master was able to discover the device on the local network using UDP broadcast, this does not impact the procedure.
 
-![Immagine che contiene testo, schermata, schermo, Carattere Descrizione
-generata
-automaticamente](./resources/images/media/image40.png)
-Once the software has started, click on the "FW Maintenance" menu on the
-top bar.
+![FW Maintenance menu](./resources/images/media/image40.png)
 
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image41.png)
-A dialog will appear listing the devices that were discovered on the
-local network, the Olliter SDR should show up, select it from the list.
+Once the software has started, click on the "FW Maintenance" menu on the top bar.
 
-![Firmware & IP
-Address](./resources/images/media/image42.png)
-In the central part of the dialog, type in the new IP address to be used
-by the device, the IP address must be valid on your local network and
-must not be used by any other device.
+![FW Maintenance window](./resources/images/media/image41.png)
 
-After inserting the IP address, click on Change IP to persist the
-settings to the device, the SDR should now reboot.
+A dialog will appear listing the devices that were discovered on the local network, the Olliter SDR should show up, select it from the list.
 
-![Firmware & IP
-Address](./resources/images/media/image43.png)
+![Firmware & IP Address](./resources/images/media/image42.png)
+
+In the central part of the dialog, type in the new IP address to be used by the device, the IP address must be valid on your local network and must not be used by any other device.
+
+After inserting the IP address, click on Change IP to persist the settings to the device, the SDR should now reboot.
+
+![Firmware & IP Address](./resources/images/media/image43.png)
 
 #### Restore the default IP settings of the PC
 
-Once the IP address of the transceiver is properly configured to a valid
-address, the master PC can be reconfigured to DHCP mode or the original
-IP address that was previously configured.
+Once the IP address of the transceiver is properly configured to a valid address, the master PC can be reconfigured to DHCP mode or the original IP address that was previously configured.
 
 On the Windows PC, open Control Panel and select "Network and internet".
 
-![Pannello di
-controllo](./resources/images/media/image34.png)
+![Pannello di controllo](./resources/images/media/image34.png)
 Select "Network and sharing"
 
-![Rete e
-Internet](./resources/images/media/image35.png)
+![Rete e Internet](./resources/images/media/image35.png)
 Click on "Change adapter settings" on the left side.
 
-![Centro connessioni di rete e
-condivisione](./resources/images/media/image36.png)
+![Centro connessioni di rete e condivisione](./resources/images/media/image36.png)
 
 Right click the Ethernet interface that was used to connect the SDR
 device and open the Properties menu.
 
-![Immagine che contiene testo, schermata, software, Icona del computer
-Descrizione generata
-automaticamente](./resources/images/media/image37.png)
+![Interface settings](./resources/images/media/image37.png)
 
 Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then
 click on "Properties".
 
-![Immagine che contiene testo, elettronica, schermata, software
-Descrizione generata
-automaticamente](./resources/images/media/image38.png)
+![IP Address settings](./resources/images/media/image38.png)
 
 Restore the previous IP address settings as needed.
 
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image44.png)
+![Reset IP settings](./resources/images/media/image44.png)
 
-Now, please connect the Olliter SDR as shown in the Sample Ethernet
-connection. chapter.
+Now, please connect the Olliter SDR as shown in the Sample Ethernet connection. chapter.
 
 ## Usage of OL-Master
 
-### Configuring OL-Master
-
-All the following settings are accessed using the Setup menu of the
-OL-Master application, in OL-Master, click the Setup menu, then follow
-the subsequent instructions.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image45.png)
-Settings are persisted using the *Save* or the *Save and Close* buttons.
-
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image46.png)
-
-#### Configuring the Olliter SDR address
-
-In *General* \> *HW Config* make sure the "*Use static IP Address*"
-option is enabled, then insert the IP address of the Olliter SDR that
-was configured.
-
-This address is 192.168.1.111 by default, if it was manually changed
-following the above procedure, please input the new IP address that was
-configured.
-
-Once the IP address has been configured and selected (using the radio
-button on the right), click Save and close the dialog box.
-
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image47.png)
-
-#### Configuring the operator settings
-
-In *General* \> *Options*, set the callsign and grid locator of the
-station.
-
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image48.png)
-
-#### Configuring the audio interface
-
-If the user wants to enable the audio to be routed to the master PC, the
-following procedure is needed.
-
-In *Audio* \> *Audio & Common VAC* configure the *Driver* to MME, select
-the desired *Input* and *Output* devices, then select "*Enable PC
-Speaker via common VAC*".
-
-The onboard speakers can be deactivated using the "*Local speaker
-disable*" option.
-
-![Immagine che contiene testo, schermata, schermo, software Descrizione
-generata
-automaticamente](./resources/images/media/image49.png)
-If a microphone is connected to the radio, the RX Only option can be
-checked to exclude audio transmission from the PC
-
-![](./resources/images/da0f40fd02c37219095ae9af50a9567f14234e42.png)
-
-#### Configuring the receiver bandwidth
-
-The SDR is capable of receiving and displaying a wide area of the RF
-spectrum, the receiver span can be configured in *General* \> *HW
-Config* \> *Sample Rate*.
-
-The spectrum span that is rendered is roughly the 80% of the sample rate
-set in the settings menu, for example if 192000 samples per second are
-selected, the displayed spectrum will be roughly 180KHz.
-
-The recommended sample rate is 192000 samples per second.
-
-  
-> [!WARNING]As the sample rate is increased, more system and network
-  resources will be required by the software, please adjust the
-  settings accordingly
-  
-
-  
-
-![Immagine che contiene testo, elettronica, schermata, schermo
-Descrizione generata
-automaticamente](./resources/images/media/image52.png)
-
-#### Configuring the refresh rate
-
-The refresh rate of the receivers windows can be adjusted in *Display*
-\> *General*. The suggested value is between 10 and 20 frames per
-second.
-
-  
-> [!WARNING]Increasing the refresh rate can significantly impact the system
-  load, if the system starts lagging or the UI starts behaving,
-  reduce the "Main Display FPS" value
-  
-
-  
-
-![Immagine che contiene testo, elettronica, schermo, schermata
-Descrizione generata
-automaticamente](./resources/images/media/image53.png)
-
-### Starting the device
-
-Once the device settings were configured by the user, the device can now
-be started using the PWR button, the spectrum should animate, and audio
-will start.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image54.png)
-[\]{.underline}
-
-### Controlling the transceiver
-
-This chapter will cover the main settings of the OL-Master software,
-such as changing band, changing mode or interacting with the spectrum.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/4ea9dd2ed4ac68c4fed3fe430336de573f890ea6.png)
-
-#### Selecting a different band
-
-The transceiver can operate on all amateur bands of HF plus the 50MHz
-(6mt) band. The received band can be selected using the dedicated
-buttons.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image56.png)
-
-#### Tuning a frequency
-
-There are multiple ways to tune the received frequency, the main ones
-are by panning the receiver spectrum or by selecting the frequency using
-the dedicated numeric input.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image57.png){width="5.559701443569554in"
-height="3.8447200349956256in"}![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image57.png)
-
-#### Setting the visualization mode
-
-Different viewing modes can be selected for the receivers, each band
-will save the view setting that is restored every time the band is
-recalled.
-
-![](./resources/images/media/image58.png)
-
-#### Interacting with the spectrum
-
-The receiver spectrum can be interacted using the spectrum controls,
-these allows zooming, panning and setting the tune step.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image59.png)
-The spectrum can be rendered to display the average or the peak
-mode[.]{.underline}
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image59.png)
-
-#### Setting the receiver mode
-
-All main operative modes are supported by the transceiver, this can be
-selected using the dedicated buttons.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image60.png)
-Then, for each operating mode, the bandwidth can be adjusted as needed.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image61.png)
-
-#### Adding additional receivers
-
-RX1 is located in the main window of the software, additional receivers
-can be enabled using the RX2, RX3 and RX4 buttons in the main window.
-
-> [!WARNING]Using additional receivers may significantly impact the system
-> load, if the system starts to lag, reduce the number of
-> receivers, or reduce the sample rate.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image62.png)
-![Immagine che contiene schermata, testo, Software multimediale,
-software Descrizione generata
-automaticamente](./resources/images/a49589dfb85f23b5e752a1e7b76355ed175bc99b.png)
-
-#### Adjusting the receivers volume
-
-The main and sub volumes, per each receiver can be configured using the
-*Volume* controls group.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image64.png)
-
-#### DSP options
-
-Multiple software-based filters can be added to any receiver mode, these
-can significantly improve the reception of a given signal. Some filters
-are tuned to improve the voice quality, others to remove clicking,
-background noise or unwanted whistles. Filters can be enabled using the
-dedicated buttons.
-
-![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image65.png)
-
-### Firmware upgrade
-
-Upgrade of the firmware is performed using the OL-Master application
-with a dedicated menu.
-
-> [!WARNING]Although the Olliter SDR has a recovery mode that can be enabled
-> in case of major firmware failures, the firmware upgrade is a
-> delicate process that requires some attention. Please read this
-> chapter carefully before starting the procedure.
-
-> [!WARNING]Make sure to close all background apps and to have a reliable
-> power source for both the PC and the transceiver before
-> attempting a firmware upgrade.
-
-Extract the ZIP file containing the firmware anywhere on the local PC to
-get the *.hex* file which contains the new firmware.
-
-> [!WARNING]Extract the file on the local hard drive, do not use USB sticks,
-> network drive or other unreliable locations that may create
-> latency or issues.
-
-Once the file is extracted you should see something like this:
-
-![](./resources/images/2deb3313b882db5c6cb6f0fdd90a51e9d879e76f.png)
-
-Make sure the transceiver is ON and reachable on the local network, then
-open OL-Master and select the *FW Maintenance* menu. The SDR should be
-detected automatically by the software.
-
-![](./resources/images/1ee15ab771b6ea80b7b1ae20172ddb0194170c44.png)
-
-Using the Select button, navigate to the .hex file that was just
-extracted and select it.
-
-![](./resources/images/659766a21245bc4e387668b3b92ac18462d10dc8.png)
-
-Once the file is selected, click the Program button to start the upgrade
-procedure.
-
-> [!WARNING]The upgrade procedure will take about a minute, please be
-> patient.
-
-![](./resources/images/42461e5c391b24857e1eba8fd208316b921cd597.png)
-
-At first, the software will erase the content of the FPGA, this is a
-monolithic task, so the software may look like it's frozen, please be
-patient and just wait for the process to complete. Once the erase task
-is completed, you should see the progress bar moving, and when it
-reaches 100%, the transceiver should be restarted automatically.
-  
-> [!WARNING]If the process hangs after some minutes, or if any error occurs,
-> please contact our customer assistance to get further
-> assistance.
-
-Wait for the upgrade window to close automatically after a couple of
-seconds, then the process is complete, and the transceiver can be used
-as normal.
+Please refer to the [OL-Master](../OL-Master/README.md) manual for detailed instructions on how to use the software.
 
 ## General recommendations
 
-### Digital modes (FT8)
-
-The following steps outline the proper configuration of the Olliter SDR
-for operating in FT8 mode. Ensure that the settings are applied
-carefully to avoid issues with audio processing and transmission.
-
-#### Using Virtual Audio Cable (VAC)
-
-- VAC RX1: Set the software to use VAC RX1 (or RX2, RX3, or RX4) for
-    audio input, but do not use the \"Common VAC\" setting. This
-    configuration ensures that the audio is correctly routed through the
-    system without interference from other processes.
-
-- VAC Type: Use monodirectional VAC for both input and output. You may
-    need to configure separate VACs for input and output if your version
-    supports bidirectional audio (such as Muzychenko\'s VAC). If your
-    system uses bidirectional VAC, it is possible to use a single VAC
-    for both input and output.
-
-#### Audio Levels and Filters
-
-- Compressor and Leveler: In FT8 mode, disable both the Compressor and
-    Leveler. These audio processors are not required in FT8 and may
-    cause distortion or improper modulation of the digital signal.
-
-- VAC RX Level: Set the VAC RX level to approximately -27 dB. This
-    ensures that the audio level is appropriate for digital signal
-    processing, avoiding overload.
-
-- VAC TX Level: Set the VAC TX level to 0 dB. This level ensures that
-    the transmitted signal is clear and within the normal operational
-    range for FT8 transmissions.
-
-#### Transmit and Receive Filters
-
-- TX Audio Filter: When WSJT-X is set to Radio -\> Split: NONE, the TX
-    audio filter of the Olliter SDR must be adjusted to match the RX
-    filter and the bandwidth used by FT8. For example, if you are using
-    FT8 between 200 Hz and 3500 Hz, the TX audio filter should also be
-    set between 200 Hz and 3500 Hz. Additionally, the RF filter should
-    be aligned to this range.
-
-- Split Mode (RIG or FAKE): If using WSJT-X with the \"Split\" mode
-    set to either RIG or FAKE, there is no need to modify the TX audio
-    filter beyond its normal range. In this case, set the TX filter to
-    300 Hz to 2700 Hz, and FT8 will adjust the RF frequency to keep the
-    audio signal centered within the bandwidth. The RF filter can be set
-    freely, but note that it will limit the FT8 band visible on WSJT-X
-    or similar software.
-
-### SSB mode
-
-When switching from FT8 or other digital modes to SSB, several
-adjustments need to be made to ensure optimal audio performance. Follow
-these instructions for setting up the Olliter SDR for SSB operations.
-
-#### Microphone Voltage Considerations
-
-- Yaesu Microphones: Typically require 5V for proper operation.
-
-- ICOM Microphones: Typically require 8V. Verify the correct voltage
-    before connecting the microphone to prevent damage or malfunction.
-
-Please refer to the Microphone input chapter to see how to change the
-microphone voltage.
-
-#### Switching from FT8 to SSB
-
-- Deactivate VAC: After using FT8 or other digital modes, ensure that
-    VAC RX1 (or RX2, RX3, RX4) is deactivated before switching to SSB.
-    Failure to do so may prevent audio from being transmitted properly.
-
-#### Audio Processing Settings for SSB
-
-- Leveler: Reactivate the Leveler when operating in SSB mode. The
-    recommended setting is 7 dB, which helps maintain consistent output
-    levels. After adjusting, verify that the Automatic Level Control
-    (ALC) is set to approximately 3 dB.
-
-- Compressor: For SSB, it is recommended to enable the Compressor at 8
-    dB, or even 10 dB, especially when using the PureSignal feature.
-    This improves the overall signal clarity and transmission quality.
-
-#### Transmitting Filter Settings
-
-- TX Audio Filter: In the Setup -\> Transmitting menu, adjust the TX
-    audio filter according to your preferences. The default range for
-    voice transmission is 300 Hz to 2700 Hz; this range provides a
-    balance between intelligibility and bandwidth usage.
+Please refer to the [OL-Master](../OL-Master/GeneralRecommendations.md) manual for general recommendations on how to use the software.
 
 ## Troubleshooting
 
-Please see: [Troubleshooting](../OL-Master/Troubleshooting.md)
+Please refer to the [OL-Master](../OL-Master/Troubleshooting.md) manual for troubleshooting instructions.
