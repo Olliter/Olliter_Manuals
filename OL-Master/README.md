@@ -357,6 +357,372 @@ At first, the software will erase the content of the FPGA, this is a monolithic 
 
 Wait for the upgrade window to close automatically after a couple of seconds, then the process is complete, and the transceiver can be used as normal.
 
+## External services
+
+The OL-Master software can be configured to use external services like clusters or EIBI, these services require an internet connection to work.
+
+## EIBI
+
+The EIBI service is a database of shortwave broadcast stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
+
+> [!NOTE]
+> This chapter is a work in progress
+
+## Clusters
+
+The cluster service is a database of amateur radio stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
+
+> [!NOTE]
+> This chapter is a work in progress
+
+## MQTT
+
+The OL-Master software can be configured to send telemetry data to an MQTT broker, this data can be used to monitor the transceiver remotely, or to integrate the transceiver with other software.
+
+> [!NOTE]
+> This chapter is a work in progress
+
+MQTT settings are available in the `Setup > COM > MQTT` menu of the OL-Master software.
+
+### Telemetry data
+
+The telemetry data that is sent to the MQTT broker is a JSON object that contains the following fields:
+
+The telemetry data is sent to the MQTT broker at each interval as configured in the Setup menu of the OL-Master software.
+
+The telemetry topic is `receivers/get/[x]` where `[x]` is the receiver number, starting from 1.
+
+The telemetry data is read-only and cannot be used to control the transceiver.
+
+```json
+{
+  "software_id": "SomeRandomSoftwareId",
+  "txpower": "0",
+  "monitor_vol": "0",
+  "band": "B10M",
+  "swr": "1",
+  "master_vol": "0.5",
+  "temperature": "29.4",
+  "current": "0.0",
+  "receiver_a": {
+    "active": "False",
+    "frequency": "28.500000",
+    "mode": "USB",
+    "filterlow": "300",
+    "filterhigh": "2700",
+    "volume": "0",
+    "squelch": "0",
+    "mox": "False",
+    "txvfo": "False",
+    "signal": "-109.2"
+  },
+  "receiver_b": {
+    "active": "False",
+    "frequency": "28.550000",
+    "mode": "USB",
+    "filterlow": "300",
+    "filterhigh": "2700",
+    "volume": "0",
+    "squelch": "0",
+    "mox": "False",
+    "txvfo": "False",
+    "signal": "-109.2"
+  }
+}
+```
+
+### Receiver control
+
+The receiver commands are sent to the MQTT broker using the `receivers/set/[x]` topic, where `[x]` is the receiver number, starting from 1.
+
+The JSON payload follows the same structure as the telemetry data, but some the fields are read-write and can be used to control the transceiver.
+
+#### Controls examples
+
+##### Changing the band on the first receiver
+
+Topic: `receivers/set/1`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "txpower": null,
+  "monitor_vol": null,
+  "band": "B30M",
+  "swr": null,
+  "master_vol": null,
+  "receiver_a": null,
+  "receiver_b": null
+}
+```
+
+##### Setting the frequency of the first receiver (main)
+
+Topic: `receivers/set/1`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "txpower": null,
+  "monitor_vol": null,
+  "band": "B30M",
+  "swr": null,
+  "master_vol": null,
+  "receiver_a": {
+    "active": "True",
+    "frequency": "10.100000",
+    "mode": "LSB",
+    "filterlow": "-2700",
+    "filterhigh": "-300",
+    "volume": "0",
+    "squelch": "0",
+    "mox": "False",
+    "txvfo": "False",
+    "signal": "-170.0"
+  },
+  "receiver_b": null
+}
+```
+
+Frequency is in MHz.
+
+### Receivers commands
+
+The following commands can be sent to the MQTT broker to send quick commands to the transceiver.
+
+The topic is `receivers/command/[x]` where `[x]` is the receiver number, starting from 1.
+
+Supported commands:
+
+* `enable` - Enable or disable the receiver
+* `volume` - Adjust the volume of the receiver
+* `mox` - Toggle the MOX
+* `frequency` - Adjust the frequency of the receiver
+
+Supported actions:
+
+* `toggle` - Toggle the command
+* `+` - Increase the value
+* `-` - Decrease the value
+
+The optional `subreceiver` field can be set to `true` to control the sub receiver.
+
+The optional `value` field can be set to the value to increase or decrease. If this parameter is empty, the default value for such command will be used (e.g: the tuning step of the frequency).
+
+#### Commands examples
+
+##### Toggling the first receiver
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+   "software_id": "AnyRandomSoftwareId",
+    "command": "enable",
+    "action": "toggle"
+ }
+```
+
+#### Increasing the volume of the second receiver
+
+Topic: `receivers/command/2`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "command": "volume",
+  "subreceiver": "false",
+  "action": "+",
+  "value": "15" 
+}
+```
+
+To increase the volume on the sub receiver, set the `subreceiver` field to `true`.
+
+#### Toggling MOX on the first receiver
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "command": "mox",
+  "action": "toggle",
+  "subreceiver": "false"
+}
+```
+
+#### Increasing the frequency of the first receiver (sub)
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+  "software_id": "OL-Master_WIN-asd",
+  "command": "frequency",
+  "action": "+",
+  "value": "0.1",
+ "subreceiver": "true"
+}
+```
+
+The frequency is in MHz, to decrease the frequency, set the `action` field to `-`.
+
+## UDP Stream
+
+The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
+
+> [!NOTE]
+> This chapter is a work in progress
+
+> [!WARNING]
+> The traffic is sent as unencrypted UDP packets, please make sure the network is secure before enabling this feature.
+
+### Spectrum stream
+
+The spectrum stream is sent to the UDP server at each interval as configured in the Setup menu of the OL-Master software.
+
+#### Spectrum reception example
+
+The following code is an example of how to receive the spectrum stream using a javascript application to render the spectrum on a canvas.
+
+```js
+function initializePanadapterCanvas() {
+    window.addEventListener('resize', adjustCanvasSize);
+    adjustCanvasSize();
+}
+
+function adjustCanvasSize() {
+    const canvas = document.getElementById('panadapterCanvas');
+    if (canvas == null) {
+        return;
+    }
+    const width = window.innerWidth; // Set width to the width of the viewport
+    canvas.width = width; // Update the canvas width
+    // Optionally, you can set height dynamically or keep it fixed
+    canvas.height = 400; // Set height to a fixed value or adjust dynamically
+}
+
+window.drawPanadapter = (spectrumData, gridMin = -160, gridMax = 0) => {
+    const canvas = document.getElementById('panadapterCanvas');
+    if (canvas == null) {
+        return;
+    }
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    const yRange = gridMax - gridMin;
+
+    ctx.clearRect(0, 0, width, height); // Clear canvas
+
+    const points = [];
+    const slope = spectrumData.length / width; // Adjust this as needed
+
+    for (let i = 0; i < width; i++) {
+        // Ensure dataIndex is within bounds
+        const dataIndex = Math.floor(i * slope);
+        const data = spectrumData[Math.min(dataIndex, spectrumData.length - 1)] || 0;
+        const yTemp = Math.ceil((gridMax - data) * height / yRange);
+        points.push({ x: i, y: Math.min(yTemp, height) });
+    }
+
+    // Draw fill polygon if needed
+    if (true) { // Adjust condition if necessary
+        ctx.fillStyle = 'rgba(185, 152, 106, 0.5)'; // Adjust color and opacity
+        points.push({ x: width, y: height }, { x: 0, y: height });
+        ctx.beginPath();
+        points.forEach((point, index) => {
+            if (index === 0) {
+                ctx.moveTo(point.x, point.y);
+            } else {
+                ctx.lineTo(point.x, point.y);
+            }
+        });
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    // Draw the spectrum line
+    ctx.strokeStyle = '#FFFFFF'; // Line color
+    ctx.lineWidth = 2; // Line width
+    ctx.beginPath();
+    points.forEach((point, index) => {
+        if (index === 0) {
+            ctx.moveTo(point.x, point.y);
+        } else {
+            ctx.lineTo(point.x, point.y);
+        }
+    });
+    ctx.stroke();
+
+    ctx.strokeStyle = '#00000040';
+    ctx.rect(width / 2, 0, 1, height);
+    ctx.stroke();
+};
+```
+
+#### Audio reception example
+
+The following Python code is an example of how to receive the audio stream using the `sounddevice` library.
+
+```python
+import socket
+import pyaudio
+import numpy as np
+
+# Configurazione UDP
+UDP_IP = "127.0.0.1"  # Ascolta su tutte le interfacce
+UDP_PORT = 5000    # Porta UDP
+BUFFER_SIZE = 1024  # Dimensione del pacchetto UDP
+
+# Configurazione audio
+FORMAT = pyaudio.paFloat32  # Supponendo che i dati siano float32
+CHANNELS = 2                # Audio mono
+RATE = 48000                # Frequenza di campionamento
+
+# Configura PyAudio
+p = pyaudio.PyAudio()
+stream = p.open(format=FORMAT,
+                channels=CHANNELS,
+                rate=RATE,
+                output=True)
+
+# Configura socket UDP
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind((UDP_IP, UDP_PORT))
+print(f"Ricezione audio su {UDP_IP}:{UDP_PORT}...")
+
+try:
+    while True:
+        data, addr = sock.recvfrom(BUFFER_SIZE)
+        
+        # Decodifica i dati (supponendo double -> float)
+        audio_data = np.frombuffer(data, dtype=np.float64).astype(np.float32)
+        
+        # Riproduci il buffer
+        stream.write(audio_data.tobytes())
+except KeyboardInterrupt:
+    print("Terminato.")
+finally:
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+    sock.close()
+
+```
+
 ## General recommendations
 
 Please see: [General recommendations](./GeneralRecommendations.md)
