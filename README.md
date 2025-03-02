@@ -21,15 +21,7 @@ The manuals are organized in the following folders:
 
 ## Contact information
 
-If you have any questions about these manuals, or to report any issue, please contact:
-
-```txt
-Olliter Laboratory SAgl
-Amsler 1,
-CH-7304 Maienfeld
-```
-
-Or, via email at the following address: [hello@olliter.com](mailto:hello@olliter.com)
+If you have any questions about these manuals, or to report any issue, please contact us via email at the following address: [hello@olliter.com](mailto:hello@olliter.com)
 
 ## Additional resources
 

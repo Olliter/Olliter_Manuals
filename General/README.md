@@ -66,12 +66,4 @@ Please refer to the hardware license agreement at the following link: [Hardware 
 
 ## Contact Information
 
-If you have any questions about this agreement, please contact:
-
-```txt
-Olliter Laboratory SAgl
-Amsler 1,
-CH-7304 Maienfeld
-```
-
-Or, via email at the following address: [legal@olliter.com](mailto:legal@olliter.com)
+If you have any questions about this agreement, please contact us via email at the following address: [legal@olliter.com](mailto:legal@olliter.com)
