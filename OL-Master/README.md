@@ -35,8 +35,28 @@
       * [Adjusting the receivers volume](#adjusting-the-receivers-volume)
       * [DSP options](#dsp-options)
     * [Firmware upgrade](#firmware-upgrade)
-6. [General recommendations](#general-recommendations)
-7. [Troubleshooting](#troubleshooting)
+6. [External services](#external-services)
+    * [EIBI](#eibi)
+    * [Clusters](#clusters)
+    * [MQTT](#mqtt)
+      * [Telemetry data](#telemetry-data)
+      * [Receiver control](#receiver-control)
+        * [Controls examples](#controls-examples)
+          * [Changing the band on the first receiver](#changing-the-band-on-the-first-receiver)
+          * [Setting the frequency of the first receiver (main)](#setting-the-frequency-of-the-first-receiver-main)
+      * [Receivers commands](#receivers-commands)
+        * [Commands examples](#commands-examples)
+          * [Toggling the first receiver](#toggling-the-first-receiver)
+          * [Increasing the volume of the second receiver](#increasing-the-volume-of-the-second-receiver)
+          * [Toggling MOX on the first receiver](#toggling-mox-on-the-first-receiver)
+          * [Increasing the frequency of the first receiver (sub)](#increasing-the-frequency-of-the-first-receiver-sub)
+    * [UDP Stream](#udp-stream)
+      * [Spectrum stream](#spectrum-stream)
+        * [Spectrum reception example](#spectrum-reception-example)
+      * [Audio stream](#audio-stream)
+        * [Audio reception example](#audio-reception-example)
+7. [General recommendations](#general-recommendations)
+8. [Troubleshooting](#troubleshooting)
 
 ## Important user notice
 
@@ -361,21 +381,21 @@ Wait for the upgrade window to close automatically after a couple of seconds, th
 
 The OL-Master software can be configured to use external services like clusters or EIBI, these services require an internet connection to work.
 
-## EIBI
+### EIBI
 
 The EIBI service is a database of shortwave broadcast stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
 > [!NOTE]
 > This chapter is a work in progress
 
-## Clusters
+### Clusters
 
 The cluster service is a database of amateur radio stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
 > [!NOTE]
 > This chapter is a work in progress
 
-## MQTT
+### MQTT
 
 The OL-Master software can be configured to send telemetry data to an MQTT broker, this data can be used to monitor the transceiver remotely, or to integrate the transceiver with other software.
 
@@ -384,7 +404,7 @@ The OL-Master software can be configured to send telemetry data to an MQTT broke
 
 MQTT settings are available in the `Setup > COM > MQTT` menu of the OL-Master software.
 
-### Telemetry data
+#### Telemetry data
 
 The telemetry data that is sent to the MQTT broker is a JSON object that contains the following fields:
 
@@ -431,15 +451,15 @@ The telemetry data is read-only and cannot be used to control the transceiver.
 }
 ```
 
-### Receiver control
+#### Receiver control
 
 The receiver commands are sent to the MQTT broker using the `receivers/set/[x]` topic, where `[x]` is the receiver number, starting from 1.
 
 The JSON payload follows the same structure as the telemetry data, but some the fields are read-write and can be used to control the transceiver.
 
-#### Controls examples
+##### Controls examples
 
-##### Changing the band on the first receiver
+###### Changing the band on the first receiver
 
 Topic: `receivers/set/1`
 
@@ -458,7 +478,7 @@ Payload:
 }
 ```
 
-##### Setting the frequency of the first receiver (main)
+###### Setting the frequency of the first receiver (main)
 
 Topic: `receivers/set/1`
 
@@ -490,7 +510,7 @@ Payload:
 
 Frequency is in MHz.
 
-### Receivers commands
+#### Receivers commands
 
 The following commands can be sent to the MQTT broker to send quick commands to the transceiver.
 
@@ -513,9 +533,9 @@ The optional `subreceiver` field can be set to `true` to control the sub receive
 
 The optional `value` field can be set to the value to increase or decrease. If this parameter is empty, the default value for such command will be used (e.g: the tuning step of the frequency).
 
-#### Commands examples
+##### Commands examples
 
-##### Toggling the first receiver
+###### Toggling the first receiver
 
 Topic: `receivers/command/1`
 
@@ -529,7 +549,7 @@ Payload:
  }
 ```
 
-#### Increasing the volume of the second receiver
+###### Increasing the volume of the second receiver
 
 Topic: `receivers/command/2`
 
@@ -547,7 +567,7 @@ Payload:
 
 To increase the volume on the sub receiver, set the `subreceiver` field to `true`.
 
-#### Toggling MOX on the first receiver
+###### Toggling MOX on the first receiver
 
 Topic: `receivers/command/1`
 
@@ -562,7 +582,7 @@ Payload:
 }
 ```
 
-#### Increasing the frequency of the first receiver (sub)
+###### Increasing the frequency of the first receiver (sub)
 
 Topic: `receivers/command/1`
 
@@ -580,7 +600,7 @@ Payload:
 
 The frequency is in MHz, to decrease the frequency, set the `action` field to `-`.
 
-## UDP Stream
+### UDP Stream
 
 The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
 
@@ -590,11 +610,11 @@ The OL-Master software can be configured to send the audio and spectrum stream t
 > [!WARNING]
 > The traffic is sent as unencrypted UDP packets, please make sure the network is secure before enabling this feature.
 
-### Spectrum stream
+#### Spectrum stream
 
 The spectrum stream is sent to the UDP server at each interval as configured in the Setup menu of the OL-Master software.
 
-#### Spectrum reception example
+##### Spectrum reception example
 
 The following code is an example of how to receive the spectrum stream using a javascript application to render the spectrum on a canvas.
 
@@ -673,7 +693,11 @@ window.drawPanadapter = (spectrumData, gridMin = -160, gridMax = 0) => {
 };
 ```
 
-#### Audio reception example
+#### Audio stream
+
+The audio stream is sent to the UDP server as raw audio data, this can be used to record the audio stream or to integrate the transceiver with other software.
+
+##### Audio reception example
 
 The following Python code is an example of how to receive the audio stream using the `sounddevice` library.
 
