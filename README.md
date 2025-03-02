@@ -2,7 +2,8 @@
 
 This repository contains the manuals for the software(s) and hardware(s) developed by Olliter. The manuals are written in markdown format and are intended to be read on GitHub.
 
-> [!TIP] If you need to print or export the manuals to PDF, you can use the **print** function of 
+> [!TIP]
+> If you need to print or export the manuals to PDF, you can use the **print** function of 
 > your browser. The manuals are designed to be printed on A4 paper.
 
 ## Content
