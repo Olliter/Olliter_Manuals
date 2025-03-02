@@ -1,6 +1,4 @@
-![Immagine che contiene Carattere, Elementi grafici, schermata, logo
-Descrizione generata
-automaticamente](./resources/images/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter Logo](../Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
 
 # OL-SD20A SDR Transceiver User Manual
 
@@ -743,15 +741,15 @@ automaticamente](./resources/images/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png
 On the Windows PC, open Control Panel and select "Network and internet".
 
 ![Pannello di
-controllo](./resources/images/media/image34.tmp)
+controllo](./resources/images/media/image34.png)
 Select "Network and sharing"
 
 ![Rete e
-Internet](./resources/images/media/image35.tmp)
+Internet](./resources/images/media/image35.png)
 Click on "Change adapter settings" on the left side.
 
 ![Centro connessioni di rete e
-condivisione](./resources/images/media/image36.tmp)
+condivisione](./resources/images/media/image36.png)
 Right click the Ethernet interface that was used to connect the SDR
 device and open the Properties menu.
 
@@ -794,12 +792,12 @@ Once the software has started, click on the "FW Maintenance" menu on the
 top bar.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image41.tmp)
+CH1](./resources/images/media/image41.png)
 A dialog will appear listing the devices that were discovered on the
 local network, the Olliter SDR should show up, select it from the list.
 
 ![Firmware & IP
-Address](./resources/images/media/image42.tmp)
+Address](./resources/images/media/image42.png)
 In the central part of the dialog, type in the new IP address to be used
 by the device, the IP address must be valid on your local network and
 must not be used by any other device.
@@ -808,7 +806,7 @@ After inserting the IP address, click on Change IP to persist the
 settings to the device, the SDR should now reboot.
 
 ![Firmware & IP
-Address](./resources/images/media/image43.tmp)
+Address](./resources/images/media/image43.png)
 
 #### Restore the default IP settings of the PC
 
@@ -819,15 +817,15 @@ IP address that was previously configured.
 On the Windows PC, open Control Panel and select "Network and internet".
 
 ![Pannello di
-controllo](./resources/images/media/image34.tmp)
+controllo](./resources/images/media/image34.png)
 Select "Network and sharing"
 
 ![Rete e
-Internet](./resources/images/media/image35.tmp)
+Internet](./resources/images/media/image35.png)
 Click on "Change adapter settings" on the left side.
 
 ![Centro connessioni di rete e
-condivisione](./resources/images/media/image36.tmp)
+condivisione](./resources/images/media/image36.png)
 
 Right click the Ethernet interface that was used to connect the SDR
 device and open the Properties menu.
@@ -861,7 +859,7 @@ OL-Master application, in OL-Master, click the Setup menu, then follow
 the subsequent instructions.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image45.tmp)
+CH1](./resources/images/media/image45.png)
 Settings are persisted using the *Save* or the *Save and Close* buttons.
 
 ![Immagine che contiene testo, elettronica, schermata, schermo
@@ -963,7 +961,7 @@ be started using the PWR button, the spectrum should animate, and audio
 will start.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image54.tmp)
+CH1](./resources/images/media/image54.png)
 [\]{.underline}
 
 ### Controlling the transceiver
@@ -981,7 +979,7 @@ The transceiver can operate on all amateur bands of HF plus the 50MHz
 buttons.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image56.tmp)
+CH1](./resources/images/media/image56.png)
 
 #### Tuning a frequency
 
@@ -990,9 +988,9 @@ are by panning the receiver spectrum or by selecting the frequency using
 the dedicated numeric input.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image57.tmp){width="5.559701443569554in"
+CH1](./resources/images/media/image57.png){width="5.559701443569554in"
 height="3.8447200349956256in"}![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image57.tmp)
+CH1](./resources/images/media/image57.png)
 
 #### Setting the visualization mode
 
@@ -1008,12 +1006,12 @@ The receiver spectrum can be interacted using the spectrum controls,
 these allows zooming, panning and setting the tune step.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image59.tmp)
+CH1](./resources/images/media/image59.png)
 The spectrum can be rendered to display the average or the peak
 mode[.]{.underline}
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image59.tmp)
+CH1](./resources/images/media/image59.png)
 
 #### Setting the receiver mode
 
@@ -1021,11 +1019,11 @@ All main operative modes are supported by the transceiver, this can be
 selected using the dedicated buttons.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image60.tmp)
+CH1](./resources/images/media/image60.png)
 Then, for each operating mode, the bandwidth can be adjusted as needed.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image61.tmp)
+CH1](./resources/images/media/image61.png)
 
 #### Adding additional receivers
 
@@ -1037,7 +1035,7 @@ can be enabled using the RX2, RX3 and RX4 buttons in the main window.
 > receivers, or reduce the sample rate.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image62.tmp)
+CH1](./resources/images/media/image62.png)
 ![Immagine che contiene schermata, testo, Software multimediale,
 software Descrizione generata
 automaticamente](./resources/images/a49589dfb85f23b5e752a1e7b76355ed175bc99b.png)
@@ -1048,7 +1046,7 @@ The main and sub volumes, per each receiver can be configured using the
 *Volume* controls group.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image64.tmp)
+CH1](./resources/images/media/image64.png)
 
 #### DSP options
 
@@ -1059,7 +1057,7 @@ background noise or unwanted whistles. Filters can be enabled using the
 dedicated buttons.
 
 ![ OL-Master v1.0.6 (6 Jun 2024) \-- RX1 -
-CH1](./resources/images/media/image65.tmp)
+CH1](./resources/images/media/image65.png)
 
 ### Firmware upgrade
 
@@ -1213,224 +1211,4 @@ microphone voltage.
 
 ## Troubleshooting
 
-This chapter contains some issues that may occur while operating the
-transceiver, if the proposed solution does not work for you, please get
-in touch with the customer care department.
-
-### Olliter SDR Not Powering Up
-
-Some linear power supplies with large filtering capacitors can cause the
-Olliter SDR to power up improperly if it is connected before the power
-supply is turned on. This occurs because the slow charging process of
-the power supply\'s output filters triggers a low voltage alert in the
-transceiver, activating the protection circuit and cutting off the
-power.
-
-**Solution**: Resetting the Protection Circuit
-
-If the Olliter SDR does not show the green light when pressing the power
-button after turning on the power supply, follow these steps:
-
-- Disconnect the Input Voltage
-
-    - Ensure the power supply remains on.
-
-    - Disconnect the input voltage from the Olliter SDR.
-
-- Wait for a Few Seconds:
-
-    - Allow a couple of seconds for the protection circuit to reset.
-
-- Reconnect the Power:
-
-    - Reconnect the input voltage to the Olliter SDR.
-
-By following these steps, the protection circuit should reset, and the
-Olliter SDR should power up correctly. If the issue persists, ensure all
-connections are secure and the power supply is functioning correctly.
-
-### OL-Master reporting an error at startup
-
-If the OL-Master software throws an error at startup stating "Cannot
-load DLL 'ChannelMaster', cannot find the specified module" means that
-some dependencies are not satisfied.
-
-**Solution**: Refer to the System requirements chapter and make sure all
-software and hardware requirements are met.
-
-### OL-Master software crashed
-
-If the OL-Master software crashes, it may be due to a variety of reasons, to help us diagnose the issue, please follow these steps:
-
-- Navigate to the `%appdata%/OL-Master/Logs` folder
-- Create a ZIP file containing all the files in the folder (all txt files and the `CrashDumps` folder)
-- Send the ZIP file to the customer care department
-
-The following additional details will help us diagnose the issue and provide a solution:
-
-- The operating system version
-- The hardware configuration of the PC
-- The version of the OL-Master software
-- The steps that led to the crash (or what was being done when the crash occurred)
-
-### No voice from the front-panel microphone when transmitting
-
-This issue can relate to multiple reasons, both software and hardware.
-
-### VAC is enabled on the receiver
-
-VAC will have priority over the microphone audio when transmitting, make
-sure the VAC is disabled on the current receiver from the Setup menu to
-enable the audio stream from the microphone.
-
-**Solution**: disable VAC for the receiver that is being used
-
-### Wrong microphone style
-
-Each transceiver is shipped with a dedicated microphone wiring, a
-different brand of microphone cannot be used without switching to a new
-wiring kit. Contact the customer assistance service to receive
-information on the wiring that was shipped with your transceiver or to
-request a new microphone wiring kit.
-
-**Solution**: verify the microphone wiring that was installed
-
-### Wrong microphone voltage
-
-Different microphone brands have different settings, make sure the right
-microphone supply voltage was selected in the Setup menu.
-
-**Solution**: verify the microphone supply voltage
-
-### Improper microphone gain setting
-
-Microphone gain is set from the upper-left panel of the OL-Master
-software when in SSB mode, adjust the slider to get a good quality of
-the transmitted audio.
-
-Additional settings can be found in the Setup menu, like preamplifier or
-the adjustment range of the main slider.
-
-**Solution**: verify the microphone gain.
-
-### Additional windows (like EiBi or Cluster) are not showing up
-
-Windows sometimes "hides" some UI elements outside the screen
-boundaries, just restore the window position to show it up.
-
-**Solution**: Restoring the new window position
-
-Hover the mouse to the OL-Master icon in the Windows bar (usually the
-bottom part of your screen), you should see two or more windows as in
-the picture
-
-![Immagine che contiene testo, schermata, software, Software
-multimediale Descrizione generata
-automaticamente](./resources/images/media/image66.png)
-Right click on the window that has disappeared (the DX Spider Client in
-this example) and select "Maximize". The window should now appear on
-your main screen fully maximized, click on the title bar and drag it
-anywhere to return to its normal size. The new location should be stored
-in the database and recovered at the next reopening.
-
-### User interface is not updating or feels slow
-
-If the UI is laggy or unresponsive, it may be caused by a CPU overload,
-the bottom bar of OL-Master shows the CPU utilization, if this is too
-high, or even if the number is low but the interface feels "slow",
-please consider closing other software running in background or use a
-more powerful computer.
-
-Another way to reduce the computing load of the software is to reduce
-the sample rate from the OL-Master "Setup" menu, closing additional
-receivers, turn off some advanced filtering (like NB2 or NR2) or
-disabling external services like cluster or EiBi.
-
-Please remember that on SDR devices, the biggest part of the job is
-performed by the computer, so a powerful transceiver, requires an
-adequately powerful PC.
-
-**Solution**: Reduce the sample rate, close all background applications
-or consider a PC hardware upgrade
-
-### Audio from the speakers feels clicky or saturated
-
-Audio levels is monitored by the AGC algorithm, if the AGC is set to any
-manual setting and the volume is too high, the audio will be saturated
-and sound bad.
-
-**Solution**: lower the audio volume or enable AGC
-
-### I connected the transceiver to a different PC and all settings were reset
-
-Settings of the transceiver are not stored in the transceiver itself,
-they are stored in an xml file which lives in the *%appdata%/OL-Master*
-folder of the control PC. This file should be copied across the
-different devices where OL-Master is installed
-
-**Solution**: copy the database file to the new PC
-
-### I get a weird error at startup telling my database cannot be loaded for some reason
-
-The database probably got corrupted due to some hardware or software
-issues, automatic backups are created by the software in the
-%appdata%/OL-Master/Backups/Automatic folder, these files can be copied
-back to *%appdata%/OL-Master* and renamed to *database.xml* to restore a
-previous configuration
-
-**Solution**: restore one of the automatic backups of the database
-
-### You can't stop using the Olliter SDR transceiver
-
-We're glad that you got to this point, if you can't stop using the
-Olliter SDR, it means that our engineers have worked really hard to get
-the most out of the best hardware which is currently available on the
-market and you're enjoying the result. Please let's keep in touch with
-our team using the Olliter website
-[www.olliter.com](http://www.olliter.com) or our social media so you
-will be notified at every new software release or be the first one to
-test our new hardware.
-
-## Additional resources
-
-Some additional material was developed by our engineers to help you
-troubleshoot or configure some sections of the software, here are some
-links that every user should check out:
-
-### Olliter website
-
-This is the official website where all news are published, here you can
-find manuals, software and all the information that are created for our
-customers.
-
-Olliter website: <https://www.olliter.com/>
-
-Downloads section: <https://www.olliter.com/download.html>
-
-OL-SDR page: <https://www.olliter.com/sdr.html>
-
-### Olliter YouTube channel
-
-This is the main source of information on how to configure third-party
-software (like WSJT-X, CW-Skimmer or DX-Lab).
-
-Link to the Olliter YouTube channel:
-<https://www.youtube.com/@OLLITER-EU>
-
-Link to the OL-Master Playlists:
-<https://www.youtube.com/@OLLITER-EU/playlists>
-
-### Olliter on Facebook
-
-Here you can find some news about our devices, plus some previews of the
-devices that are being developed or tested.
-
-Link to the Olliter Facebook page: <https://www.facebook.com/Olliter/>
-
-### Olliter on Instagram
-
-Wanna see some cool stuff? Some pictures from events, presentations or
-our laboratories? Instagram is the place for you.
-
-Link to the Olliter Instagram page:
-<https://www.instagram.com/_olliter_/>
+Please see: [Troubleshooting](../OL-Master/Troubleshooting.md)
