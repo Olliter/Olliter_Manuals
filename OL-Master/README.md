@@ -12,6 +12,15 @@ automaticamente](./resources/images/media/image2.jpg)
 
 1. [Contents of this manual](#contents-of-this-manual)
 2. [Disclaimer for Proper Use of Amateur SDR Transceiver](#disclaimer-for-proper-use-of-amateur-sdr-transceiver)
+    * [Proper Connection and Installation](#proper-connection-and-installation)  
+    * [Liability](#liability)
+    * [Warranty and Damage](#warranty-and-damage)
+    * [Electrostatic Discharge (ESD) Precautions](#electrostatic-discharge-esd-precautions)
+    * [Safety and Compliance](#safety-and-compliance)
+    * [Acknowledgement](#acknowledgement)
+    * [Software license](#software-license)
+    * [Hardware license](#hardware-license)
+    * [Contact information](#contact-information)
 3. [Important user notice](#important-user-notice)
 4. [Introduction](#introduction)
 5. [Device overview](#device-overview)
@@ -23,16 +32,6 @@ automaticamente](./resources/images/media/image2.jpg)
     * [Network requirements](#network-requirements)
 7. [Installing OL-Master](#installing-ol-master)
     * [Configuring the firewall](#configuring-the-firewall)
-8. [Wiring the transceiver](#wiring-the-transceiver)
-    * [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
-    * [Connecting the power supply](#connecting-the-power-supply)
-    * [Connecting the antenna](#connecting-the-antenna)
-    * [Connecting the ethernet cable](#connecting-the-ethernet-cable)
-    * [Connecting the microphone](#connecting-the-microphone)
-9. [Connection of the SDR to the PC](#connection-of-the-sdr-to-the-pc)
-    * [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
-    * [Sample Ethernet connection](#sample-ethernet-connection)
-    * [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
 10. [Usage of OL-Master](#usage-of-ol-master)
      * [Configuring OL-Master](#configuring-ol-master)
      * [Starting the device](#starting-the-device)
@@ -48,12 +47,7 @@ automaticamente](./resources/images/media/image2.jpg)
      * [Olliter on Facebook](#olliter-on-facebook)
      * [Olliter on Instagram](#olliter-on-instagram)
 
-## Disclaimer for Proper Use of Amateur SDR Transceiver
 
-> [!WARNING]
-> Please read carefully before using the SDR transceiver
-
-For the full hardware and software license, please refer to the following document: [General/README.md](../General/README.md)
 
 ## Important user notice
 
@@ -126,7 +120,7 @@ meaning
 If the Power-on LED is not turning on when pressing the power button,
 please refer to the Troubleshooting chapter of this manual
 
-- []{#_Toc1852837891 .anchor}Front speakers
+* []{#_Toc1852837891 .anchor}Front speakers
 
 These speakers are controlled by OL-Master and can be used to play the
 demodulated signal that is tuned. The onboard speakers can be enabled or
@@ -136,24 +130,24 @@ disabled from OL-Master, volume control is also provided by the software
 
 ![](./resources/images/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
 
-1.  Receiving line for the transverter interface 1
+1. Receiving line for the transverter interface 1
 
-2.  Transmitting line for the transverter interface 1
+2. Transmitting line for the transverter interface 1
 
-3.  Receiving line for the transverter interface 2
+3. Receiving line for the transverter interface 2
 
-4.  Transmitting line for the transverter interface 2
+4. Transmitting line for the transverter interface 2
 
-5.  Pure signal input
+5. Pure signal input
 
-6.  Pure signal output
+6. Pure signal output
 
-7.  EXT IN (unfiltered RF input)
+7. EXT IN (unfiltered RF input)
 
-8.  10MHz input from an external oscillator (GPSDO or rubidium
+8. 10MHz input from an external oscillator (GPSDO or rubidium
     reference)
 
-9.  10MHz output for external devices (such as transverters)
+9. 10MHz output for external devices (such as transverters)
 
 10. Open collector I/O (can be configured from OL-Master)
 
@@ -205,7 +199,6 @@ recommended measures when connecting external devices.
 
 > [!WARNING]
 > The warranty for your Olliter SDR device will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to improper connection of external devices.
-
 
 > [!WARNING]
 > The warranty for your Olliter SDR will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to connection of external devices that generate or absorb excessive current or voltage
@@ -384,7 +377,6 @@ have an internal 4.7KΩ pull-down resistor.
 | 8       | PTT RX3 (active LOW)       |
 | 9       | Ext Inhibit (active HIGH)  |
 
-
 #### OC connector
 
 This connector offers 8 open-collector outputs that can be used to drive
@@ -415,7 +407,6 @@ protected by a 250mA resettable fuse.
 | 13       | Open-collector common    |
 | 14       | GND                      |
 | 15       | 13.8V                    |
-
 
 External relay connection example:
 
@@ -471,14 +462,14 @@ The operating system should be updated to the latest version and the .NET8 must 
 
 Depending on the system configuration, both the .NET8 SDK and .NET8 Runtime might be needed.
 
-- .NET8 Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/runtime-desktop-8.0.13-windows-x64-installer>
-- .NET8 SDK Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer>
+* .NET8 Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/runtime-desktop-8.0.13-windows-x64-installer>
+* .NET8 SDK Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer>
 
 #### Microsoft Visual C++ Redistributable
 
 Some components of the software were written using highly optimized C++ code, this requires the latest version of the Microsoft Visual C++ Redistributable package to be installed and updated. The latest version of this package can be downloaded from the following URL:
 
-- VC Redist: <https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
+* VC Redist: <https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
 .
 
 As per the moment this manual was written, the latest available version
@@ -595,9 +586,9 @@ automaticamente](./resources/images/media/image31.png)
 > [!WARNING]
 > Electrostatic Discharge (ESD) can cause severe damage to electrical circuits, potentially leading to costly repairs or replacements. Always take measures to protect your equipment. These safety measures include but are not limited to:
 >
-> - Proper grounding: make sure all equipment and workstations are properly grounded
-> - Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity  
-> - Handle components with care: touch components only by their edges or the grounding case avoiding touching pins and circuitry
+> * Proper grounding: make sure all equipment and workstations are properly grounded
+> * Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity  
+> * Handle components with care: touch components only by their edges or the grounding case avoiding touching pins and circuitry
 
 Connecting the transceiver is simple but a couple of considerations and
 safety measures are needed, please read carefully the wiring
@@ -611,7 +602,7 @@ transceiver.
 
 ![Pure Signal-2](./resources/images/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
 
-Pure Signal is the name given to the theory and implementation of the 
+Pure Signal is the name given to the theory and implementation of the
 clean transmission logic developed by the OpenHPSDR team and implemented
 in both the Olliter SDR software and transceiver. The algorithm behind
 the Pure Signal technology is quite simple, when both the drive applied
@@ -643,11 +634,11 @@ Connect the power supply to the Olliter SDR by using high-quality
 Anderson PowerPole® connectors. Wire size should be chosen according to
 the length of the connection, here are our suggestions:
 
-- Wires shorter than 2 meters (6.5ft) long will require 2mm^2^ (AWG14) wires
+* Wires shorter than 2 meters (6.5ft) long will require 2mm^2^ (AWG14) wires
 
-- Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm^2^ wires
+* Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm^2^ wires
 
-- Wires longer than 4 meters (13ft) are not recommended as they may
+* Wires longer than 4 meters (13ft) are not recommended as they may
     pick up excessive noise from the surrounding environment or cause
     excessive voltage fluctuations
 
@@ -681,7 +672,6 @@ Each device comes with a dedicated microphone wiring which should be
 selected when ordering the transceiver, use the front 8-pin socket to
 connect the microphone.
 
-
 ## Connection of the SDR to the PC
 
 Connection of the transceiver to the PC is performed using an
@@ -696,22 +686,14 @@ your local network has an address family like 192.168.1.X and the subnet
 mask is 255.255.255.0), you can just plug the device to the local
 network and skip the IP address setup guide.
 
-  
 > [!WARNING]Before applying any voltage to the SDR, connect the device to
   your home switch/router using a high-quality CAT5 (or superior)
   ethernet cable
-  
-
-  
-
   
 > [!WARNING]The transceiver can only communicate at 1Gbps, if the
   switch/router or the master PC does not support such speed, the
   connection may be unavailable or unstable
   
-
-  
-
 ### Sample Ethernet connection
 
 The following schematic illustrates the recommended connection of the
@@ -926,14 +908,10 @@ selected, the displayed spectrum will be roughly 180KHz.
 
 The recommended sample rate is 192000 samples per second.
 
-  
 > [!WARNING]As the sample rate is increased, more system and network
   resources will be required by the software, please adjust the
   settings accordingly
   
-
-  
-
 ![Immagine che contiene testo, elettronica, schermata, schermo
 Descrizione generata
 automaticamente](./resources/images/media/image52.png)
@@ -944,14 +922,10 @@ The refresh rate of the receivers windows can be adjusted in *Display*
 \> *General*. The suggested value is between 10 and 20 frames per
 second.
 
-  
 > [!WARNING]Increasing the refresh rate can significantly impact the system
   load, if the system starts lagging or the UI starts behaving,
   reduce the "Main Display FPS" value
   
-
-  
-
 ![Immagine che contiene testo, elettronica, schermo, schermata
 Descrizione generata
 automaticamente](./resources/images/media/image53.png)
@@ -1129,12 +1103,12 @@ carefully to avoid issues with audio processing and transmission.
 
 #### Using Virtual Audio Cable (VAC)
 
-- VAC RX1: Set the software to use VAC RX1 (or RX2, RX3, or RX4) for
+* VAC RX1: Set the software to use VAC RX1 (or RX2, RX3, or RX4) for
     audio input, but do not use the \"Common VAC\" setting. This
     configuration ensures that the audio is correctly routed through the
     system without interference from other processes.
 
-- VAC Type: Use monodirectional VAC for both input and output. You may
+* VAC Type: Use monodirectional VAC for both input and output. You may
     need to configure separate VACs for input and output if your version
     supports bidirectional audio (such as Muzychenko\'s VAC). If your
     system uses bidirectional VAC, it is possible to use a single VAC
@@ -1142,28 +1116,28 @@ carefully to avoid issues with audio processing and transmission.
 
 #### Audio Levels and Filters
 
-- Compressor and Leveler: In FT8 mode, disable both the Compressor and
+* Compressor and Leveler: In FT8 mode, disable both the Compressor and
     Leveler. These audio processors are not required in FT8 and may
     cause distortion or improper modulation of the digital signal.
 
-- VAC RX Level: Set the VAC RX level to approximately -27 dB. This
+* VAC RX Level: Set the VAC RX level to approximately -27 dB. This
     ensures that the audio level is appropriate for digital signal
     processing, avoiding overload.
 
-- VAC TX Level: Set the VAC TX level to 0 dB. This level ensures that
+* VAC TX Level: Set the VAC TX level to 0 dB. This level ensures that
     the transmitted signal is clear and within the normal operational
     range for FT8 transmissions.
 
 #### Transmit and Receive Filters
 
-- TX Audio Filter: When WSJT-X is set to Radio -\> Split: NONE, the TX
+* TX Audio Filter: When WSJT-X is set to Radio -\> Split: NONE, the TX
     audio filter of the Olliter SDR must be adjusted to match the RX
     filter and the bandwidth used by FT8. For example, if you are using
     FT8 between 200 Hz and 3500 Hz, the TX audio filter should also be
     set between 200 Hz and 3500 Hz. Additionally, the RF filter should
     be aligned to this range.
 
-- Split Mode (RIG or FAKE): If using WSJT-X with the \"Split\" mode
+* Split Mode (RIG or FAKE): If using WSJT-X with the \"Split\" mode
     set to either RIG or FAKE, there is no need to modify the TX audio
     filter beyond its normal range. In this case, set the TX filter to
     300 Hz to 2700 Hz, and FT8 will adjust the RF frequency to keep the
@@ -1179,9 +1153,9 @@ these instructions for setting up the Olliter SDR for SSB operations.
 
 #### Microphone Voltage Considerations
 
-- Yaesu Microphones: Typically require 5V for proper operation.
+* Yaesu Microphones: Typically require 5V for proper operation.
 
-- ICOM Microphones: Typically require 8V. Verify the correct voltage
+* ICOM Microphones: Typically require 8V. Verify the correct voltage
     before connecting the microphone to prevent damage or malfunction.
 
 Please refer to the Microphone input chapter to see how to change the
@@ -1189,24 +1163,24 @@ microphone voltage.
 
 #### Switching from FT8 to SSB
 
-- Deactivate VAC: After using FT8 or other digital modes, ensure that
+* Deactivate VAC: After using FT8 or other digital modes, ensure that
     VAC RX1 (or RX2, RX3, RX4) is deactivated before switching to SSB.
     Failure to do so may prevent audio from being transmitted properly.
 
 #### Audio Processing Settings for SSB
 
-- Leveler: Reactivate the Leveler when operating in SSB mode. The
+* Leveler: Reactivate the Leveler when operating in SSB mode. The
     recommended setting is 7 dB, which helps maintain consistent output
     levels. After adjusting, verify that the Automatic Level Control
     (ALC) is set to approximately 3 dB.
 
-- Compressor: For SSB, it is recommended to enable the Compressor at 8
+* Compressor: For SSB, it is recommended to enable the Compressor at 8
     dB, or even 10 dB, especially when using the PureSignal feature.
     This improves the overall signal clarity and transmission quality.
 
 #### Transmitting Filter Settings
 
-- TX Audio Filter: In the Setup -\> Transmitting menu, adjust the TX
+* TX Audio Filter: In the Setup -\> Transmitting menu, adjust the TX
     audio filter according to your preferences. The default range for
     voice transmission is 300 Hz to 2700 Hz; this range provides a
     balance between intelligibility and bandwidth usage.
@@ -1231,19 +1205,19 @@ power.
 If the Olliter SDR does not show the green light when pressing the power
 button after turning on the power supply, follow these steps:
 
-- Disconnect the Input Voltage
+* Disconnect the Input Voltage
 
-    - Ensure the power supply remains on.
+  * Ensure the power supply remains on.
 
-    - Disconnect the input voltage from the Olliter SDR.
+  * Disconnect the input voltage from the Olliter SDR.
 
-- Wait for a Few Seconds:
+* Wait for a Few Seconds:
 
-    - Allow a couple of seconds for the protection circuit to reset.
+  * Allow a couple of seconds for the protection circuit to reset.
 
-- Reconnect the Power:
+* Reconnect the Power:
 
-    - Reconnect the input voltage to the Olliter SDR.
+  * Reconnect the input voltage to the Olliter SDR.
 
 By following these steps, the protection circuit should reset, and the
 Olliter SDR should power up correctly. If the issue persists, ensure all
@@ -1262,16 +1236,16 @@ software and hardware requirements are met.
 
 If the OL-Master software crashes, it may be due to a variety of reasons, to help us diagnose the issue, please follow these steps:
 
-- Navigate to the `%appdata%/OL-Master/Logs` folder
-- Create a ZIP file containing all the files in the folder (all txt files and the `CrashDumps` folder)
-- Send the ZIP file to the customer care department
+* Navigate to the `%appdata%/OL-Master/Logs` folder
+* Create a ZIP file containing all the files in the folder (all txt files and the `CrashDumps` folder)
+* Send the ZIP file to the customer care department
 
 The following additional details will help us diagnose the issue and provide a solution:
 
-- The operating system version
-- The hardware configuration of the PC
-- The version of the OL-Master software
-- The steps that led to the crash (or what was being done when the crash occurred)
+* The operating system version
+* The hardware configuration of the PC
+* The version of the OL-Master software
+* The steps that led to the crash (or what was being done when the crash occurred)
 
 ### No voice from the front-panel microphone when transmitting
 
