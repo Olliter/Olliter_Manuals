@@ -2,7 +2,10 @@
 
 # Olliter software(s) and hardware(s) manuals
 
-This repository contains the manuals for the software(s) and hardware(s) developed by Olliter. The manuals are written in markdown format and are intended to be read on GitHub at the following link: [https://github.com/Olliter/Olliter_Manuals](https://github.com/Olliter/Olliter_Manuals)
+This repository contains the manuals for the software(s) and hardware(s) developed by Olliter.
+
+* GitHub version of the manual (with enhanced styling): [https://github.com/Olliter/Olliter_Manuals](https://github.com/Olliter/Olliter_Manuals)
+* Web version of the manual: [https://olliter.github.io/Olliter_Manuals/](https://olliter.github.io/Olliter_Manuals/)
 
 > [!TIP]
 > If you need to print or export the manuals to PDF, you can use the **print** function of 
