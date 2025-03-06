@@ -522,6 +522,7 @@ Supported commands:
 * `volume` - Adjust the volume of the receiver
 * `mox` - Toggle the MOX
 * `frequency` - Adjust the frequency of the receiver
+* `mode` - Adjust the mode of the receiver
 
 Supported actions:
 
@@ -535,7 +536,7 @@ The optional `value` field can be set to the value to increase or decrease. If t
 
 ##### Commands examples
 
-###### Toggling the first receiver
+* Toggling the first receiver
 
 Topic: `receivers/command/1`
 
@@ -549,7 +550,7 @@ Payload:
  }
 ```
 
-###### Increasing the volume of the second receiver
+* Increasing the volume of the second receiver
 
 Topic: `receivers/command/2`
 
@@ -567,7 +568,7 @@ Payload:
 
 To increase the volume on the sub receiver, set the `subreceiver` field to `true`.
 
-###### Toggling MOX on the first receiver
+* Toggling MOX on the first receiver
 
 Topic: `receivers/command/1`
 
@@ -582,7 +583,7 @@ Payload:
 }
 ```
 
-###### Increasing the frequency of the first receiver (sub)
+* Increasing the frequency of the first receiver (sub)
 
 Topic: `receivers/command/1`
 
@@ -590,7 +591,7 @@ Payload:
 
 ```json
 {
-  "software_id": "OL-Master_WIN-asd",
+  "software_id": "AnyRandomSoftwareId",
   "command": "frequency",
   "action": "+",
   "value": "0.1",
@@ -599,6 +600,27 @@ Payload:
 ```
 
 The frequency is in MHz, to decrease the frequency, set the `action` field to `-`.
+
+* Changing the receiver mode of the third transceiver
+
+> [!NOTE]
+> Requires OL-Master version 1.0.12.13 or later
+
+Topic: `receivers/command/3`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "command": "mode",
+  "action": "",
+  "value": "USB",
+  "subreceiver": ""
+}
+```
+
+Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU", "DIGL", "DIGU", "FM5", "FM2", "FT"
 
 ### UDP Stream
 
