@@ -459,7 +459,7 @@ The JSON payload follows the same structure as the telemetry data, but some the 
 
 ##### Controls examples
 
-###### Changing the band on the first receiver
+* Changing the band on the first receiver
 
 Topic: `receivers/set/1`
 
@@ -478,7 +478,7 @@ Payload:
 }
 ```
 
-###### Setting the frequency of the first receiver (main)
+* Setting the frequency of the first receiver (main)
 
 Topic: `receivers/set/1`
 
