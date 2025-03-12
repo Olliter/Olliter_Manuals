@@ -1,6 +1,6 @@
-![Olliter Logo](./Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
-
 # Olliter software(s) and hardware(s) manuals
+
+![Olliter Logo](./Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
 
 This repository contains the manuals for the software(s) and hardware(s) developed by Olliter.
 
@@ -18,9 +18,11 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 
 The manuals are organized in the following folders:
 
-- [Hardware and software licenses](./General/README.md)
-- [OL-Master](./OL-Master/README.md)
-- [OL-SD20A](./OL-SD20A/README.md)
+* [Hardware and software licenses](./General/README.md)
+* [OL-Master](./OL-Master/README.md)
+* [OL-SD20A](./OL-SD20A/README.md)
+* OL-SD300A (coming soon)
+* RosPo (coming soon)
 
 ## Contact information
 

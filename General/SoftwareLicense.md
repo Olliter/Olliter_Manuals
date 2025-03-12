@@ -34,7 +34,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 In compliance with the GPL, the complete corresponding source code for this software is available to anybody which obtains a copy of the binaries. The source code includes all the necessary files to compile, install, and run the software, as well as any modifications and enhancements we have made.
 
-If you received the OL-Master software and you are willing to obtain the source code, a written offer should be performed, you can request it by sending a written request to the following address: <legal@olliter.com>
+If you received the OL-Master software and you are willing to obtain the source code, a written offer should be performed, you can request it by sending a request to the following address: <legal@olliter.com>
 
 To comply with the GNU/GPL license, this offer is valid for three years from the date you received the binary version of the software.
 
