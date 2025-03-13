@@ -26,6 +26,7 @@ automaticamente](./resources/images/media/image2.jpg)
       - [OC connector](#oc-connector)
       - [Power connector](#power-connector)
       - [Antenna connectors](#antenna-connectors)
+      - [Ethernet connector](#ethernet-connector)
 3. [System requirements](#system-requirements)
 4. [Wiring the transceiver](#wiring-the-transceiver)
     - [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
@@ -247,27 +248,18 @@ Advanced features (like up/down, scan, etc.) are not available.
 
 #### Transverter interfaces
 
-The transverter input and outputs are designed to drive external devices
-to provide additional bands to the transceiver.
+The transverter input and outputs are designed to drive external devices to provide additional bands to the transceiver.
 
-The transverter input 1 is connected to the CH1 line of the SDR, while
-the transverter input 2 is connected to the CH2 line of the SDR. Both
-inputs are passed through a dedicated 50MHz low-pass filter, a 32dB
-software-controlled attenuator and a 20dB amplifier. The suggested
-maximum input should be -2dBm (assuming no attenuator is used).
+The transverter input 1 is connected to the CH1 line of the SDR, while the transverter input 2 is connected to the CH2 line of the SDR. Both inputs are passed through a dedicated 50MHz low-pass filter, a 32dB software-controlled attenuator and a 20dB amplifier. The suggested maximum input should be -2dBm (assuming no attenuator is used).
 
-The nominal output for the transverter transmission line is 10dBm, this
-value may vary a little depending on the IF frequency that is
-configured. The transmission signal is passed through a 50MHz low-pass
-filter, and a programmable attenuator (which is controlled by the TX
-Power slider in OL-Master).
+The nominal output for the transverter transmission line is 10dBm, this value may vary a little depending on the IF frequency that is configured. The transmission signal is passed through a 50MHz low-pass filter, and a programmable attenuator (which is controlled by the TX Power slider in OL-Master).
 
-Transverters can be configured using the dedicated section of the
-OL-Master software.
+Transverters can be configured using the dedicated section of the OL-Master software.
 
 #### EXT IN
 
-> [!WARNING]The EXT IN connector provide direct access to the ADC2 device
+> [!WARNING]
+> The EXT IN connector provide direct access to the ADC2 device
 > inside the transceiver, excessive power input can permanently
 > damage the internal circuits
 
@@ -384,6 +376,13 @@ Please refer to the Connecting the power supply chapter for further information
 These four BNC connectors are used by the transceiver to receive and transmit. Different bands can receive or transmit on different antennas, mapping between bands, mode and antenna can be done in the Setup menu of OL-Master.
 
 Please refer to the Connecting the antenna for further information
+
+#### Ethernet connector
+
+> [!WARNING]
+> The transceiver does not accept any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
+
+The ethernet port is used to communicate with the OL-Master application through local network, make sure to use high-quality shielded wires to achieve best performances.
 
 ## System requirements
 

@@ -121,7 +121,7 @@ Ethernet interface at 1Gbps on the control PC is mandatory if using more than on
 ### Network requirements
 
 > [!WARNING]
-> The transceiver does not any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
+> The transceiver does not accept any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
 
 An ethernet interface capable of 1Gbps **is mandatory** for the transceiver to communicate with the control device (PC), a properly configured ethernet switch with interfaces at 1Gbps is suggested to be used in between the SDR and the PC.
 
