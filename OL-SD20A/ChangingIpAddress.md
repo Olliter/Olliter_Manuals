@@ -1,6 +1,6 @@
 # Changing the IP address of the Olliter SDR
 
-![Olliter logo](../Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter logo](../resources/olliter-logo.png)
 
 ## Connect the device to the PC
 

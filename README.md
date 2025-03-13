@@ -1,15 +1,15 @@
 # Olliter software(s) and hardware(s) manuals
 
-![Olliter Logo](./Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter Logo](./resources/olliter-logo.png)
 
 This repository contains the manuals for the software(s) and hardware(s) developed by Olliter.
 
 * GitHub version of the manual (with enhanced styling): [https://github.com/Olliter/Olliter_Manuals](https://github.com/Olliter/Olliter_Manuals)
 * Web version of the manual: [https://olliter.github.io/Olliter_Manuals/](https://olliter.github.io/Olliter_Manuals/)
+* Telegram chatbot to help retrieve information from the manuals: [https://t.me/olliter_bot](https://t.me/olliter_bot)
 
 > [!TIP]
-> If you need to print or export the manuals to PDF, you can use the **print** function of 
-> your browser. The manuals are designed to be printed on A4 paper.
+> If you need to print or export the manuals to PDF, you can use the **print** function of your browser. The manuals are designed to be printed on A4 paper.
 
 ## Content
 

@@ -1,6 +1,6 @@
 # General Information and Disclaimer on the Olliter products
 
-![Olliter Logo](../Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter Logo](../resources/olliter-logo.png)
 
 This document provides general information and disclaimers for the Olliter products, including the SDR transceiver(s) and associated software(s). It covers essential details about the products, their intended use, safety precautions, and warranty information. Users are encouraged to read this document carefully before using the Olliter products to ensure safe and proper operation.
 

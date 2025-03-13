@@ -1,8 +1,8 @@
-![Olliter Logo](../Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter Logo](../resources/olliter-logo.png)
 
 # OL-Master Software User Manual
 
-![OL-Master screenshot](../Resources/ol-master-screenshot.png)
+![OL-Master screenshot](../resources/ol-master-screenshot.png)
 
 ## Contents of this manual
 
@@ -56,7 +56,8 @@
       * [Audio stream](#audio-stream)
         * [Audio reception example](#audio-reception-example)
 7. [General recommendations](#general-recommendations)
-8. [Troubleshooting](#troubleshooting)
+8. [Frequently Asked Questions](#frequently-asked-questions)
+9. [Troubleshooting](#troubleshooting)
 
 ## Important user notice
 
@@ -81,7 +82,7 @@ Some I/O are available on-board to interface with external accessories like micr
 
 A simplified schematic representation of the SDR device is shown below.
 
-![Schematic representation of the SDR functions](../Resources/c208c3c638ae2571c37c170f0810465abafe36ee.png)
+![Schematic representation of the SDR functions](./resources/sdr-overview.png)
 
 ### Software requirements
 
@@ -772,6 +773,10 @@ finally:
 ## General recommendations
 
 Please see: [General recommendations](./GeneralRecommendations.md)
+
+## Frequently Asked Questions
+
+Please see: [FAQ](./FrequentlyAskedQuestions.md)
 
 ## Troubleshooting
 

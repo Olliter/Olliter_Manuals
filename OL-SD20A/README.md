@@ -1,4 +1,4 @@
-![Olliter Logo](../Resources/e07589b9375e5e984f1c51c5e6118d9156cd79d1.png)
+![Olliter Logo](../resources/olliter-logo.png)
 
 # OL-SD20A SDR Transceiver User Manual
 
@@ -423,11 +423,9 @@ An integrated protection circuit is added to the transceiver which can help in p
 
 Connect the power supply to the Olliter SDR by using high-quality Anderson PowerPole® connectors. Wire size should be chosen according to the length of the connection, here are our suggestions:
 
-* Wires shorter than 2 meters (6.5ft) long will require 2mm<sup>2</sup> (AWG14) wires
-
-* Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm<sup>2</sup> wires
-
-* Wires longer than 4 meters (13ft) are not recommended as they may pick up excessive noise from the surrounding environment or cause excessive voltage fluctuations
+- Wires shorter than 2 meters (6.5ft) long will require 2mm<sup>2</sup> (AWG14) wires
+- Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm<sup>2</sup> wires
+- Wires longer than 4 meters (13ft) are not recommended as they may pick up excessive noise from the surrounding environment or cause excessive voltage fluctuations
 
 ![DC plug on the back of the transceiver](./resources/images/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
 
