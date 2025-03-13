@@ -42,14 +42,8 @@
       * [Telemetry data](#telemetry-data)
       * [Receiver control](#receiver-control)
         * [Controls examples](#controls-examples)
-          * [Changing the band on the first receiver](#changing-the-band-on-the-first-receiver)
-          * [Setting the frequency of the first receiver (main)](#setting-the-frequency-of-the-first-receiver-main)
       * [Receivers commands](#receivers-commands)
         * [Commands examples](#commands-examples)
-          * [Toggling the first receiver](#toggling-the-first-receiver)
-          * [Increasing the volume of the second receiver](#increasing-the-volume-of-the-second-receiver)
-          * [Toggling MOX on the first receiver](#toggling-mox-on-the-first-receiver)
-          * [Increasing the frequency of the first receiver (sub)](#increasing-the-frequency-of-the-first-receiver-sub)
     * [UDP Stream](#udp-stream)
       * [Spectrum stream](#spectrum-stream)
         * [Spectrum reception example](#spectrum-reception-example)
@@ -114,11 +108,20 @@ As per the moment this manual was written, the latest available version is 14.40
 
 ### Hardware requirements
 
-Recommended hardware setup is an 7<sup>th</sup> generation Intel Core i5 or later, with at least 16GB of RAM and 1GB of available storage space (disk usage may vary depending on additional features like recordings, cluster, EIBI and more).
+> [!WARNING]
+> OL-Master requires AVX2 instruction set which was introduced with the Haswell series of Intel® CPUs (4<sup>th</sup> generation Intel® Core i series), any CPU older than Intel® Core i5 4<sup>th</sup> generation **cannot be used**. For optimal performances, we highly recommend an Intel® Core i5 7<sup>th</sup> generation or later.
+
+Recommended hardware setup is an 7<sup>th</sup> generation Intel® Core i5 or later, with at least 16GB of RAM and 2GB of available storage space
+
+> [!TIP]
+> The disk and RAM usage may vary depending on additional features like recordings, cluster, EIBI, receiver bandwidth, number of receivers, and more.
 
 Ethernet interface at 1Gbps on the control PC is mandatory if using more than one receiver window. Ethernet interface at 1Gbps is mandatory to configure the IP address of the device if connected directly to the control PC.
 
 ### Network requirements
+
+> [!WARNING]
+> The transceiver does not any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
 
 An ethernet interface capable of 1Gbps **is mandatory** for the transceiver to communicate with the control device (PC), a properly configured ethernet switch with interfaces at 1Gbps is suggested to be used in between the SDR and the PC.
 
