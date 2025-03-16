@@ -21,6 +21,7 @@ automaticamente](./resources/images/media/image2.jpg)
       - [Transverter interfaces](#transverter-interfaces)
       - [EXT IN](#ext-in)
       - [10MHz references](#10mhz-references)
+      - [Pure Signal input](#pure-signal-input)
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
       - [OC connector](#oc-connector)
@@ -281,6 +282,17 @@ The Olliter SDR transceiver can be connected to an external 10MHz reference to p
 The 10MHz input (labelled as GPS IN) is a 50Ω input between -15dBm and +5dBm. This input is protected against overvoltage but using an attenuator (if needed) is recommended.
 
 The 10MHz output (labelled as OUT) provides a 3.3V CMOS output with a series resistance (used as short-circuit protection). This output can only be used as a frequency reference, and it was not designed to provide more than 20mA. This output comes from the internal TCXO when no external reference is applied.
+
+#### Pure Signal input
+
+PureSignal features an input level control loop with a 30 dB range to minimize spurious emissions and get cleaner RF output emissions. At full power, with an input level of 3 dBm, the automatic attenuation stabilizes around 20 dB.
+
+This means that PureSignal can still correct the amplifier even when the output power is only one-hundredth of its maximum value. This is particularly useful when the instantaneous voice level is low.
+
+For optimal performance, it is recommended to set external attenuators to limit the input level to +3 dBm at full power, ensuring that the automatic attenuator stabilizes around 20 dB.
+
+> [!WARNING]
+> The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
 
 #### PA Band connector
 
