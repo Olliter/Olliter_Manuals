@@ -22,6 +22,7 @@ automaticamente](./resources/images/media/image2.jpg)
       - [EXT IN](#ext-in)
       - [10MHz references](#10mhz-references)
       - [Pure Signal input](#pure-signal-input)
+      - [PTT Output](#ptt-output)
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
       - [OC connector](#oc-connector)
@@ -293,6 +294,24 @@ For optimal performance, it is recommended to set external attenuators to limit 
 
 > [!WARNING]
 > The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
+
+#### PTT Output
+
+The radio features a PTT OUT output located on the back panel, designed for external device control. This output is open-drain, meaning it remains open during reception (RX) and is grounded during transmission (TX).
+
+> [!WARNING]
+> Maximum Drain-Source Voltage (Vdss): 20V (must never be exceeded)
+
+> [!WARNING]
+> Maximum Current: 0.5A (user is responsible for ensuring this limit is not exceeded)
+
+When controlling a relay, it is essential to place a flyback diode in parallel with the relay coil to prevent voltage spikes that could damage the internal FET.
+
+> [!TIP]
+> Most amplifiers includes an internal 4.7KΩ pull-up resistor to its internal 5V supply. As a result, it can be directly connected to the OL-SDR PTT OUT without requiring additional components. For optimal performance and minimal interference, it is recommended to use a shielded cable with an RCA connector.
+
+> [!TIP]
+> In Setup → Options, the radio can be configured to activate an adjustable delay for RF output after PTT ON activation. This feature ensures that external relays have sufficient time to switch the antenna connection before transmission begins.
 
 #### PA Band connector
 
