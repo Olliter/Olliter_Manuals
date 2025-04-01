@@ -50,7 +50,7 @@ automaticamente](./resources/images/media/image2.jpg)
 
 ## Disclaimer for Proper Use of Amateur SDR Transceiver
 
-> [!WARNING]
+> {% include warning.html content="
 > Please read carefully before using the SDR transceiver
 
 For the full hardware and software license, please refer to the following document: [General/README.md](../General/README.md)
@@ -182,10 +182,10 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 Here is a description of the inputs and outputs of the Olliter SDR transceiver. Some of these connections are highly sensitive to ESD, overvoltage, short-circuit, overcurrent and more, please take all the recommended measures when connecting external devices.
 
-> [!WARNING]
+> {% include warning.html content="
 > The warranty for your Olliter SDR device will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to improper connection of external devices.
 
-> [!WARNING]
+> {% include warning.html content="
 > The warranty for your Olliter SDR will be voided if our customer assistance department determines that the device has been damaged or rendered inoperative due to connection of external devices that generate or absorb excessive current or voltage
 
 #### Morse key jack
@@ -201,21 +201,21 @@ This connector uses either 5V or 3V3 pull-up resistors. Voltage can be selected 
 This output is designed to drive standard headphones with a nominal
 impedance of 16Ω impedance, output level is 50mW for a -75dB THD.
 
-> [!WARNING]
+> {% include warning.html content="
 > Prolonged use of headphones at high volume can cause permanent hearing dagame. Adjust the volume to a safe level to protect your ears.
 
 ![Headphones jack wiring diagram](./resources/images/media/image9.png)
 
 #### Microphone input
 
-> [!WARNING]
+> {% include warning.html content="
 > If the transceiver was ordered with a Icom wiring, a Yaesu microphone cannot be used and vice-versa. Using a different microphone style can damage the transceiver and/or the microphone.
 
 This input should be chosen when placing the order for the Olliter SDR transceiver. This input is designed to work with either Icom (such as the SM-30) or Yaesu (such as M-70) microphones.
 
 In addition to the microphone wiring that was requested, and independently from the user choice, a balanced input for a dynamic capsule is also available on the same connector.
 
-> [!WARNING]
+> {% include warning.html content="
 > Before connecting any kind of microphone to the transceiver, please adjust the voltage settings in the Setup menu of OL-Master software. Incorrect voltage settings may damage the transceiver and/or the microphone.
 
 Selection between 5V, 8V or none can be toggled in the Setup menu of OL-Master.
@@ -260,7 +260,7 @@ Transverters can be configured using the dedicated section of the OL-Master soft
 
 #### EXT IN
 
-> [!WARNING]
+> {% include warning.html content="
 > The EXT IN connector provide direct access to the ADC2 device
 > inside the transceiver, excessive power input can permanently
 > damage the internal circuits
@@ -292,25 +292,25 @@ This means that PureSignal can still correct the amplifier even when the output 
 
 For optimal performance, it is recommended to set external attenuators to limit the input level to +3 dBm at full power, ensuring that the automatic attenuator stabilizes around 20 dB.
 
-> [!WARNING]
+> {% include warning.html content="
 > The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
 
 #### PTT Output
 
 The radio features a PTT OUT output located on the back panel, designed for external device control. This output is open-drain, meaning it remains open during reception (RX) and is grounded during transmission (TX).
 
-> [!WARNING]
+> {% include warning.html content="
 > Maximum Drain-Source Voltage (Vdss): 20V (must never be exceeded)
 
-> [!WARNING]
+> {% include warning.html content="
 > Maximum Current: 0.5A (user is responsible for ensuring this limit is not exceeded)
 
 When controlling a relay, it is essential to place a flyback diode in parallel with the relay coil to prevent voltage spikes that could damage the internal FET.
 
-> [!TIP]
+> {% include tip.html content="
 > Most amplifiers includes an internal 4.7KΩ pull-up resistor to its internal 5V supply. As a result, it can be directly connected to the OL-SDR PTT OUT without requiring additional components. For optimal performance and minimal interference, it is recommended to use a shielded cable with an RCA connector.
 
-> [!TIP]
+> {% include tip.html content="
 > In Setup → Options, the radio can be configured to activate an adjustable delay for RF output after PTT ON activation. This feature ensures that external relays have sufficient time to switch the antenna connection before transmission begins.
 
 #### PA Band connector
@@ -410,7 +410,7 @@ Please refer to the Connecting the antenna for further information
 
 #### Ethernet connector
 
-> [!WARNING]
+> {% include warning.html content="
 > The transceiver does not accept any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
 
 The ethernet port is used to communicate with the OL-Master application through local network, make sure to use high-quality shielded wires to achieve best performances.
@@ -421,7 +421,7 @@ A detailed description of the hardware and software requirements needed to run t
 
 ## Wiring the transceiver
 
-> [!WARNING]
+> {% include warning.html content="
 > Electrostatic Discharge (ESD) can cause severe damage to electrical circuits, potentially leading to costly repairs or replacements. Always take measures to protect your equipment. These safety measures include but are not limited to:
 >
 > - Proper grounding: make sure all equipment and workstations are properly grounded
@@ -448,7 +448,7 @@ The Olliter SDR was designed to operate from a stable and constant power supply 
 
 An integrated protection circuit is added to the transceiver which can help in protecting the radio from excessive voltage fluctuations by cutting the power line and turning off the device.
 
-> [!WARNING]
+> {% include warning.html content="
 > The integrated protection circuit should not be considered a surge, lightning or electrostatic protection, it was designed to protect the circuitry from excessive or low voltages which may negatively impact the transceiver performances.
 
 Connect the power supply to the Olliter SDR by using high-quality Anderson PowerPole® connectors. Wire size should be chosen according to the length of the connection, here are our suggestions:
@@ -487,10 +487,10 @@ Connection of the transceiver to the PC is performed using an Ethernet/IP protoc
 
 The transceiver comes with a preconfigured IP address set to 192.168.1.111, if this address is valid on your local network (meaning your local network has an address family like 192.168.1.X and the subnet mask is 255.255.255.0), you can just plug the device to the local etwork and skip the IP address setup guide.
 
-> [!WARNING]
+> {% include warning.html content="
 > Before applying any voltage to the SDR, connect the device to your home switch/router using a high-quality CAT5 (or superior) ethernet cable
 
-> [!WARNING]
+> {% include warning.html content="
 > The transceiver can only communicate at 1Gbps, if the switch/router or the master PC does not support such speed, the connection may be unavailable or unstable 
 
 ### Sample Ethernet connection

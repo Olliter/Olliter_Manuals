@@ -1,0 +1,27 @@
+# Jekyll configuration for GitHub Pages
+title: Olliter Manuals
+description: Documentation and manuals for Olliter products
+remote_theme: just-the-docs/just-the-docs
+
+# Enable GitHub Flavored Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Just-the-docs specific settings for alert boxes
+callouts:
+  note:
+    title: Note
+    color: blue
+  tip:
+    title: Tip
+    color: green
+  warning:
+    title: Warning
+    color: yellow
+  danger:
+    title: Danger
+    color: red
+  important:
+    title: Important
+    color: purple

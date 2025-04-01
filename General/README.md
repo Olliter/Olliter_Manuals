@@ -6,7 +6,7 @@ This document provides general information and disclaimers for the Olliter produ
 
 ## Disclaimer for Proper Use of Amateur SDR Transceiver(s) and related software(s)
 
-> [!WARNING]
+> {% include warning.html content="
 > Please read carefully before using the SDR transceiver(s) and related software(s).
 
 ### Proper Connection and Installation
