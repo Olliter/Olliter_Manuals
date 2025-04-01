@@ -139,21 +139,41 @@ The network connection diagram is available in the transceiver manual.
 
 After buying an Olliter SDR, you should receive the setup file for OL-Master, this is the main application that controls the SDR and must be installed on the PC.
 
+The OL-Master software is distributed in two separate files, one for the first installation and one for the update. The two files are:
+
+* `OL-Master_First_Setup_[version].exe`: This is the main setup file that must be used to install the software for the first time. It will install all the required components and dependencies in additions to the basic configuration files (like band plans, memories, default settings, etc).
+  * This file can be used to install the software on a new PC or to reinstall the software on an existing PC.
+* `OL-Master_Update_[version].exe`: This is the update file that can be used to update the software to the latest version. It will only update the existing installation and will not install any additional components or dependencies.
+  * This file will not be available for the first installation, it will be available only after the first installation of the software.
+  * This file will not overwrite the existing configuration files, so if you want to reset the configuration files to the default values, you need to delete the existing configuration files manually.
+
+The first install or update procedures are almost identical, the only difference is that the first install will install all the required components and dependencies, while the update will only update the existing installation.
+
 ![Olliter setup file](./resources/15a34c54f5fdc8760e8ca4c1e772a68a2118758a.png)
 
-Double click the executable to start the installer, administrative
-privileges are mandatory to install the software. Follow the on-screen
-instructions to proceed with the installation.
+Double click the executable to start the installer, administrative privileges are mandatory to install the software. Follow the on-screen instructions to proceed with the installation.
 
 ![Setup step 1](./resources/2c2db219748179cb712d2579dcff50c848ac0230.png)
 
+Please accept all software license agreements to proceed with the installation.
+
 ![Setup step 2](./resources/5f228f61610cbb24ebdc9df574ec8a5385319e14.png)
+
+Optionally, tick the option to create a desktop shortcut for the software, this will create a shortcut on the desktop to quickly access the software. A start menu shortcut will be created automatically.
 
 ![Setup step 3](./resources/d9fd212c0273127827a90e0fd34e3259949a8e96.png)
 
+Once the setup is completed, users can choose to start the software immediately or to close the installer. The software can be started later from the start menu or from the desktop shortcut if created.
+
 ![Setup step 4](./resources/85191356186f190b5d11ff91f44fb13f69b8b502.png)
 
-Setup is now completed, before starting the software, please read carefully the next chapter.
+Setup or update procedure is now completed, before starting the software, please read carefully the next chapter.
+
+### Automatic update check
+
+There is currently no mechanism to automatically check for updates, the user must manually check for updates by visiting the [Olliter website](https://olliter.com) or by contacting the customer care team.
+
+We are actively working to implement an automatic update check mechanism in the future. We apologize for the inconvenience and we appreciate your understanding.
 
 ### Configuring the firewall
 
