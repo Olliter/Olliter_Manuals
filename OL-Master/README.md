@@ -16,6 +16,7 @@
     * [Hardware requirements](#hardware-requirements)
     * [Network requirements](#network-requirements)
 4. [Installing OL-Master](#installing-ol-master)
+    * [Automatic update check](#automatic-update-check)
     * [Configuring the firewall](#configuring-the-firewall)
 5. [Usage of OL-Master](#usage-of-ol-master)
     * [Configuring OL-Master](#configuring-ol-master)
@@ -167,7 +168,7 @@ Once the setup is completed, users can choose to start the software immediately 
 
 ![Setup step 4](./resources/85191356186f190b5d11ff91f44fb13f69b8b502.png)
 
-Setup or update procedure is now completed, before starting the software, please read carefully the next chapter.
+Setup or update procedure is now completed, before starting the software, please read carefully the next chapters.
 
 ### Automatic update check
 
@@ -266,14 +267,14 @@ If a microphone is connected to the radio, the RX Only option can be checked to 
 
 The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in *General* \> *HW Config* \> *Sample Rate*.
 
+> [!WARNING]
+> As the sample rate is increased, more system and network resources will be required by the software, please adjust the settings accordingly
+
 The spectrum span that is rendered is roughly the 80% of the sample rate set in the settings menu, for example if 192000 samples per second are selected, the displayed spectrum will be roughly 180KHz.
 
 > [!TIP]
 > The recommended sample rate is 192000 samples per second.
 
-> [!WARNING]
-> As the sample rate is increased, more system and network resources will be required by the software, please adjust the settings accordingly
-  
 ![Receiver bandwidth setup](./resources/image52.png)
 
 #### Configuring the refresh rate
@@ -360,10 +361,10 @@ Multiple software-based filters can be added to any receiver mode, these can sig
 
 ### Firmware upgrade
 
-Upgrade of the firmware is performed using the OL-Master application with a dedicated menu.
-
 > [!WARNING]
 > Although the Olliter SDR has a recovery mode that can be enabled in case of major firmware failures, the firmware upgrade is a delicate process that requires some attention. Please read this chapter carefully before starting the procedure.
+
+Upgrade of the firmware is performed using the OL-Master application with a dedicated menu.
 
 > [!WARNING]
 > Make sure to close all background apps and to have a reliable power source for both the PC and the transceiver before attempting a firmware upgrade.
@@ -648,10 +649,10 @@ Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU",
 
 ### UDP Stream
 
-The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
-
 > [!NOTE]
 > This chapter is a work in progress
+
+The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
 
 > [!WARNING]
 > The traffic is sent as unencrypted UDP packets, please make sure the network is secure before enabling this feature.
