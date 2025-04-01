@@ -87,7 +87,7 @@ As any SDR device, one of the main components is the PC that is used to control 
 
 The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported, if the host machine is capable enough.
 
-> {% include note.html content="
+> [!NOTE]
 > Compatibility with Microsoft Windows 8.1 or previous versions of Microsoft Windows cannot be ensured due to lack of support for the latest .NET modules which was used to develop the application.
 
 #### .NET 8
@@ -109,19 +109,19 @@ As per the moment this manual was written, the latest available version is 14.40
 
 ### Hardware requirements
 
-> {% include warning.html content="
+> [!WARNING]
 > OL-Master requires AVX2 instruction set which was introduced with the Haswell series of Intel® CPUs (4<sup>th</sup> generation Intel® Core i series), any CPU older than Intel® Core i5 4<sup>th</sup> generation **cannot be used**. For optimal performances, we highly recommend an Intel® Core i5 7<sup>th</sup> generation or later.
 
 Recommended hardware setup is an 7<sup>th</sup> generation Intel® Core i5 or later, with at least 16GB of RAM and 2GB of available storage space
 
-> {% include tip.html content="
+> [!TIP]
 > The disk and RAM usage may vary depending on additional features like recordings, cluster, EIBI, receiver bandwidth, number of receivers, and more.
 
 Ethernet interface at 1Gbps on the control PC is mandatory if using more than one receiver window. Ethernet interface at 1Gbps is mandatory to configure the IP address of the device if connected directly to the control PC.
 
 ### Network requirements
 
-> {% include warning.html content="
+> [!WARNING]
 > The transceiver does not accept any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
 
 An ethernet interface capable of 1Gbps **is mandatory** for the transceiver to communicate with the control device (PC), a properly configured ethernet switch with interfaces at 1Gbps is suggested to be used in between the SDR and the PC.
@@ -267,12 +267,12 @@ If a microphone is connected to the radio, the RX Only option can be checked to 
 
 The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in *General* \> *HW Config* \> *Sample Rate*.
 
-> {% include warning.html content="
+> [!WARNING]
 > As the sample rate is increased, more system and network resources will be required by the software, please adjust the settings accordingly
 
 The spectrum span that is rendered is roughly the 80% of the sample rate set in the settings menu, for example if 192000 samples per second are selected, the displayed spectrum will be roughly 180KHz.
 
-> {% include tip.html content="
+> [!TIP]
 > The recommended sample rate is 192000 samples per second.
 
 ![Receiver bandwidth setup](./resources/image52.png)
@@ -281,7 +281,7 @@ The spectrum span that is rendered is roughly the 80% of the sample rate set in 
 
 The refresh rate of the receivers windows can be adjusted in *Display* \> *General*. The suggested value is between 10 and 20 frames per second.
 
-> {% include warning.html content="
+> [!WARNING]
 > Increasing the refresh rate can significantly impact the system load, if the system starts lagging or the UI starts behaving, reduce the "Main Display FPS" value 
 
 ![Screen refresh rate](./resources/image53.png)
@@ -339,7 +339,7 @@ Then, for each operating mode, the bandwidth can be adjusted as needed.
 
 RX1 is located in the main window of the software, additional receivers can be enabled using the RX2, RX3 and RX4 buttons in the main window.
 
-> {% include warning.html content="
+> [!WARNING]
 > Using additional receivers may significantly impact the system load, if the system starts to lag, reduce the number of receivers, or reduce the sample rate.
 
 ![Ol-Master software](./resources/image62.png)
@@ -361,18 +361,18 @@ Multiple software-based filters can be added to any receiver mode, these can sig
 
 ### Firmware upgrade
 
-> {% include warning.html content="
+> [!WARNING]
 > Although the Olliter SDR has a recovery mode that can be enabled in case of major firmware failures, the firmware upgrade is a delicate process that requires some attention. Please read this chapter carefully before starting the procedure.
 
 Upgrade of the firmware is performed using the OL-Master application with a dedicated menu.
 
-> {% include warning.html content="
+> [!WARNING]
 > Make sure to close all background apps and to have a reliable power source for both the PC and the transceiver before attempting a firmware upgrade.
 
 Extract the ZIP file containing the firmware anywhere on the local PC to
 get the *.hex* file which contains the new firmware.
 
-> {% include warning.html content="
+> [!WARNING]
 > Extract the file on the local hard drive, do not use USB sticks, network drive or other unreliable locations that may create latency or issues.
 
 Once the file is extracted you should see something like this:
@@ -390,14 +390,14 @@ Using the Select button, navigate to the .hex file that was just extracted and s
 Once the file is selected, click the Program button to start the upgrade
 procedure.
 
-> {% include warning.html content="
+> [!WARNING]
 > The upgrade procedure will take about a minute, please be patient.
 
 ![Firmware upgrade task](./resources/42461e5c391b24857e1eba8fd208316b921cd597.png)
 
 At first, the software will erase the content of the FPGA, this is a monolithic task, so the software may look like it's frozen, please be patient and just wait for the process to complete. Once the erase task is completed, you should see the progress bar moving, and when it reaches 100%, the transceiver should be restarted automatically.
 
-> {% include warning.html content="
+> [!WARNING]
 > If the process hangs after some minutes, or if any error occurs, please contact our customer assistance to get further assistance.
 
 Wait for the upgrade window to close automatically after a couple of seconds, then the process is complete, and the transceiver can be used as normal.
@@ -410,21 +410,21 @@ The OL-Master software can be configured to use external services like clusters 
 
 The EIBI service is a database of shortwave broadcast stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
-> {% include note.html content="
+> [!NOTE]
 > This chapter is a work in progress
 
 ### Clusters
 
 The cluster service is a database of amateur radio stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
-> {% include note.html content="
+> [!NOTE]
 > This chapter is a work in progress
 
 ### MQTT
 
 The OL-Master software can be configured to send telemetry data to an MQTT broker, this data can be used to monitor the transceiver remotely, or to integrate the transceiver with other software.
 
-> {% include note.html content="
+> [!NOTE]
 > This chapter is a work in progress
 
 MQTT settings are available in the `Setup > COM > MQTT` menu of the OL-Master software.
@@ -628,7 +628,7 @@ The frequency is in MHz, to decrease the frequency, set the `action` field to `-
 
 * Changing the receiver mode of the third transceiver
 
-> {% include note.html content="
+> [!NOTE]
 > Requires OL-Master version 1.0.12.13 or later
 
 Topic: `receivers/command/3`
@@ -649,12 +649,12 @@ Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU",
 
 ### UDP Stream
 
-> {% include note.html content="
+> [!NOTE]
 > This chapter is a work in progress
 
 The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
 
-> {% include warning.html content="
+> [!WARNING]
 > The traffic is sent as unencrypted UDP packets, please make sure the network is secure before enabling this feature.
 
 #### Spectrum stream

@@ -9,12 +9,12 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 * Telegram chatbot to help retrieve information from the manuals: [https://t.me/olliter_bot](https://t.me/olliter_bot)
   - The bot can answer in any language
 
-> {% include tip.html content="
+> [!TIP]
 > If you need to print or export the manuals to PDF, you can use the **print** function of your browser. The manuals are designed to be printed on A4 paper.
 
 ## Content
 
-> {% include warning.html content="
+> [!WARNING]
 > Please read carefully before using the SDR transceiver(s) and related software(s).
 
 The manuals are organized in the following folders:
