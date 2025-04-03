@@ -27,8 +27,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Check if the repository is public
+  check_repo:
+    runs-on: ubuntu-latest
+    outputs:
+      is_public: ${{ steps.check.outputs.is_public }}
+    steps:
+      - id: check
+        run: |
+          if [[ "${{ github.repository }}" == "Olliter/Olliter_Manuals" ]]; then
+            echo "is_public=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_public=false" >> $GITHUB_OUTPUT
+          fi
   # Build job
   build:
+    needs: check_repo
+    if: needs.check_repo.outputs.is_public == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,6 +58,15 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Update Jekyll config
+        run: |
+          if grep -q "exclude:" _config.yml; then
+            # If exclude is already defined, append vendor to it
+            sed -i '/^exclude:/a\  - vendor' _config.yml
+          else
+            # If exclude isn't defined, add it with vendor
+            echo -e "\nexclude:\n  - vendor" >> _config.yml
+          fi
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -63,4 +87,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
