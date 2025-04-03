@@ -1,14 +1,7 @@
 # Jekyll configuration for GitHub Pages
 title: Olliter Manuals
 description: Documentation and manuals for Olliter products
-remote_theme: pages-themes/cayman@v0.2.0
+
+markdown: GFM
 plugins:
-  - jekyll-remote-theme
-
-# Enable GitHub Flavored Markdown
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# Define custom CSS for alert boxes
+  - jekyll-gfm-admonitions
