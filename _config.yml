@@ -2,6 +2,12 @@
 title: Olliter Manuals
 description: Documentation and manuals for Olliter products
 
-markdown: GFM
+markdown: GFM 
 plugins:
-  - jekyll-gfm-admonitions
+- jekyll-gfm-admonitions
+- jekyll-optional-front-matter
+
+exclude: 
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
