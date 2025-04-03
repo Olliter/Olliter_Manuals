@@ -67,11 +67,17 @@ jobs:
             # If exclude isn't defined, add it with vendor
             echo -e "\nexclude:\n  - vendor" >> _config.yml
           fi
+          
+          # Add repository name to _config.yml if it doesn't exist
+          if ! grep -q "^repository:" _config.yml; then
+            echo -e "\nrepository: Olliter/Olliter_Manuals" >> _config.yml
+          fi
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          PAGES_REPO_NWO: Olliter/Olliter_Manuals
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
