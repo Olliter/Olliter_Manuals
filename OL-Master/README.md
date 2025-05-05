@@ -178,6 +178,9 @@ We are actively working to implement an automatic update check mechanism in the 
 
 ### Configuring the firewall
 
+> [!TIP]
+> The firewall must be properly configured for the transceiver to work properly. If the firewall is not configured, the software won't be able to communicate with the OL-SDR device
+
 Network communication to the device is performed using UDP protocol, a security system exception must be created for the software to work reliably.
 
 Open the Windows firewall settings.

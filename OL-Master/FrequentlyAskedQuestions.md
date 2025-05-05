@@ -29,3 +29,7 @@ You can also use the sub receiver feature to transmit in split. The sub receiver
 * The sub receiver can be used to listen to a DX station while transmitting on a different frequency.
 * The sub receiver can be used to listen to a pileup while transmitting on a different frequency.
 * The sub receiver can be used to listen to a net while transmitting on a different frequency.
+
+## The software sends the Power-ON signal, then the radio turns off after few seconds
+
+This is an issue with the firewall, please read the OL-Master software manual to see how to properly configure the local firewall software
