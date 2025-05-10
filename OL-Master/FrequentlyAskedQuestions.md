@@ -33,3 +33,7 @@ You can also use the sub receiver feature to transmit in split. The sub receiver
 ## The software sends the Power-ON signal, then the radio turns off after few seconds
 
 This is an issue with the firewall, please read the OL-Master software manual to see how to properly configure the local firewall software
+
+## How do I create a custom filter to match my receive/transmit profile?
+
+Custom filters for both RX and TX can be created using the **VAR1** and **VAR2** filters of the OL-Master software, those filters can be customized using the **HIGH** and **LOW** sliders to match the desired profile. Filter settings are then stored automatically in the database. These filters can be different for each band, once they are configured, they will be available whenever needed just by clicking either **VAR1** or **VAR2**.
