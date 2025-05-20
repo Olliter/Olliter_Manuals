@@ -10,6 +10,9 @@ automaticamente](./resources/images/media/image2.jpg)
 
 1. [Introduction](#introduction)
 2. [Device overview](#device-overview)
+    - [Device specifications](#device-specifications)
+      - [General specifications](#general-specifications)
+      - [Technical specifications](#technical-specifications)
     - [Front panel](#front-panel)
       - [Front panel LEDs](#front-panel-leds)
       - [Front speakers](#front-speakers)
@@ -74,6 +77,43 @@ This guide may not fully cover the hardware configuration of the device or every
 ## Device overview
 
 This chapter covers the input and output of the Olliter SDR transceiver to guide the user when interfacing with external devices.
+
+### Device specifications
+
+#### General specifications
+
+- Direct sampling SDR
+  - 2x 16 bit RX ADC
+  - 2x 16 bit TX DAC
+- 4x fully independent receivers
+- Up to 1.5MHz of receive bandwitdh (per receiver)
+- Ultra-low-noise master oscillator (122.88MHz)
+- Thermally compensated reference oscillator (10MHz)
+- 100KHz - 55MHz guaranteed continuous receive range
+- Adjustable power output (maximum power depends on selected model)
+- 2x 7W RMS audio output
+- 8x open collector output
+- 8x LVCMOS output
+- 8x analog inputs
+- 8x digital inputs
+
+#### Technical specifications
+
+The following specifications were reported from laboratory measurements from our engineers:
+
+- Noise floor: better than -130dBm (0.07uV @2.4KHz bandwidth)
+  - Measured with no preamp
+- Noise figure: 12dB
+- Reciprocal mixing noise: 107dB (@2.4KHz bandwidth)
+- LVPECL differential master clock:
+  - -155dBc/Hz (@10Khz)
+  - -162dBc/Hz (absolute)
+- TCXO stability: better than 50ppb (<0.7Hz @14MHz)
+  - Accuracy guaranteed in temperature range between 0 and 70 Celsius
+- Minimum discernable signal: -142dBm
+- Dynamic range: 104dB
+- Blocking range: 132dB (100 KHz)
+- IMD: 38dBm (@14.0MHz)
 
 ### Front panel
 
