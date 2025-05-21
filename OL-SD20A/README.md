@@ -83,9 +83,11 @@ This chapter covers the input and output of the Olliter SDR transceiver to guide
 #### General specifications
 
 - Direct sampling SDR
-  - 2x 16 bit RX ADC
-  - 2x 16 bit TX DAC
-- 4x fully independent receivers
+  - 2x 16 bit dual-channsl RX ADC
+  - 1x 16 bit TX DAC
+- Up to 8 receivers
+  - Each of the 4 hardware receiver channels can be split into two receivers on the same band for a total of 8 receivers on 4 different bands at the same time
+- Full duplex capabilities
 - Up to 1.5MHz of receive bandwitdh (per receiver)
 - Ultra-low-noise master oscillator (122.88MHz)
 - Thermally compensated reference oscillator (10MHz)
@@ -95,7 +97,7 @@ This chapter covers the input and output of the Olliter SDR transceiver to guide
 - 8x open collector output
 - 8x LVCMOS output
 - 8x analog inputs
-- 8x digital inputs
+- 4x digital inputs
 
 #### Technical specifications
 
