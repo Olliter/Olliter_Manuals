@@ -337,6 +337,27 @@ For optimal performance, it is recommended to set external attenuators to limit 
 > [!WARNING]
 > The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
 
+> [!TIP]
+> We observed that most commercial amplifiers are producing a 0dBm (or -60dBc) power at the PureSignal output, this power level is enough to be used with the OL-SD20A
+
+##### PureSignal System Verification Procedure
+
+To ensure proper operation of the PureSignal system, follow the steps below:
+
+1. Initiate a Two-Tone Test
+   - Begin with a two-tone test at low power levels.
+   - Navigate to `Setup > PureSignal` to monitor the system's behavior.
+
+2. Check the Automatic Attenuator Level
+   - Observe the value of the automatic attenuator displayed in the setup screen.
+
+3. Interpret the readings as follows:
+   - Feedback too low: If the value stays at 0 dB, the feedback signal level is insufficient.
+   - Feedback too high: If the value remains at –31 dB and the RX1 label on the panel is blue, the feedback signal level is excessive.
+
+4. Power Amplifier Performance Evaluation:
+   - If the power amplifier (PA) is indeed producing 1 kW, a cancellation level on the PureSignal output of –60 dBc is considered acceptable.
+
 #### PTT Output
 
 The radio features a PTT OUT output located on the back panel, designed for external device control. This output is open-drain, meaning it remains open during reception (RX) and is grounded during transmission (TX).
