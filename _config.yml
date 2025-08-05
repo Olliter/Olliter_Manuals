@@ -1,6 +1,7 @@
 # Jekyll configuration for GitHub Pages
 title: Olliter Manuals
 description: Documentation and manuals for Olliter products
+baseurl: "/Olliter"
 
 markdown: GFM 
 plugins:

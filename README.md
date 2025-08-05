@@ -42,34 +42,40 @@ This is the official website where all news are published, here you can
 find manuals, software and all the information that are created for our
 customers.
 
-Olliter website: <https://www.olliter.com/>
+Olliter website: 
+- [English version](https://www.olliter.com/home-en.html)
+- [Italian version](https://www.olliter.com/index.html)
 
-Downloads section: <https://www.olliter.com/download.html>
+### Downloads
 
-OL-SDR page: <https://www.olliter.com/sdr.html>
+The downloads section of the website with manuals and resources is available at:
+- [Italian version](https://www.olliter.com/download.html)
+- [English version](https://www.olliter.com/download-en.html)
+
+### OL-SDR
+
+A dedicate page with all the different OL-SDR devices and accessories is available at:
+- [Italian version](https://www.olliter.com/sdr.html)
+- [English version](https://www.olliter.com/ol-sdr-en.html)
 
 ### Olliter YouTube channel
 
-This is the main source of information on how to configure third-party
-software (like WSJT-X, CW-Skimmer or DX-Lab).
+This is the main source of information on how to configure third-party software (like WSJT-X, CW-Skimmer or DX-Lab).
 
-Link to the Olliter YouTube channel:
-<https://www.youtube.com/@OLLITER-EU>
+Link to the Olliter YouTube channel: [@OLLITER.LABORATORY](https://www.youtube.com/@OLLITER.LABORATORY)
 
-Link to the OL-Master Playlists:
-<https://www.youtube.com/@OLLITER-EU/playlists>
+OL-Master tutorials on YouTube: [Olliter video tutorials](https://www.olliter.com/video-tutorials-en.html)
 
 ### Olliter on Facebook
 
 Here you can find some news about our devices, plus some previews of the
 devices that are being developed or tested.
 
-Link to the Olliter Facebook page: <https://www.facebook.com/Olliter/>
+Link to the Olliter Facebook page: [Olliter on Facebook](https://www.facebook.com/Olliter/)
 
 ### Olliter on Instagram
 
 Wanna see some cool stuff? Some pictures from events, presentations or
 our laboratories? Instagram is the place for you.
 
-Link to the Olliter Instagram page:
-<https://www.instagram.com/_olliter_/>
+Link to the Olliter Instagram page: [Olliter on Instagram](https://www.instagram.com/_olliter_/)
