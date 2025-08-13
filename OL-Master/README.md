@@ -35,6 +35,7 @@
       * [Adding additional receivers](#adding-additional-receivers)
       * [Adjusting the receivers volume](#adjusting-the-receivers-volume)
       * [DSP options](#dsp-options)
+      * [Notch filter](#notch-filter)
     * [Firmware upgrade](#firmware-upgrade)
 6. [External services](#external-services)
     * [EIBI](#eibi)
@@ -361,6 +362,31 @@ The main and sub volumes, per each receiver can be configured using the
 Multiple software-based filters can be added to any receiver mode, these can significantly improve the reception of a given signal. Some filters are tuned to improve the voice quality, others to remove clicking, background noise or unwanted whistles. Filters can be enabled using the dedicated buttons.
 
 ![DSP Options](./resources/image65.png)
+
+#### Notch filter
+
+When receiving a station in voice modes, sometimes there are carriers interfering and creating unpleasant/disturbing hiss that can reduce the intelligibility of the received signal. OL-Master has functions to reduce/cancel this hiss with minimum impact on the received signal.
+
+* **Automatic Mode:** To activate the automatic mode, click “ANF” (Automatic Notch Filter): very shortly the interfering signal will be reduced/cancelled.
+* **Manual Mode:** If the interfering signal is intermittent or if it is always present, it is better to use the manual mode and define a permanent notch that will be stored in the configuration database and that will be activated every time OL-Master is started and the notch (NTCH) button activated.
+
+There is no limit to the number of notches that can be defined.
+
+Notches can be created in Panadapter, Spectrum and Panaspectrum display modes, but since the resolution of Spectrum and the spectrum sub-window of Panaspectrum display mode is higher, it is recommended to define the notch there because notches can be positioned with better precision. It is also recommended to activate the notch function by clicking the NOTCH button before creating notches: the effect of the notch will be audible in real time and immediately visible on the spectrum.
+
+To define a notch: move the mouse pointer on the spectrum over the interfering signal and click the right button. A green vertical marker will appear. The first number is a progressive notch number, and the second number is the notch width. To change the notch width, move slightly the mouse to highlight the notch marker, then use the mouse wheel to adjust the width. The notch depth is automatically adjusted for best attenuation. If the notch (NTCH) button is active, the notch effect will immediately be audible and visible on the spectrum.
+
+To disable a defined notch, highlight the marker by moving the mouse pointer over it and then right-click: the notch marker will become a dashed line.
+
+To enable a defined notch, highlight the marker by moving the mouse pointer over it and then right-click: the marker will become a continuous line.
+
+To delete a defined notch, highlight the marker by moving the mouse pointer over it and then double-right-click.
+
+To delete ALL defined notches at once, press left-Alt on the keyboard and then right-click anywhere on the Panadapter, Spectrum, or Panaspectrum window and confirm the action by selecting Yes.
+
+If the notch (NTCH) button is active, the Spectrum will immediately reflect the changes. No changes will be seen on the Panadapter since its data are collected before any function is applied. Spectrum data, however, are collected after all activated functions (e.g., filters, mode, noise reduction, notches) are applied.
+
+To disable the manual notch mode, use the notch (NTCH) button to deactivate it. Please note that notches can be defined even if the notch (NTCH) button is not active, but the effect will not be visible or audible until the notch (NTCH) button is activated.
 
 ### Firmware upgrade
 

@@ -32,6 +32,36 @@ If the OL-Master software throws an error at startup stating "Cannot load DLL 'C
 
 **Solution**: Refer to the System requirements chapter and make sure all software and hardware requirements are met.
 
+## Cannot connect to the OL-SDR transceiver
+
+If you are unable to connect to the OL-SDR transceiver, the issue may be related to the Ethernet connection between the transceiver and your PC. Please check the following:
+
+**Solution**: Follow these steps to troubleshoot the connection issue, potential issues might be related to duplicated IP addresses or network hardware capabilities.
+
+### 1. Check for Duplicate IP Addresses
+
+Ensure that no other device on your network is using the same IP address as the OL-SDR transceiver. Duplicate IP addresses will prevent proper communication.
+
+### 2. Verify LAN Hardware Capabilities
+
+All devices in the network path (PC, switches, routers) must support Gigabit Ethernet (1000 Mbps). Using older 100 Mbps hardware may cause connectivity or performance issues.
+
+### 3. Assign a Single IP Address
+
+Make sure that only one IP address is assigned to the Ethernet interface used to control the transceiver. Multiple IPs on the same interface can cause routing conflicts.
+
+### 4. Direct Connection Test
+
+If the device still cannot be reached, try connecting the transceiver directly to your PC using a standard Ethernet cable, bypassing any switches or routers. This helps isolate network-related issues.
+
+### 5. Additional Checks
+
+* Confirm that the Ethernet cable is securely connected and undamaged.
+* Ensure that the correct network adapter is selected in the OL-Master software.
+* Disable any firewall or security software that may be blocking network traffic.
+
+If you continue to experience issues after these steps, please contact customer care for further assistance.
+
 ## OL-Master software crashed
 
 If the OL-Master software crashes, it may be due to a variety of reasons, to help us diagnose the issue, please follow these steps:
