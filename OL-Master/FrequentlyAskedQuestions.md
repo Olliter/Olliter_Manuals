@@ -37,3 +37,11 @@ This is an issue with the firewall, please read the OL-Master software manual to
 ## How do I create a custom filter to match my receive/transmit profile?
 
 Custom filters for both RX and TX can be created using the **VAR1** and **VAR2** filters of the OL-Master software, those filters can be customized using the **HIGH** and **LOW** sliders to match the desired profile. Filter settings are then stored automatically in the database. These filters can be different for each band, once they are configured, they will be available whenever needed just by clicking either **VAR1** or **VAR2**.
+
+## Does the OL-SDR support CAT interfaces?
+
+Yes, the OL-SDR supports CAT (Computer Aided Transceiver) interfaces. It can connect to third party software via RS232 (using virtual serial port emulators), and it also supports remote control via TCP/IP using the MQTT protocol.
+
+## What radio models does the OL-SDR emulate for CAT control?
+
+The OL-SDR emulates a subset of commands from two different radio architectures: the Kenwood TS-2000 and the FlexRadio/PowerSDR. Because of the different radio designs, the TS-2000 command set is limited to the most important functions (like frequency tuning, VFO controls, RX and TX commands and more), while the FlexRadio/PowerSDR command set is quite extensive.
