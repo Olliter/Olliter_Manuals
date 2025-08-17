@@ -18,13 +18,20 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 > [!WARNING]
 > Please read carefully before using the SDR transceiver(s) and related software(s).
 
-The manuals are organized in the following folders:
+These are the available manuals:
 
 * [Hardware and software licenses](./General/README.md)
+  * [Hardware License](./General/HardwareLicense.md)
+  * [Software License](./General/SoftwareLicense.md)
 * [OL-Master](./OL-Master/README.md)
+  * [Frequently Asked Questions](./OL-Master/FrequentlyAskedQuestions.md)
+  * [General Recommendations](./OL-Master/GeneralRecommendations.md)
+  * [Troubleshooting](./OL-Master/Troubleshooting.md)
 * [OL-SD20A](./OL-SD20A/README.md)
+  * [Changing IP address](./OL-SD20A/ChangingIpAddress.md)
 * OL-SD300A (coming soon)
 * RosPo (coming soon)
+* OL-POWER (coming soon)
 
 ## Contact information
 
@@ -42,21 +49,24 @@ This is the official website where all news are published, here you can
 find manuals, software and all the information that are created for our
 customers.
 
-Olliter website: 
-- [English version](https://www.olliter.com/home-en.html)
-- [Italian version](https://www.olliter.com/index.html)
+Olliter website:
+
+* [English version](https://www.olliter.com/home-en.html)
+* [Italian version](https://www.olliter.com/index.html)
 
 ### Downloads
 
 The downloads section of the website with manuals and resources is available at:
-- [Italian version](https://www.olliter.com/download.html)
-- [English version](https://www.olliter.com/download-en.html)
+
+* [Italian version](https://www.olliter.com/download.html)
+* [English version](https://www.olliter.com/download-en.html)
 
 ### OL-SDR
 
 A dedicate page with all the different OL-SDR devices and accessories is available at:
-- [Italian version](https://www.olliter.com/sdr.html)
-- [English version](https://www.olliter.com/ol-sdr-en.html)
+
+* [Italian version](https://www.olliter.com/sdr.html)
+* [English version](https://www.olliter.com/ol-sdr-en.html)
 
 ### Olliter YouTube channel
 

@@ -15,7 +15,6 @@ automaticamente](./resources/images/media/image2.jpg)
       - [Technical specifications](#technical-specifications)
     - [Front panel](#front-panel)
       - [Front panel LEDs](#front-panel-leds)
-      - [Front speakers](#front-speakers)
     - [Back panel](#back-panel)
       - [Connectors description](#connectors-description)
       - [Morse key jack](#morse-key-jack)
@@ -43,10 +42,6 @@ automaticamente](./resources/images/media/image2.jpg)
     - [Default Olliter SDR IP address](#default-olliter-sdr-ip-address)
     - [Sample Ethernet connection](#sample-ethernet-connection)
     - [Changing the Olliter SDR IP address](#changing-the-olliter-sdr-ip-address)
-      - [Connect the device to the PC](#connect-the-device-to-the-pc)
-      - [Manually set the IP address of the PC](#manually-set-the-ip-address-of-the-pc)
-      - [Setting the device address using OL-Master](#setting-the-device-address-using-ol-master)
-      - [Restore the default IP settings of the PC](#restore-the-default-ip-settings-of-the-pc)
 6. [Usage of OL-Master](#usage-of-ol-master)
 7. [General recommendations](#general-recommendations)
 8. [Troubleshooting](#troubleshooting)
@@ -60,13 +55,13 @@ For the full hardware and software license, please refer to the following docume
 
 ## Important user notice
 
-* This radio is designed to comply with your country\'s radio regulations.
+- This radio is designed to comply with your country's radio regulations.
 
-* This radio was designed to operate on frequencies allocated exclusively for amateur radio use.
+- This radio was designed to operate on frequencies allocated exclusively for amateur radio use.
 
-* To legally operate this radio, you must possess a valid amateur radio license of the appropriate class issued by your government.
+- To legally operate this radio, you must possess a valid amateur radio license of the appropriate class issued by your government.
 
-* Radio frequency (RF) emissions from transmitters can potentially interfere with electronic devices, including pacemakers and defibrillators. If you suspect any interference with your medical device while operating this radio, immediately cease transmission and seek medical attention if necessary.
+- Radio frequency (RF) emissions from transmitters can potentially interfere with electronic devices, including pacemakers and defibrillators. If you suspect any interference with your medical device while operating this radio, immediately cease transmission and seek medical attention if necessary.
 
 ## Introduction
 
