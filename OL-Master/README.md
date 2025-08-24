@@ -41,6 +41,7 @@
     * [EIBI](#eibi)
     * [Clusters](#clusters)
     * [MQTT](#mqtt)
+      * [Sample MQTT broker configuration](#sample-mqtt-broker-configuration)
       * [Telemetry data](#telemetry-data)
       * [Receiver control](#receiver-control)
         * [Controls examples](#controls-examples)
@@ -457,6 +458,25 @@ The OL-Master software can be configured to send telemetry data to an MQTT broke
 > This chapter is a work in progress
 
 MQTT settings are available in the `Setup > COM > MQTT` menu of the OL-Master software.
+
+> [!NOTE]
+> The MQTT feature requires an external MQTT broker to be available. An example of a free MQTT broker is [Eclipse Mosquitto](https://mosquitto.org/).
+
+#### Sample MQTT broker configuration
+
+This is an example of the `mosquitto.conf` file configuration for the MQTT broker:
+
+```conf
+# MQTT protocol
+listener 1883
+protocol mqtt
+# WebSocket protocol
+listener 9001
+protocol websockets
+# Authentication should be disabled
+# only on local protected networks
+allow_anonymous true
+```
 
 #### Telemetry data
 
