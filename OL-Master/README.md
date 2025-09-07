@@ -37,7 +37,7 @@
       * [DSP options](#dsp-options)
       * [Notch filter](#notch-filter)
     * [Firmware upgrade](#firmware-upgrade)
-6. [External services](#external-services)
+6. [Additional features](#additional-features)
     * [EIBI](#eibi)
     * [Clusters](#clusters)
     * [MQTT](#mqtt)
@@ -432,23 +432,41 @@ At first, the software will erase the content of the FPGA, this is a monolithic 
 
 Wait for the upgrade window to close automatically after a couple of seconds, then the process is complete, and the transceiver can be used as normal.
 
-## External services
+## Additional features
 
-The OL-Master software can be configured to use external services like clusters or EIBI, these services require an internet connection to work.
+The OL-Master software can be configured to use external services like clusters or EIBI, these services might require an internet connection to work.
 
 ### EIBI
 
 The EIBI service is a database of shortwave broadcast stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
-> [!NOTE]
-> This chapter is a work in progress
+The list of broadcast is retrieved from the Olliter website and constantly updated. A set of filters can be used to sort or search the list of stations.
+
+The broadcast stations that match the current frequency are highlighted in green.
+
+When tuning a frequency on the VFO of any receiver, the matching broadcast station will be displayed in the spectrum window.
 
 ### Clusters
 
 The cluster service is a database of amateur radio stations, it can be used to tune the receiver to a specific station, or to display the station name and frequency on the receiver window.
 
-> [!NOTE]
-> This chapter is a work in progress
+If the option is enabled in OL-Master settings, the list of DX stations will be listed in the spectrum window. Double clicking any callsign will tune the receiver to that station.
+
+### CW Keyer
+
+The CW Keyer feature allows you to send Morse code using a keyboard. The keyer can be configured to use different keying modes, speeds, and other parameters.
+
+User can configure multiple messages to be sent by pressing keys from `F1` to `F12` or by combining the `SHIFT` key with these function keys, for a total of 24 usable messages.
+
+The CW Keyer also supports special syntax for sending variable fields, such as:
+
+* `#C` - The callsign of the DX station as specified in the dedicated field
+* `#R` - A report as indicated in the dedicated field (like the signal report or a custom contest exchange like CQ zone, region, etc)
+* `#N` - The name of the DX operator as specified in the dedicated field
+* `#` - A progressive number that can be incremented from the CW Keyer window (like the progressive number in a CW contest)
+
+> [!TIP]
+> If you need to send arbitrary messages using the CW Keyer, you can use the [MQTT commands feature](#receivers-commands) as described below. This allows for more complex messaging scenarios.
 
 ### MQTT
 
@@ -597,12 +615,24 @@ Supported commands:
 * `mox` - Toggle the MOX
 * `frequency` - Adjust the frequency of the receiver
 * `mode` - Adjust the mode of the receiver
+* `keyer` - Control the transceiver CW keyer
 
 Supported actions:
 
 * `toggle` - Toggle the command
 * `+` - Increase the value
 * `-` - Decrease the value
+
+The keyer, also supports the following actions:
+
+* `sendmem` - Send a memory from the Keyer list
+* `sendtext` - Send arbitrary text
+
+> [!NOTE]
+> The keyer feature was introduced with OL-Master version 1.1.0.5
+>
+> * Maximum length of the text is 100 characters
+> * The CW Keyer window should be opened before sending commands to the keyer
 
 The optional `subreceiver` field can be set to `true` to control the sub receiver.
 
@@ -695,6 +725,38 @@ Payload:
 ```
 
 Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU", "DIGL", "DIGU", "FM5", "FM2", "FT"
+
+* Sending the message saved in the Keyer list at position 5
+
+Topic: `receivers/command/3`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "command": "keyer",
+  "action": "sendmem",
+  "value": "5",
+  "subreceiver": "false"
+}
+```
+
+* Sending arbitrary text using the keyer
+
+Topic: `receivers/command/3`
+
+Payload:
+
+```json
+{
+  "software_id": "AnyRandomSoftwareId",
+  "command": "keyer",
+  "action": "sendtext",
+  "value": "Hello World",
+  "subreceiver": "false"
+}
+```
 
 ### UDP Stream
 
