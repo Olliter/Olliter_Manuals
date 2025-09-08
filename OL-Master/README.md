@@ -951,6 +951,9 @@ OL-Master is capable of sending panadapter data to N1MM logging software. This a
 
 Using the dedicated settings at `Setup > COM > N1MM` you can enable the spectrum forwarding to N1MM.
 
+> [!TIP]
+> To ensure proper visualization of the spectrum data, the zoom level in the receiver window of OL-Master should be set to minimum (no zoom).
+
 There are also additional settings that can be customized:
 
 * `Target address`: The IP address of the machine where N1MM is running. By default it is `127.0.0.1`.
