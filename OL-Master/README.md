@@ -945,7 +945,7 @@ To ensure proper functionality, you can access the Wavelog instance, look for th
 OL-Master is capable of sending panadapter data to N1MM logging software. This allows for seamless integration between the two applications, enabling users to take full advantage of the features offered by both.
 
 > [!NOTE]
-> This feature requires OL-Master version 1.1.0.7 or later
+> This feature requires OL-Master version 1.1.0.8 or later
 
 #### OL-Master settings
 
