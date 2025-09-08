@@ -52,6 +52,8 @@
         * [Spectrum reception example](#spectrum-reception-example)
       * [Audio stream](#audio-stream)
         * [Audio reception example](#audio-reception-example)
+    * [Wavelog](#wavelog)
+    * [N1MM](#n1mm)
 7. [General recommendations](#general-recommendations)
 8. [Frequently Asked Questions](#frequently-asked-questions)
 9. [Troubleshooting](#troubleshooting)
@@ -287,7 +289,7 @@ The spectrum span that is rendered is roughly the 80% of the sample rate set in 
 The refresh rate of the receivers windows can be adjusted in *Display* \> *General*. The suggested value is between 10 and 20 frames per second.
 
 > [!WARNING]
-> Increasing the refresh rate can significantly impact the system load, if the system starts lagging or the UI starts behaving, reduce the "Main Display FPS" value 
+> Increasing the refresh rate can significantly impact the system load, if the system starts lagging or the UI starts behaving, reduce the "Main Display FPS" value
 
 ![Screen refresh rate](./resources/image53.png)
 
@@ -904,6 +906,69 @@ finally:
     sock.close()
 
 ```
+
+### Wavelog
+
+![OL-Master and Wavelog](./resources/olmaster-wavelog.png)
+
+[Wavelog](https://github.com/wavelog/wavelog) is an open-source, web-based and self-hosted logging software with extensive features to interface with external services like QSL management and live or contest logging.
+
+> [!NOTE]
+> This feature requires OL-Master version 1.1.0.6 or later
+
+In the `Setup > COM > Wavelog section`, you can configure the integration with Wavelog, by providing the few required parameters.
+
+* `Wavelog URL`: The base URL of the Wavelog instance (e.g., `https://wavelog.example.com/`).
+  * No additional paths should be added, just the base URL of the Wavelog instance as indicated in the API key page of the Wavelog software
+* `API Key`: An API key for the user account in Wavelog where radio interfaces should be synched.
+  * The API key must be configured with both read and write access
+* `Radio name`: An optional parameter used to distinguish between different radio interfaces.
+  * If no radio name is provided, the default `Olliter SDR` name will be used
+
+After configuring the Wavelog integration, you should click the `Apply + Test` button to verify the connection.
+
+#### Radio interfaces
+
+If this feature is enabled, the transceiver will periodically send updates to the Wavelog instance with the current state of the radio interfaces. This includes information such as frequency, mode, and other relevant parameters.
+
+The update interval can be adjusted as needed.
+
+To ensure proper functionality, you can access the Wavelog instance, look for the `Hardware interfaces` option in the user menu and make sure all four radio interfaces are listed and displaying correctly.
+
+> [!TIP]
+> Using a faster refresh rate (smaller interval) might overload the Wavelog instance, the recommended minimum value is 1000 milliseconds.
+
+### N1MM
+
+![OL-Master and N1MM integration](./resources/olmaster-n1mm.png)
+
+OL-Master is capable of sending panadapter data to N1MM logging software. This allows for seamless integration between the two applications, enabling users to take full advantage of the features offered by both.
+
+> [!NOTE]
+> This feature requires OL-Master version 1.1.0.7 or later
+
+#### OL-Master settings
+
+Using the dedicated settings at `Setup > COM > N1MM` you can enable the spectrum forwarding to N1MM.
+
+There are also additional settings that can be customized:
+
+* `Target address`: The IP address of the machine where N1MM is running. By default it is `127.0.0.1`.
+* `Target port`: The port number on which N1MM is listening for incoming connections. By default it is `12060`.
+* `Send interval`: The interval at which panadapter data is sent to N1MM. By default it is `333 ms`.
+  * As per N1MM documentation, refresh should happen only 3-4 times per second.
+* `Scaling factor`: A scaling factor to apply to the panadapter data before sending it to N1MM. By default it is `0.5`.
+  * Increasing this value will make the spectrum "taller", while decreasing this value will make it "shorter".
+* `Spectrum offset`: An offset to apply to the panadapter data before sending it to N1MM. By default it is `120`.
+  * Increasing the value will shift the spectrum upwards, while decreasing the value will shift it downwards.
+
+#### N1MM settings
+
+In the N1MM waterfall window, click the "Settings" button (gear icon) to access the N1MM settings and then set:
+
+* `Spectrum source`: Set this to `External (WB, Flex, etc)`.
+* `Source Options`: Select which of the active receivers spectrum to display.
+* `Binary bins`: Set this to the desired resolution of the spectrum.
 
 ## General recommendations
 
