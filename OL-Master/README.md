@@ -726,7 +726,7 @@ Payload:
 }
 ```
 
-Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU", "DIGL", "DIGU", "FM5", "FM2", "FT"
+Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU", "DIGL", "DIGU", "FM5", "FM2", "FT", "LAST"
 
 * Sending the message saved in the Keyer list at position 5
 
@@ -927,6 +927,9 @@ In the `Setup > COM > Wavelog section`, you can configure the integration with W
 
 After configuring the Wavelog integration, you should click the `Apply + Test` button to verify the connection.
 
+> [!TIP]
+> Refer to the Wavelog documentation for more details on how to configure APIs, radio interfaces and callbacks.
+
 #### Radio interfaces
 
 If this feature is enabled, the transceiver will periodically send updates to the Wavelog instance with the current state of the radio interfaces. This includes information such as frequency, mode, and other relevant parameters.
@@ -937,6 +940,25 @@ To ensure proper functionality, you can access the Wavelog instance, look for th
 
 > [!TIP]
 > Using a faster refresh rate (smaller interval) might overload the Wavelog instance, the recommended minimum value is 1000 milliseconds.
+
+#### Radio callbacks
+
+If this feature is enabled, Wavelog will be able to control the transceiver remotely. This includes changing frequency and mode.
+
+> [!NOTE]
+> This feature requires OL-Master version 1.1.0.10 or later
+
+For this feature to work, please make sure to:
+
+* Each transceiver should be assigned to a different TCP port in the `Setup > COM > Wavelog` menu of OL-Master
+  * The default ports are 54321, 54322, 54323 and 54324 for RX1, RX2, RX3 and RX4 respectively
+  * Make sure the selected ports are not blocked by any firewall or already in use by other applications
+* Each of the four transceivers that are automatically populated in the `Hardware interfaces` section of Wavelog should be assigned to the corresponding callback address TCP port as configured in OL-Master
+  * The address is always localhost, only the port should differ, for example:
+    * RX1: `http://127.0.0.1:54321`
+    * RX2: `http://127.0.0.1:54322`
+    * RX3: `http://127.0.0.1:54323`
+    * RX4: `http://127.0.0.1:54324`
 
 ### N1MM
 
