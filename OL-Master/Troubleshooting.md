@@ -1,4 +1,6 @@
-# Troubleshooting
+![Olliter Logo](../resources/olliter-logo.png)
+
+# OL-Master - Troubleshooting
 
 This manual contains some issues that may occur while operating the transceiver, if the proposed solution does not work for you, please get in touch with the customer care department.
 
@@ -30,7 +32,7 @@ By following these steps, the protection circuit should reset, and the Olliter S
 
 If the OL-Master software throws an error at startup stating "Cannot load DLL 'ChannelMaster', cannot find the specified module" means that some dependencies are not satisfied.
 
-**Solution**: Refer to the System requirements chapter and make sure all software and hardware requirements are met.
+**Solution**: Refer to the System requirements chapter and make sure all software and hardware requirements described in [OL-Master manual](./README.md) are met.
 
 ## Cannot connect to the OL-SDR transceiver
 
@@ -44,7 +46,7 @@ Ensure that no other device on your network is using the same IP address as the 
 
 ### 2. Verify LAN Hardware Capabilities
 
-All devices in the network path (PC, switches, routers) must support Gigabit Ethernet (1000 Mbps). Using older 100 Mbps hardware may cause connectivity or performance issues.
+All devices in the network path (PC, switches, routers) must support Gigabit Ethernet (1000 Mbps). Using older 10/100 Mbps adapters will not work at all.
 
 ### 3. Assign a Single IP Address
 
@@ -61,6 +63,10 @@ If the device still cannot be reached, try connecting the transceiver directly t
 * Disable any firewall or security software that may be blocking network traffic.
 
 If you continue to experience issues after these steps, please contact customer care for further assistance.
+
+## Something is not working as expected
+
+If the OL-Master software starts behaving unexpectedly, or something is not working as expected, there might be a variety of reasons, to help diagnose the issue, please navigate to the `%appdata%/OL-Master/Logs` folder where the list of log files can be retrieved and forwarded to the customer care department if needed.
 
 ## OL-Master software crashed
 

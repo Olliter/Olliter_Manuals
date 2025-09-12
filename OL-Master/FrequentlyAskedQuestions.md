@@ -1,6 +1,6 @@
-# Frequentkl Asked Questions
-
 ![Olliter logo](../resources/olliter-logo.png)
+
+# OL-Master - Frequently Asked Questions
 
 This page contains the answers to the most frequently asked questions about the OL-Master software.
 

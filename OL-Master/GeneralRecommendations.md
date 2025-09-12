@@ -1,4 +1,6 @@
-# General Recommendations
+![Olliter logo](../resources/olliter-logo.png)
+
+# OL-Master - General Recommendations
 
 This section provides general recommendations for using the Olliter SDR in various modes and configurations. These guidelines cover common issues and best practices for optimal performance and user experience.
 

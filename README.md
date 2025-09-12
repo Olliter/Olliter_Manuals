@@ -16,7 +16,7 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 ## Content
 
 > [!WARNING]
-> Please read carefully before using the SDR transceiver(s) and related software(s).
+> Please read carefully before using the Olliter hardware and software.
 
 These are the available manuals:
 
@@ -26,6 +26,7 @@ These are the available manuals:
 * [OL-Master](./OL-Master/README.md)
   * [Frequently Asked Questions](./OL-Master/FrequentlyAskedQuestions.md)
   * [General Recommendations](./OL-Master/GeneralRecommendations.md)
+  * [Additional Features](./OL-Master/AdditionalFeatures.md)
   * [Troubleshooting](./OL-Master/Troubleshooting.md)
 * [OL-SD20A](./OL-SD20A/README.md)
   * [Changing IP address](./OL-SD20A/ChangingIpAddress.md)
