@@ -86,7 +86,7 @@ The setup procedure consists of:
 
 This is an example of the `mosquitto.conf` file configuration for the MQTT broker to allow both MQTT on port 1883 and MQTT over WebSocket on port 9001 with no authentication:
 
-```conf
+```bash
 # MQTT protocol
 listener 1883
 protocol mqtt
@@ -326,7 +326,7 @@ Payload:
 }
 ```
 
-Allowed values:  "LSB", "USB", "DSB", "CWL", "CWU", "AM", "SAM", "SAML", "SAMU", "DIGL", "DIGU", "FM5", "FM2", "FT", "LAST"
+Allowed values:  `LSB`, `USB`, `DSB`, `CWL`, `CWU`, `AM`, `SAM`, `SAML`, `SAMU`, `DIGL`, `DIGU`, `FM5`, `FM2`, `FT`, `LAST`
 
 * Sending the message saved in the Keyer list at position 5
 
