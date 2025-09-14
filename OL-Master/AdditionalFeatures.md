@@ -84,7 +84,7 @@ The setup procedure consists of:
 4. Running the Eclipse Mosquitto broker
    * The broker is automatically installed as a Windows service with no need of manual startup at every reboot
 
-This is an example of the `mosquitto.conf` file configuration for the MQTT broker to allow both MQTT on port 1883 and MQTT over WebSocket on port 9001 with no authentication:
+This is an example of the `mosquitto.conf` file configuration (which is located by default at `C:\Program Files\Mosquitto\mosquitto.conf`) for the MQTT broker to allow both MQTT on port 1883 and MQTT over WebSocket on port 9001 with no authentication:
 
 ```bash
 # MQTT protocol
@@ -97,6 +97,13 @@ protocol websockets
 # only on local protected networks
 allow_anonymous true
 ```
+
+Using these settings, OL-Master (and any third party software needing to interact with it) should be set as follows:
+
+* `Broker address`: `localhost` (or the IP address of the machine where the broker is running)
+* `Broker port`: `9001`
+* `Use WebSocket`: true (checked)
+* `Use authentication`: false (unchecked)
 
 #### Telemetry data
 
