@@ -5,17 +5,17 @@
 * [EIBI](#eibi)
 * [Clusters](#clusters)
 * [MQTT](#mqtt)
-    * [Sample MQTT broker configuration](#sample-mqtt-broker-configuration)
-    * [Telemetry data](#telemetry-data)
-    * [Receiver control](#receiver-control)
-    * [Controls examples](#controls-examples)
-    * [Receivers commands](#receivers-commands)
-    * [Commands examples](#commands-examples)
+  * [Example of Eclipse Mosquitto configuration](#example-of-eclipse-mosquitto-configuration)
+  * [Telemetry data](#telemetry-data)
+  * [Receiver control](#receiver-control)
+  * [Controls examples](#controls-examples)
+  * [Receivers commands](#receivers-commands)
+  * [Commands examples](#commands-examples)
 * [UDP Stream](#udp-stream)
-    * [Spectrum stream](#spectrum-stream)
-    * [Spectrum reception example](#spectrum-reception-example)
-    * [Audio stream](#audio-stream)
-    * [Audio reception example](#audio-reception-example)
+  * [Spectrum stream](#spectrum-stream)
+  * [Spectrum reception example](#spectrum-reception-example)
+  * [Audio stream](#audio-stream)
+  * [Audio reception example](#audio-reception-example)
 * [Wavelog](#wavelog)
 * [N1MM](#n1mm)
 
@@ -65,14 +65,14 @@ The CW Keyer also supports special syntax for sending variable fields, such as:
 
 ### MQTT
 
-The OL-Master software can be configured to send telemetry data to an MQTT broker, this data can be used to monitor the transceiver remotely, or to integrate the transceiver with other software.
+The OL-Master software can be configured to send telemetry data to an MQTT broker, this data can be used to monitor the transceiver remotely, or to integrate the transceiver with other software or keypads.
 
 MQTT settings are available in the `Setup > COM > MQTT` menu of the OL-Master software.
 
 > [!WARNING]
 > Starting from OL-Master version 1.1.0.4 the internal MQTT broker of OL-Master is now deprecated. The MQTT feature requires an external MQTT broker to be available. An example of a free MQTT broker is [Eclipse Mosquitto](https://mosquitto.org/).
 
-#### Sample Eclipse Mosquitto configuration
+#### Example of Eclipse Mosquitto configuration
 
 The installation instructions about the Eclipse Mosquitto broker can be found on the official website: [Mosquitto Documentation](https://mosquitto.org/documentation/).
 
