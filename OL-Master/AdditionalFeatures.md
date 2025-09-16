@@ -6,16 +6,17 @@
 * [Clusters](#clusters)
 * [MQTT](#mqtt)
   * [Example of Eclipse Mosquitto configuration](#example-of-eclipse-mosquitto-configuration)
-  * [Telemetry data](#telemetry-data)
-  * [Receiver control](#receiver-control)
-  * [Controls examples](#controls-examples)
-  * [Receivers commands](#receivers-commands)
-  * [Commands examples](#commands-examples)
+  * [MQTT Telemetry data](#mqtt-telemetry-data)
+  * [MQTT Receiver control](#mqtt-receiver-control)
+  * [MQTT Controls examples](#mqtt-controls-examples)
+  * [MQTT Receivers commands](#mqtt-receivers-commands)
+  * [MQTT Commands examples](#mqtt-commands-examples)
+  * [MQTT Panadapter data](#mqtt-panadapter-data)
 * [UDP Stream](#udp-stream)
-  * [Spectrum stream](#spectrum-stream)
-  * [Spectrum reception example](#spectrum-reception-example)
-  * [Audio stream](#audio-stream)
-  * [Audio reception example](#audio-reception-example)
+  * [UDP Panadapter data](#udp-panadapter-data)
+  * [UDP Panadapter reception example](#udp-panadapter-reception-example)
+  * [UDP Audio stream](#udp-audio-stream)
+  * [UDP Audio reception example](#udp-audio-reception-example)
 * [Wavelog](#wavelog)
 * [N1MM](#n1mm)
 
@@ -105,7 +106,7 @@ Using these settings, OL-Master (and any third party software needing to interac
 * `Use WebSocket`: true (checked)
 * `Use authentication`: false (unchecked)
 
-#### Telemetry data
+#### MQTT Telemetry data
 
 The telemetry data that is sent to the MQTT broker is a JSON object that contains the following fields:
 
@@ -152,13 +153,13 @@ The telemetry data is read-only and cannot be used to control the transceiver.
 }
 ```
 
-#### Receiver control
+#### MQTT Receiver control
 
 The receiver commands are sent to the MQTT broker using the `receivers/set/[x]` topic, where `[x]` is the receiver number, ranging from 1 to 4.
 
 The JSON payload follows the same structure as the telemetry data, but some the fields are read-write and can be used to control the transceiver.
 
-##### Controls examples
+##### MQTT Controls examples
 
 * Changing the band on the first receiver
 
@@ -211,7 +212,7 @@ Payload:
 
 Frequency is in MHz.
 
-#### Receivers commands
+#### MQTT Receivers commands
 
 The following commands can be sent to the MQTT broker to send quick commands to the transceiver.
 
@@ -247,7 +248,7 @@ The optional `subreceiver` field can be set to `true` to control the sub receive
 
 The optional `value` field can be set to the value to increase or decrease. If this parameter is empty, the default value for such command will be used (e.g: the tuning step of the frequency).
 
-##### Commands examples
+##### MQTT Commands examples
 
 * Toggling the first receiver
 
@@ -367,6 +368,118 @@ Payload:
 }
 ```
 
+#### MQTT Panadapter data
+
+The panadapter data can be sent to the MQTT broker using the `receivers/panadapter/[x]` topic, where `[x]` is the receiver number, ranging from 1 to 4.
+
+> [!WARNING]
+> The panadapter data transfers a significant amount of data and might overload the MQTT broker or the network if the interval is too low. The UDP stream feature should be preferred for this purpose.
+
+> [!NOTE]
+> The spectrum stream is sent to the MQTT broker in different formats depending on the OL-Master version.
+
+##### OL-Master before version 1.1.0.20
+
+```Python
+# pip install paho-mqtt
+
+import base64
+import gzip
+import json
+import paho.mqtt.client as mqtt
+from io import BytesIO
+
+# MQTT broker settings
+MQTT_BROKER = "localhost"  # Change to your broker address
+MQTT_PORT = 9001
+MQTT_TOPIC = "receivers/panadapter/1"  # Change index as needed
+
+def on_message(client, userdata, msg):
+    # Step 1: Decode base64
+    compressed_payload = base64.b64decode(msg.payload)
+    # Step 2: Decompress (gzip)
+    with gzip.GzipFile(fileobj=BytesIO(compressed_payload)) as f:
+        json_payload = f.read().decode('utf-8')
+    # Step 3: Parse JSON
+    data = json.loads(json_payload)
+    # Step 4: Access spectrum data
+    spectrum = data.get("data", [])
+    print(f"Received {len(spectrum)} spectrum points")
+    # Print first 10 values for demonstration
+    print(spectrum[:10])
+
+client = mqtt.Client(transport="websockets")
+client.on_message = on_message
+client.connect(MQTT_BROKER, MQTT_PORT)
+client.subscribe(MQTT_TOPIC)
+client.loop_forever()
+```
+
+##### OL-Master after version 1.1.0.20
+
+Starting from OL-Master version 1.1.0.20, the panadapter data format has been updated to a binary stream which includes the minimum and maximum values of the spectrum data. This allows for a more accurate reconstruction of the original floating-point values and a significant improvement in the used bandwidth.
+
+```Python
+# pip install paho-mqtt numpy matplotlib
+
+import base64
+import struct
+import numpy as np
+import matplotlib.pyplot as plt
+import paho.mqtt.client as mqtt
+import queue
+import threading
+
+MQTT_BROKER = "localhost"  # Change to your broker address
+MQTT_TOPIC = "receivers/panadapter/1"
+
+# Queue to pass data from MQTT thread to main thread
+data_queue = queue.Queue()
+
+plt.ion()
+fig, ax = plt.subplots()
+line, = ax.plot([], [])
+ax.set_ylim(-150, 0)  # Adjust as needed
+
+def on_message(client, userdata, msg):
+    # Decode and decompress
+    payload = base64.b64decode(msg.payload)
+
+    # Parse min, max, int16 data
+    min_val = struct.unpack('<f', payload[0:4])[0]
+    max_val = struct.unpack('<f', payload[4:8])[0]
+    int16_data = np.frombuffer(payload[8:], dtype='<i2')
+
+    # Reconstruct floats
+    floats = ((int16_data.astype(np.float32) + 32768) / 65535) * (max_val - min_val) + min_val
+
+    # Put data in queue for main thread to process
+    data_queue.put(floats)
+
+# Use the latest callback API version
+client = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
+client.on_message = on_message
+client.connect(MQTT_BROKER)
+client.subscribe(MQTT_TOPIC)
+client.loop_start()
+
+try:
+    while True:
+        # Check for new data in queue
+        try:
+            floats = data_queue.get_nowait()
+            # Plot
+            line.set_xdata(np.arange(len(floats)))
+            line.set_ydata(floats)
+            ax.set_xlim(0, len(floats))
+            plt.draw()
+        except queue.Empty:
+            pass
+        plt.pause(0.01)
+except KeyboardInterrupt:
+    pass
+```
+
 ### UDP Stream
 
 > [!NOTE]
@@ -374,15 +487,20 @@ Payload:
 
 The OL-Master software can be configured to send the audio and spectrum stream to a remote UDP server, this can be used to record the audio stream or to integrate the transceiver with other software.
 
-#### Spectrum stream
+#### UDP Panadapter data
 
 The spectrum stream is sent to the UDP server at each interval as configured in the Setup menu of the OL-Master software.
 
-##### Spectrum reception example
+##### UDP Panadapter reception example
+
+> [!NOTE]
+> The spectrum stream is sent to the UDP server in different formats depending on the OL-Master version.
+
+###### OL-Master before version 1.1.0.20
 
 The following code is an example of how to receive the spectrum stream using a javascript application to render the spectrum on a canvas.
 
-```js
+```python
 function initializePanadapterCanvas() {
     window.addEventListener('resize', adjustCanvasSize);
     adjustCanvasSize();
@@ -457,11 +575,55 @@ window.drawPanadapter = (spectrumData, gridMin = -160, gridMax = 0) => {
 };
 ```
 
-#### Audio stream
+###### OL-Master version 1.1.0.20 or later
+
+Starting from OL-Master version 1.1.0.20, the spectrum stream format has been updated to a binary stream which includes the minimum and maximum values of the spectrum data. This allows for a more accurate reconstruction of the original floating-point values and a significant improvement in the used bandwidth.
+
+```Python
+# pip install numpy matplotlib
+
+import socket
+import struct
+import matplotlib.pyplot as plt
+import numpy as np
+
+UDP_IP = "0.0.0.0"
+UDP_PORT = 50500  # Set to your UDP port
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind((UDP_IP, UDP_PORT))
+
+plt.ion()
+fig, ax = plt.subplots()
+line, = ax.plot([], [])
+ax.set_ylim(-150, 0)  # Adjust as needed
+
+def parse_packet(data):
+    # Find the end of the label (last '|')
+    label_end = data.find(b'|', data.find(b'|', data.find(b'|')+1)+1) + 1
+    min_val = struct.unpack('<f', data[label_end:label_end+4])[0]
+    max_val = struct.unpack('<f', data[label_end+4:label_end+8])[0]
+    buffer = data[label_end+8:]
+    buffer = buffer[:len(buffer) - (len(buffer) % 2)]  # Ensure buffer size is a multiple of 2
+    int16_data = np.frombuffer(buffer, dtype='<i2')
+    # Reconstruct floats
+    floats = ((int16_data.astype(np.float32) + 32768) / 65535) * (max_val - min_val) + min_val
+    return floats
+
+while True:
+    data, addr = sock.recvfrom(65536)
+    floats = parse_packet(data)
+    line.set_xdata(np.arange(len(floats)))
+    line.set_ydata(floats)
+    ax.set_xlim(0, len(floats))
+    plt.pause(0.01)
+```
+
+#### UDP Audio stream
 
 The audio stream is sent to the UDP server as raw audio data, this can be used to record the audio stream or to integrate the transceiver with other software.
 
-##### Audio reception example
+##### UDP Audio reception example
 
 The following Python code is an example of how to receive the audio stream using the `sounddevice` library.
 
