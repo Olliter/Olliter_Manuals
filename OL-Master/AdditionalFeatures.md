@@ -116,39 +116,42 @@ The telemetry topic is `receivers/get/[x]` where `[x]` is the receiver number, r
 
 The telemetry data is read-only and cannot be used to control the transceiver.
 
-```json
+```javascript
 {
-  "software_id": "SomeRandomSoftwareId",
-  "txpower": "0",
-  "monitor_vol": "0",
-  "band": "B10M",
-  "swr": "1",
-  "master_vol": "0.5",
-  "temperature": "29.4",
-  "current": "0.0",
-  "receiver_a": {
-    "active": "False",
-    "frequency": "28.500000",
-    "mode": "USB",
-    "filterlow": "300",
-    "filterhigh": "2700",
-    "volume": "0",
-    "squelch": "0",
-    "mox": "False",
-    "txvfo": "False",
-    "signal": "-109.2"
+  "software_id": "OL-Master_PCNAME", // Read only unique identifier of the software instance
+  "txpower": "0",                    // Read only current TX power in Watts
+  "monitor_vol": "0.3",              // Read only current monitor volume (0.0 to 1.0)
+  "band": "B10M",                    // Read and write current band
+  "swr": "1",                        // Read only current SWR value
+  "master_vol": "0.5",               // Read only current master volume (0.0 to 1.0)
+  "temperature": "0.0",              // Read only current temperature in Celsius
+  "current": "0.0",                  // Read only current consumption in Amperes
+  "samplerate": "192000",            // Read and write current sample rate in Hz (throttled to one update every 30 seconds)
+  "receiver_a":                    // Read and write settings of the main receiver
+  {
+    "active": "False",               // Read and write if the receiver is active
+    "frequency": "28.500000",        // Read and write current frequency in MHz
+    "mode": "USB",                   // Read and write current mode
+    "filterlow": "250",              // Read and write current low filter in Hz
+    "filterhigh": "2650",            // Read and write current high filter in Hz
+    "volume": "30",                  // Read and write current volume (0 to 100)
+    "squelch": "0",                  // Read and write current squelch level (0 to 100)
+    "mox": "False",                  // Read and write if the MOX is active (transmitting)
+    "txvfo": "False",                // Read and write if the VFO is used for transmission
+    "signal": "-170.0"               // Read only current signal level in dBm
   },
-  "receiver_b": {
-    "active": "False",
-    "frequency": "28.550000",
-    "mode": "USB",
-    "filterlow": "300",
-    "filterhigh": "2700",
-    "volume": "0",
-    "squelch": "0",
-    "mox": "False",
-    "txvfo": "False",
-    "signal": "-109.2"
+  "receiver_b":                      // Read and write settings of the sub receiver
+  {
+    "active": "True",                // Read and write if the receiver is active
+    "frequency": "28.550000",        // Read and write current frequency in MHz
+    "mode": "USB",                   // Read and write current mode
+    "filterlow": "250",              // Read and write current low filter in Hz
+    "filterhigh": "2650",            // Read and write current high filter in Hz
+    "volume": "31",                  // Read and write current volume (0 to 100)
+    "squelch": "0",                  // Read and write current squelch level (0 to 100)
+    "mox": "False",                  // Read and write if the MOX is active (transmitting)
+    "txvfo": "False",                // Read and write if the VFO is used for transmission
+    "signal": "-170.0"               // Read only current signal level in dBm
   }
 }
 ```
