@@ -270,7 +270,7 @@ If a microphone is connected to the radio, the RX Only option can be checked to 
 
 #### Configuring the receiver bandwidth
 
-The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in the `SampleRate` menu of each receiver window.
+The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in the `Spectrum width` menu of each receiver window.
 
 > [!WARNING]
 > As the sample rate is increased, more system and network resources will be required by the software. Please adjust the settings accordingly.
