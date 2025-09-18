@@ -6,33 +6,33 @@
 
 Using a straight CAT5 Ethernet cable, connect the Olliter SDR to the PC (make sure the PC has an Ethernet interface that supports 1Gbps communication)
 
-![Ethernet connection](./resources/images/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png)
+![Ethernet connection](./resources/cf512e5c0ffda0f080d25444c6d1b24657b0b1f6.png)
 
 ## Manually set the IP address of the PC
 
 On the Windows PC, open Control Panel and select "Network and internet".
 
-![Control panel](./resources/images/media/image34.png)
+![Control panel](./resources/image34.png)
 
 Select "Network and sharing"
 
-![Network and internet](./resources/images/media/image35.png)
+![Network and internet](./resources/image35.png)
 
 Click on "Change adapter settings" on the left side.
 
-![Networks and sharing](./resources/images/media/image36.png)
+![Networks and sharing](./resources/image36.png)
 
 Right click the Ethernet interface that was used to connect the SDR device and open the Properties menu.
 
-![TCP/IP V4 settigns](./resources/images/media/image37.png)
+![TCP/IP V4 settigns](./resources/image37.png)
 
 Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then click on "Properties".
 
-![Manual IP settings](./resources/images/media/image38.png)
+![Manual IP settings](./resources/image38.png)
 
 Click on the radio button to enable "Use the following IP address" and then input 192.168.1.10 as IP address and 255.255.255.0 as subnet mask. Leave default gateway and the DNS empty.
 
-![Confirm settings](./resources/images/media/image39.png)
+![Confirm settings](./resources/image39.png)
 
 Click "Ok" on all dialogs to save the settings and execute OL-Master
 
@@ -44,21 +44,19 @@ After executing the software, an error message will appear, informing the user t
 
 If the dialog does not appear, it means that OL-Master was able to discover the device on the local network using UDP broadcast, this does not impact the procedure.
 
-![FW Maintenance menu](./resources/images/media/image40.png)
-
 Once the software has started, click on the "FW Maintenance" menu on the top bar.
 
-![FW Maintenance window](./resources/images/media/image41.png)
+![Firmware maintenance menu](../OL-Master/resources/1ee15ab771b6ea80b7b1ae20172ddb0194170c44.png)
 
 A dialog will appear listing the devices that were discovered on the local network, the Olliter SDR should show up, select it from the list.
 
-![Firmware & IP Address](./resources/images/media/image42.png)
+![Radio discovery](../OL-Master/resources/fw-upgrade-discovery.png)
 
 In the central part of the dialog, type in the new IP address to be used by the device, the IP address must be valid on your local network and must not be used by any other device.
 
 After inserting the IP address, click on Change IP to persist the settings to the device, the SDR should now reboot.
 
-![Firmware & IP Address](./resources/images/media/image43.png)
+![Firmware & IP Address](./resources/image43.png)
 
 ## Restore the default IP settings of the PC
 
@@ -66,26 +64,27 @@ Once the IP address of the transceiver is properly configured to a valid address
 
 On the Windows PC, open Control Panel and select "Network and internet".
 
-![Pannello di controllo](./resources/images/media/image34.png)
+![Pannello di controllo](./resources/image34.png)
+
 Select "Network and sharing"
 
-![Rete e Internet](./resources/images/media/image35.png)
+![Rete e Internet](./resources/image35.png)
 Click on "Change adapter settings" on the left side.
 
-![Centro connessioni di rete e condivisione](./resources/images/media/image36.png)
+![Centro connessioni di rete e condivisione](./resources/image36.png)
 
 Right click the Ethernet interface that was used to connect the SDR
 device and open the Properties menu.
 
-![Interface settings](./resources/images/media/image37.png)
+![Interface settings](./resources/image37.png)
 
 Scroll down to select "Internet protocol version 4 (TCP/IPv4)" and then
 click on "Properties".
 
-![IP Address settings](./resources/images/media/image38.png)
+![IP Address settings](./resources/image38.png)
 
 Restore the previous IP address settings as needed.
 
-![Reset IP settings](./resources/images/media/image44.png)
+![Reset IP settings](./resources/image44.png)
 
 Now, please connect the Olliter SDR as shown in the Sample Ethernet connection of the SDR manual.

@@ -17,6 +17,7 @@
     * [Network requirements](#network-requirements)
 4. [Installing OL-Master](#installing-ol-master)
     * [Automatic update check](#automatic-update-check)
+    * [Upgrading OL-Master](#upgrading-ol-master)
     * [Configuring the firewall](#configuring-the-firewall)
 5. [Usage of OL-Master](#usage-of-ol-master)
     * [Configuring OL-Master](#configuring-ol-master)
@@ -36,6 +37,15 @@
       * [Adjusting the receivers volume](#adjusting-the-receivers-volume)
       * [DSP options](#dsp-options)
       * [Notch filter](#notch-filter)
+        * [Defining a notch filter](#defining-a-notch-filter)
+        * [Deleting a notch filter](#deleting-a-notch-filter)
+        * [Notch filter considerations](#notch-filter-considerations)
+      * [AGC and Gain Control](#agc-and-gain-control)
+        * [AGC Modes](#agc-modes)
+        * [Gain (Threshold)](#gain-threshold)
+        * [Hang Time](#hang-time)
+        * [Slope](#slope)
+        * [Other options](#other-options)
     * [Firmware upgrade](#firmware-upgrade)
 6. [Additional features](#additional-features)
 7. [General recommendations](#general-recommendations)
@@ -73,27 +83,26 @@ As any SDR device, one of the main components is the PC that is used to control 
 
 #### Operating system requirements
 
-The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported, if the host machine is capable enough.
+The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported if the host machine is capable enough.
 
 > [!NOTE]
 > Compatibility with Microsoft Windows 8.1 or previous versions of Microsoft Windows cannot be ensured due to lack of support for the latest .NET modules which was used to develop the application.
 
 #### .NET 8
 
-The operating system should be updated to the latest version and the .NET8 must be installed on the machine (latest update of the .NET8 can be downloaded from the Microsoft).
+The operating system should be updated to the latest version, and the .NET 8 runtime must be installed on the machine (download the latest runtime from the Microsoft website if needed).
 
-Depending on the system configuration, both the .NET8 SDK and .NET8 Runtime might be needed.
+Depending on the system configuration, both the .NET 8 SDK and .NET 8 Runtime might be needed.
 
-* .NET8 Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/runtime-desktop-8.0.13-windows-x64-installer>
-* .NET8 SDK Link: <https://dotnet.microsoft.com/it-it/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer>
+> [!TIP]
+> The required version of .NET is automatically downloaded and installed during the first setup of the software, if the PC is connected to the internet.
 
 #### Microsoft Visual C++ Redistributable
 
 Some components of the software were written using highly optimized C++ code, this requires the latest version of the Microsoft Visual C++ Redistributable package to be installed and updated. The latest version of this package can be downloaded from the following URL:
 
-* VC Redist: <https://learn.microsoft.com/it-it/cpp/windows/latest-supported-vc-redist?view=msvc-170>
-
-As per the moment this manual was written, the latest available version is 14.40.33810.0.
+> [!TIP]
+> The required version of Microsoft Visual C++ Redistributable is automatically downloaded and installed during the first setup of the software, if the PC is connected to the internet.
 
 ### Hardware requirements
 
@@ -105,7 +114,7 @@ Recommended hardware setup is an 7<sup>th</sup> generation Intel® Core i5 or la
 > [!TIP]
 > The disk and RAM usage may vary depending on additional features like recordings, cluster, EIBI, receiver bandwidth, number of receivers, and more.
 
-Ethernet interface at 1Gbps on the control PC is mandatory if using more than one receiver window. Ethernet interface at 1Gbps is mandatory to configure the IP address of the device if connected directly to the control PC.
+Ethernet interface at 1Gbps on the control PC is a mandatory requirement between the SDR and the PC (and/or any other device in between).
 
 ### Network requirements
 
@@ -160,9 +169,17 @@ Setup or update procedure is now completed, before starting the software, please
 
 ### Automatic update check
 
-There is currently no mechanism to automatically check for updates, the user must manually check for updates by visiting the [Olliter website](https://olliter.com) or by contacting the customer care team.
+There is currently no automatic update check; users must manually check for updates by visiting the [Olliter website](https://olliter.com) or by contacting the customer care team.
 
 We are actively working to implement an automatic update check mechanism in the future. We apologize for the inconvenience and we appreciate your understanding.
+
+### Upgrading OL-Master
+
+To upgrade OL-Master to the latest version, please download the latest update file and run it. The update process is similar to the initial installation process, and you will be guided through the necessary steps.
+
+You will be prompted to update the existing band plans if newer versions are available.
+
+No user settings will be changed during the update process.
 
 ### Configuring the firewall
 
@@ -227,13 +244,13 @@ In *General* \> *HW Config* make sure the "*Use static IP Address*" option is en
 
 This address is 192.168.1.111 by default, if it was manually changed following the above procedure, please input the new IP address that was configured.
 
-Once the IP address has been configured and selected (using the radio button on the right), click Save and close the dialog box.
+Once the IP address has been configured and selected (using the radio button on the right), click `Save and Close` to close the dialog box.
 
 ![IP Address selection](./resources/image47.png)
 
 #### Configuring the operator settings
 
-In *General* \> *Options*, set the callsign and grid locator of the station.
+In `General > Options`, set the callsign and grid locator of the station. These values will be displayed in the main window of the software and will be used by some additional features like cluster or EIBI.
 
 ![Grid square settings](./resources/image48.png)
 
@@ -241,9 +258,9 @@ In *General* \> *Options*, set the callsign and grid locator of the station.
 
 If the user wants to enable the audio to be routed to the master PC, the following procedure is needed.
 
-In *Audio* \> *Audio & Common VAC* configure the *Driver* to MME, select the desired *Input* and *Output* devices, then select "*Enable PC Speaker via common VAC*".
+In `Audio > Audio & Common VAC` configure the `Driver` to MME, select the desired `Input` and `Output` devices, then select `Enable PC Speaker via common VAC`.
 
-The onboard speakers can be deactivated using the "*Local speaker disable*" option.
+The onboard speakers can be deactivated using the `Local speaker disable` option.
 
 ![Audio interface settings](./resources/image49.png)
 
@@ -253,12 +270,12 @@ If a microphone is connected to the radio, the RX Only option can be checked to 
 
 #### Configuring the receiver bandwidth
 
-The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in *General* \> *HW Config* \> *Sample Rate*.
+The SDR is capable of receiving and displaying a wide area of the RF spectrum, the receiver span can be configured in the `SampleRate` menu of each receiver window.
 
 > [!WARNING]
-> As the sample rate is increased, more system and network resources will be required by the software, please adjust the settings accordingly
+> As the sample rate is increased, more system and network resources will be required by the software. Please adjust the settings accordingly.
 
-The spectrum span that is rendered is roughly the 80% of the sample rate set in the settings menu, for example if 192000 samples per second are selected, the displayed spectrum will be roughly 180KHz.
+The spectrum span that is rendered on the screen is roughly the 95% of the sample rate set in the settings menu, for example if 192000 samples per second are selected, the displayed spectrum will be a little more than 180KHz wide.
 
 > [!TIP]
 > The recommended sample rate is 192000 samples per second.
@@ -267,7 +284,7 @@ The spectrum span that is rendered is roughly the 80% of the sample rate set in 
 
 #### Configuring the refresh rate
 
-The refresh rate of the receivers windows can be adjusted in *Display* \> *General*. The suggested value is between 10 and 20 frames per second.
+The refresh rate of the receivers windows can be adjusted in `Display > General`. The suggested value is between 10 and 20 frames per second.
 
 > [!WARNING]
 > Increasing the refresh rate can significantly impact the system load, if the system starts lagging or the UI starts behaving, reduce the "Main Display FPS" value
@@ -311,7 +328,7 @@ The receiver spectrum can be interacted using the spectrum controls, these allow
 The spectrum can be rendered to display the average or the peak
 mode.
 
-![Changing spectrum mode](./resources/image59.png)
+![Zooming and panning](./resources/image59.png)
 
 #### Setting the receiver mode
 
@@ -325,12 +342,12 @@ Then, for each operating mode, the bandwidth can be adjusted as needed.
 
 #### Adding additional receivers
 
-RX1 is located in the main window of the software, additional receivers can be enabled using the RX2, RX3 and RX4 buttons in the main window.
+RX1 opens with the main window of the software and cannot be closed; additional receivers can be enabled using the RX2, RX3 and RX4 buttons in the main window.
 
 > [!WARNING]
 > Using additional receivers may significantly impact the system load, if the system starts to lag, reduce the number of receivers, or reduce the sample rate.
 
-![Ol-Master software](./resources/image62.png)
+![Additional receivers](./resources/image62.png)
 
 ![Multi-receivers layout](./resources/a49589dfb85f23b5e752a1e7b76355ed175bc99b.png)
 
@@ -349,28 +366,97 @@ Multiple software-based filters can be added to any receiver mode, these can sig
 
 #### Notch filter
 
-When receiving a station in voice modes, sometimes there are carriers interfering and creating unpleasant/disturbing hiss that can reduce the intelligibility of the received signal. OL-Master has functions to reduce/cancel this hiss with minimum impact on the received signal.
+When receiving a station in voice modes, interfering carriers can create unpleasant hiss that reduces the intelligibility of the received signal. OL-Master has functions to reduce or cancel this hiss with minimum impact on the received signal.
 
 * **Automatic Mode:** To activate the automatic mode, click “ANF” (Automatic Notch Filter): very shortly the interfering signal will be reduced/cancelled.
 * **Manual Mode:** If the interfering signal is intermittent or if it is always present, it is better to use the manual mode and define a permanent notch that will be stored in the configuration database and that will be activated every time OL-Master is started and the notch (NTCH) button activated.
 
 There is no limit to the number of notches that can be defined.
 
+##### Defining a notch filter
+
 Notches can be created in Panadapter, Spectrum and Panaspectrum display modes, but since the resolution of Spectrum and the spectrum sub-window of Panaspectrum display mode is higher, it is recommended to define the notch there because notches can be positioned with better precision. It is also recommended to activate the notch function by clicking the NOTCH button before creating notches: the effect of the notch will be audible in real time and immediately visible on the spectrum.
 
+![Notch filter](./resources/olmaster-notch-enabled.png)
+
 To define a notch: move the mouse pointer on the spectrum over the interfering signal and click the right button. A green vertical marker will appear. The first number is a progressive notch number, and the second number is the notch width. To change the notch width, move slightly the mouse to highlight the notch marker, then use the mouse wheel to adjust the width. The notch depth is automatically adjusted for best attenuation. If the notch (NTCH) button is active, the notch effect will immediately be audible and visible on the spectrum.
+
+![Disabling a notch filter](./resources/olmaster-notch-disabled.png)
 
 To disable a defined notch, highlight the marker by moving the mouse pointer over it and then right-click: the notch marker will become a dashed line.
 
 To enable a defined notch, highlight the marker by moving the mouse pointer over it and then right-click: the marker will become a continuous line.
 
+##### Deleting a notch filter
+
 To delete a defined notch, highlight the marker by moving the mouse pointer over it and then double-right-click.
 
-To delete ALL defined notches at once, press left-Alt on the keyboard and then right-click anywhere on the Panadapter, Spectrum, or Panaspectrum window and confirm the action by selecting Yes.
+To delete ALL defined notches at once, press the left `Alt` key on the keyboard and then right-click anywhere on the Panadapter, Spectrum, or Panaspectrum window and confirm the action by selecting Yes.
+
+##### Notch filter considerations
 
 If the notch (NTCH) button is active, the Spectrum will immediately reflect the changes. No changes will be seen on the Panadapter since its data are collected before any function is applied. Spectrum data, however, are collected after all activated functions (e.g., filters, mode, noise reduction, notches) are applied.
 
 To disable the manual notch mode, use the notch (NTCH) button to deactivate it. Please note that notches can be defined even if the notch (NTCH) button is not active, but the effect will not be visible or audible until the notch (NTCH) button is activated.
+
+#### AGC and Gain Control
+
+> [!TIP]
+> These features come from the WDSP library by dr. Warren C. Pratt (N0RV). Please refer to “The WDSP Guide” available on [GitHub](https://github.com/TAPR/OpenHPSDR-wdsp), for further information.
+
+![AGC and Gain Control](./resources/olmaster-agc.png)
+
+AGC control in OL-Master is based on the WDSP implementation and provides flexible automatic gain control for each receiver window. Key capabilities include:
+
+* Configurable attack, decay and hold (hang) behaviour
+* Separate fast and normal decay paths to recover quickly from strong impulses
+* Gain (threshold) adjustment for receiver RF chain
+* Hang time to suppress background noise during short speech pauses
+* Slope control to alter perceived loudness between strong and weak signals
+* Direct gain and hang adjustments on the panadapter (interactive markers)
+
+##### AGC modes
+
+Six preset AGC modes are available for each RX window; they differ only by the time constants used by the algorithm:
+
+| MODE  | Attack (ms) | Decay (ms) | Hold / Hang (ms) |
+|-------|-------------:|-----------:|-----------------:|
+| Fixed | OFF          | OFF        | OFF              |
+| Long  | 1            | 500        | 2000             |
+| Slow  | 1            | 250        | 1000             |
+| Medium| 1            | 250        | OFF              |
+| Fast  | 1            | 50         | OFF              |
+| Custom| 1            | See below  | See below        |
+
+Custom Mode parameters are defined in `Setup > DSP > AGC`.
+
+The `attack` parameter controls how quickly the AGC reduces gain when a strong signal is received, while the `decay` (restore) time controls how slowly gain is returned after the signal falls. A second *fast* decay is applied internally to quickly restore level after brief impulses so that the receiver is not held at low gain for the full normal decay period.
+
+##### Gain (Threshold)
+
+The `Gain` (Threshold) parameter is the maximum gain of the receiver RF chain when no signal is received. It can be adjusted with the `Gain` slider in each receiver's window or by adjusting the green line on the panadapter canvas (by dragging the `-G` green square on the left side of the spectrum).
+
+For optimal operation, it is recommended to set the threshold close to the background noise level of the received band. Setting the threshold too low on the Gain slider (or too high on the panadapter) will reduce the audio output and may mute the receiver entirely. Note that the receiver is very quiet by design; even at maximum gain, the threshold line on the panadapter will remain above the noise floor when no antenna is connected.
+
+When `Fixed Mode` is selected for AGC, the `Gain` slider and the reference line on the panadapter directly control the receiver's RF gain. In this mode, set the gain lower on the slider (higher on the panadapter) than the typical operating level, and ensure it remains well above the strongest received signals. This prevents clipping and saturation in the receiver chain. Note that signal peaks may not always be visible on the panadapter due to its averaging, so it is important to leave sufficient headroom.
+
+##### Hang Time
+
+In `Slow`, `Long`, and `Custom` AGC modes, a yellow `Hang Level` line appears on the panadapter. When a received signal peaks above this line, the AGC maintains the current gain for a short period (the *hang time*) after the signal drops. This prevents the background noise from rising abruptly during brief pauses in speech, resulting in a more comfortable listening experience, especially on medium or strong signals.
+
+You can adjust the `Hang Level` directly on the panadapter by dragging the yellow `-H` square. The `Hang Level` is always set above the green `Gain Level` line, typically ranging from `10 dB` to `30 dB`. Moving the `Gain Level` will also shift the `Hang Level` accordingly.
+
+This feature is particularly useful for SSB and CW modes, where maintaining consistent audio levels during speech or keying pauses improves intelligibility and listening comfort.
+
+##### Slope
+
+The `Slope` parameter controls the perceived loudness difference between strong and weak signals. It can be adjusted independently for each receiver in the `Setup > DSP > AGC` panel.
+
+A value of `0 dB` means all signals will be heard at the same loudness, regardless of their strength. Increasing the slope value makes stronger signals sound louder compared to weaker ones. By default, the slope is set to `0 dB`.
+
+##### Other options
+
+In the `Setup > DSP > AGC` panel, you can choose whether to display the Gain Level and Hang Level lines, along with their corresponding square markers, on the panadapter. Enable or disable these visual aids according to your preference for easier adjustment and monitoring of AGC parameters.
 
 ### Firmware upgrade
 
@@ -396,6 +482,8 @@ Make sure the transceiver is ON and reachable on the local network, then open OL
 
 ![Firmware maintenance menu](./resources/1ee15ab771b6ea80b7b1ae20172ddb0194170c44.png)
 
+![Radio discovery](./resources/fw-upgrade-discovery.png)
+
 Using the Select button, navigate to the .hex file that was just extracted and select it.
 
 ![Firmware selection](./resources/659766a21245bc4e387668b3b92ac18462d10dc8.png)
@@ -419,7 +507,7 @@ Wait for the upgrade window to close automatically after a couple of seconds, th
 
 The OL-Master software can be configured to use external services like clusters or EIBI, these services might require an internet connection to work.
 
-The list of the additional features is listed and explained [here](./AdditionalFeatures.md)
+Additional features are explained in [Additional Features](./AdditionalFeatures.md).
 
 ## General recommendations
 

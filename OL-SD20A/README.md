@@ -4,7 +4,7 @@
 
 ![Immagine che contiene elettronica, Elettrodomestico, elettrodomestico,
 piastra Descrizione generata
-automaticamente](./resources/images/media/image2.jpg)
+automaticamente](./resources/image2.jpg)
 
 ## Contents of this manual
 
@@ -114,7 +114,7 @@ The following specifications were reported from laboratory measurements from our
 
 ### Front panel
 
-![Front panel](./resources/images/3284ef3277303db02603912d273051ec195d35ad.png)
+![Front panel](./resources/3284ef3277303db02603912d273051ec195d35ad.png)
 
 1. Morse key input
 
@@ -141,7 +141,7 @@ The following specifications were reported from laboratory measurements from our
 The front panel offers four different LEDs, each LED have a different
 meaning
 
-![Front panel LEDs](./resources/images/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
+![Front panel LEDs](./resources/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
 
 1. Connection status: this LED is ON when OL-Master is communicating with the transceiver
 
@@ -159,7 +159,7 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 ### Back panel
 
-![Back panel](./resources/images/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
+![Back panel](./resources/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
 
 1. Receiving line for the transverter interface 1
 
@@ -231,7 +231,7 @@ This ¼ inch (6.35mm) jack is used to connect either a paddle or a straight key.
 
 This connector uses either 5V or 3V3 pull-up resistors. Voltage can be selected by moving the internal "3.3 -- 5V I/O" jumper.
 
-![Morse key jack wiring diagram](./resources/images/media/image8.png)
+![Morse key jack wiring diagram](./resources/image8.png)
 
 #### Headphones output
 
@@ -241,7 +241,7 @@ impedance of 16Ω impedance, output level is 50mW for a -75dB THD.
 > [!WARNING]
 > Prolonged use of headphones at high volume can cause permanent hearing dagame. Adjust the volume to a safe level to protect your ears.
 
-![Headphones jack wiring diagram](./resources/images/media/image9.png)
+![Headphones jack wiring diagram](./resources/image9.png)
 
 #### Microphone input
 
@@ -309,9 +309,9 @@ where filters are already installed (such as panadapter interfaces).
 To enable this feature please select RX2 as receiver channel for the
 receiver that is going to be used.
 
-![CH -> RX mapping in Setup form](./resources/images/a439cba54074365622555ccec2c8991a7e11e642.png)
+![CH -> RX mapping in Setup form](./resources/a439cba54074365622555ccec2c8991a7e11e642.png)
 
-![EXT Input Active on RX in Setup form](./resources/images/da21b99e161e2b4cd65470df5445514e460e2c5a.png)
+![EXT Input Active on RX in Setup form](./resources/da21b99e161e2b4cd65470df5445514e460e2c5a.png)
 
 #### 10MHz references
 
@@ -381,7 +381,7 @@ These outputs are normally in a LOW state using a pull-down resistor.
 
 The voltage that is provided by this port depends on the internal "3.3 -- 5V I/O" jumper. Maximum available current is limited with a 220Ω series resistor.
 
-![DB9 Standard wiring diagram](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
+![DB9 Standard wiring diagram](./resources/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
 | DB9 Pin | Software Output |
 |---------|-----------------|
@@ -410,7 +410,7 @@ The voltage range for both ADC0 and ADC1 is 0V to 3.3V. Excessive voltage can ca
 
 Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9 have an internal 4.7KΩ pull-down resistor.
 
-![DB15 standard pinout](./resources/images/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
+![DB15 standard pinout](./resources/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
 | DB9 Pin | Software Output |
 |---------|---------------------------|
@@ -432,7 +432,7 @@ The maximum V~CE~ that can be used at the open-collector outputs is 48V DC.
 
 The 13.8V DC lines are derived from the main power supply and are protected by a 250mA resettable fuse.
 
-![DB15 standard pinout diagram](./resources/images/media/image11.png)
+![DB15 standard pinout diagram](./resources/image11.png)
 
 | DB15 Pin | Software Output |
 |----------|--------------------------|
@@ -454,7 +454,7 @@ The 13.8V DC lines are derived from the main power supply and are protected by a
 
 External relay connection example:
 
-![External relay wiring example](./resources/images/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
+![External relay wiring example](./resources/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
 
 #### Power connector
 
@@ -492,13 +492,13 @@ Connecting the transceiver is simple but a couple of considerations and safety m
 
 To achieve optimal transmission quality and reduce the spurious emissions, the Pure Signal technology is supported by the Olliter SDR transceiver.
 
-![Pure Signal-2](./resources/images/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
+![Pure Signal-2](./resources/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
 
 Pure Signal is the name given to the theory and implementation of the clean transmission logic developed by the OpenHPSDR team and implemented in both the Olliter SDR software and transceiver. The algorithm behind the Pure Signal technology is quite simple, when both the drive applied to the Digital-to-analogue converter (DAC) and the output as measured at the antenna are known it is possible to modify the drive so that the output is as clean as possible.
 
 The Pure Signal technology is enabled by connecting the PS IN with the PS OUT using the provided SMA to SMA coaxial cable.
 
-![Pure signal connectors on the back of the transceiver](./resources/images/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
+![Pure signal connectors on the back of the transceiver](./resources/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
 
 ### Connecting the power supply
 
@@ -515,7 +515,7 @@ Connect the power supply to the Olliter SDR by using high-quality Anderson Power
 - Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm<sup>2</sup> wires
 - Wires longer than 4 meters (13ft) are not recommended as they may pick up excessive noise from the surrounding environment or cause excessive voltage fluctuations
 
-![DC plug on the back of the transceiver](./resources/images/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
+![DC plug on the back of the transceiver](./resources/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
 
 Make sure to connect all the needed wires before turning on the power supply.
 
@@ -527,7 +527,7 @@ Up to 4 antennas can be connected to the Olliter SDR, these can be configured in
 
 To begin, connect an antenna using a male BNC connector to the ANT1 socket.
 
-![Antenna 1 connection](./resources/images/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
+![Antenna 1 connection](./resources/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
 
 ### Connecting the ethernet cable
 
@@ -555,7 +555,7 @@ The transceiver comes with a preconfigured IP address set to 192.168.1.111, if t
 
 The following schematic illustrates the recommended connection of the SDR device to the PC.
 
-> ![Ethernet connection](./resources/images/a42f45266f8b697997a33d50c3cad1939f357c95.png)
+> ![Ethernet connection](./resources/a42f45266f8b697997a33d50c3cad1939f357c95.png)
 
 ### Changing the Olliter SDR IP address
 

@@ -30,6 +30,7 @@ These are the available manuals:
   * [Troubleshooting](./OL-Master/Troubleshooting.md)
 * [OL-SD20A](./OL-SD20A/README.md)
   * [Changing IP address](./OL-SD20A/ChangingIpAddress.md)
+* OL-Remote (coming soon)
 * OL-SD300A (coming soon)
 * RosPo (coming soon)
 * OL-POWER (coming soon)
