@@ -1,0 +1,52 @@
+name: Sync Private to Public Repo (erase history)
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout private repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ secrets.PRIVATE }}
+          token: ${{ secrets.GH_PAT }}
+          path: private-repo
+
+      - name: Prepare public repo
+        run: |
+          if [ -d public-repo ]; then
+            cd public-repo
+            rm -rf .git
+            git init
+            git remote add origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ secrets.PUBLIC }}.git
+          else
+            mkdir public-repo
+            cd public-repo
+            git init
+            git remote add origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ secrets.PUBLIC }}.git
+          fi
+
+      - name: Sync contents
+        run: |
+          rsync -av --delete --exclude='.git' private-repo/ public-repo/
+
+      - name: Configure Git
+        run: |
+          cd public-repo
+          git config user.name "Manual Sync Bot"
+          git config user.email "sync-bot@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          cd public-repo
+          rm -rf .github/workflows/sync_manuals.yml  # Hide GitHub Actions from public repo
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated generation of the user manual"
+            git branch -M main
+            git push -u origin main --force
+          fi
