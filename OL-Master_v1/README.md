@@ -1,6 +1,6 @@
 ![Olliter Logo](../resources/olliter-logo.png)
 
-# OL-Master Software User Manual
+# OL-Master v1 Software User Manual
 
 ![OL-Master screenshot](../resources/ol-master-v1-screenshot.png)
 
