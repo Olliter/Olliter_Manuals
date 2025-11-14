@@ -89,6 +89,7 @@ OL-Master v2 is a complete rewrite of the previous OL-Master v1.x software, with
 * Overall CPU usage was reduced significantly (up to 50% less CPU usage in our tests)
 * Improved SO2R support with N1MM
 * Improved CW keyer interface
+* CW decoder integrated into the software
 
 ## System requirements
 
@@ -170,29 +171,9 @@ The OL-Master software is distributed in two separate files, one for the first i
   * This file will not be available for the first installation, it will be available only after the first installation of the software.
   * This file will not overwrite the existing configuration files, so if you want to reset the configuration files to the default values, you need to delete the existing configuration files manually.
 
-The first install or update procedures are almost identical, the only difference is that the first install will install all the required components and dependencies, while the update will only update the existing installation.
+The first install or update procedures are almost identical, the only difference is that the first install will install all the required components and dependencies, while the update package will only update the existing installation without overwriting any user data or settings.
 
-![Olliter setup file](./resources/15a34c54f5fdc8760e8ca4c1e772a68a2118758a.png)
-
-Double click the executable to start the installer, administrative privileges are mandatory to install the software. Follow the on-screen instructions to proceed with the installation.
-
-Please read carefully and accept all software license agreements to proceed with the installation.
-
-![Setup step 1](./resources/2c2db219748179cb712d2579dcff50c848ac0230.png)
-
-Then read the hardware license agreement and accept it to proceed.
-
-![Setup step 2](./resources/5f228f61610cbb24ebdc9df574ec8a5385319e14.png)
-
-Optionally, tick the option to create a desktop shortcut for the software, this will create a shortcut on the desktop to quickly access the software. A start menu shortcut will be created automatically.
-
-![Setup step 3](./resources/d9fd212c0273127827a90e0fd34e3259949a8e96.png)
-
-Once the setup is completed, users can choose to start the software immediately or to close the installer. The software can be started later from the start menu or from the desktop shortcut if created.
-
-![Setup step 4](./resources/85191356186f190b5d11ff91f44fb13f69b8b502.png)
-
-Setup or update procedure is now completed, before starting the software, please read carefully the next chapters.
+The setup procedure is described at this link: [Installing or Updating OL-Master](./SoftwareSetup.md)
 
 ### Automatic update check
 
@@ -211,47 +192,9 @@ No user settings will be changed during the update process.
 ### Configuring the firewall
 
 > [!TIP]
-> The firewall must be properly configured for the transceiver to work. If the firewall is not configured, the software won't be able to communicate with the OL-SDR device
+> The firewall must be properly configured for the transceiver to work. If the firewall fails to configure during OL-Master installation, the software won't be able to communicate with the OL-SDR device
 
-Network communication to the device is performed using UDP protocol, a security system exception must be created for the software to work reliably.
-
-Open the Windows firewall settings.
-
-![Windows defender with advanced security](./resources/image22.png)
-
-Select "Inbound connection rules" on the left menu.
-
-![Inbound connection rules](./resources/image23.png)
-
-Click on "New rule" on the right menu.
-
-![New program rule](./resources/image24.png)
-
-Select \"Program" and click "next".
-
-![Create program rule](./resources/image25.png)
-
-Click on "Browse" and navigate to `C:/Program Files/Olliter/Ol-master.exe`
-
-![Browse to OL-Master software](./resources/image26.png)
-
-![Locate OL-Master software](./resources/image27.png)
-
-Click on "Next"
-
-![Proceed with selection](./resources/image28.png)
-
-Select "Allow connections" and click "Next".
-
-![Allow connection](./resources/image29.png)
-
-Now select the kind of network that you are using, by default it should be "Private", if you are using a different kind of network, please select the option that best fits your configuration.
-
-![Select kind of network](./resources/image30.png)
-
-Insert any name you like and then click on "Complete".
-
-![Complete rule creation](./resources/image31.png)
+If the OL-Master software turns on the radio, the powers off immediately, please manually adjust the firewall settings by following the instructions in [Configuring Firewall](./ConfiguringFirewall.md)
 
 ## Usage of OL-Master
 
@@ -447,13 +390,13 @@ AGC control in OL-Master is based on the WDSP implementation and provides flexib
 Six preset AGC modes are available for each RX window; they differ only by the time constants used by the algorithm:
 
 | MODE  | Attack (ms) | Decay (ms) | Hold / Hang (ms) |
-|-------|-------------:|-----------:|-----------------:|
-| Fixed | OFF          | OFF        | OFF              |
-| Long  | 1            | 500        | 2000             |
-| Slow  | 1            | 250        | 1000             |
-| Medium| 1            | 250        | OFF              |
-| Fast  | 1            | 50         | OFF              |
-| Custom| 1            | See below  | See below        |
+|-------|-------------|------------|------------------|
+| Fixed | OFF         | OFF        | OFF              |
+| Long  | 1           | 500        | 2000             |
+| Slow  | 1           | 250        | 1000             |
+| Medium| 1           | 250        | OFF              |
+| Fast  | 1           | 50         | OFF              |
+| Custom| 1           | See below  | See below        |
 
 Custom Mode parameters are defined in `Setup > DSP > AGC`.
 
@@ -485,50 +428,9 @@ A value of `0 dB` means all signals will be heard at the same loudness, regard
 
 In the `Setup > DSP > AGC` panel, you can choose whether to display the Gain Level and Hang Level lines, along with their corresponding square markers, on the panadapter. Enable or disable these visual aids according to your preference for easier adjustment and monitoring of AGC parameters.
 
-### Firmware upgrade
+## Firmware upgrade
 
-> [!WARNING]
-> Although the Olliter SDR has a recovery mode that can be enabled in case of major firmware failures, the firmware upgrade is a delicate process that requires some attention. Please read this chapter carefully before starting the procedure.
-
-Upgrade of the firmware is performed using the OL-Master application with a dedicated menu.
-
-> [!WARNING]
-> Make sure to close all background apps and to have a reliable power source for both the PC and the transceiver before attempting a firmware upgrade.
-
-Extract the ZIP file containing the firmware anywhere on the local PC to
-get the *.hex* file which contains the new firmware.
-
-> [!WARNING]
-> Extract the file on the local hard drive, do not use USB sticks, network drive or other unreliable locations that may create latency or issues.
-
-Once the file is extracted you should see something like this:
-
-![Extracted firmwares](./resources/2deb3313b882db5c6cb6f0fdd90a51e9d879e76f.png)
-
-Make sure the transceiver is ON and reachable on the local network, then open OL-Master and select the *FW Maintenance* menu. The SDR should be detected automatically by the software.
-
-![Firmware maintenance menu](./resources/1ee15ab771b6ea80b7b1ae20172ddb0194170c44.png)
-
-![Radio discovery](./resources/fw-upgrade-discovery.png)
-
-Using the Select button, navigate to the .hex file that was just extracted and select it.
-
-![Firmware selection](./resources/659766a21245bc4e387668b3b92ac18462d10dc8.png)
-
-Once the file is selected, click the Program button to start the upgrade
-procedure.
-
-> [!WARNING]
-> The upgrade procedure will take about a minute, please be patient.
-
-![Firmware upgrade task](./resources/42461e5c391b24857e1eba8fd208316b921cd597.png)
-
-At first, the software will erase the content of the FPGA, this is a monolithic task, so the software may look like it's frozen, please be patient and just wait for the process to complete. Once the erase task is completed, you should see the progress bar moving, and when it reaches 100%, the transceiver should be restarted automatically.
-
-> [!WARNING]
-> If the process hangs after some minutes, or if any error occurs, please contact our customer assistance to get further assistance.
-
-Wait for the upgrade window to close automatically after a couple of seconds, then the process is complete, and the transceiver can be used as normal.
+The upgrade procedure for the Olliter SDR firmware is performed using the OL-Master software. A detailed guide about the firmware upgrade procedure is available at: [Firmware Upgrade](./FirmwareUpgrade.md)
 
 ## Additional features
 

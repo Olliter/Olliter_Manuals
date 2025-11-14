@@ -307,7 +307,7 @@ transceiver, it is typically used to interface with external devices
 where filters are already installed (such as panadapter interfaces).
 
 To enable this feature please select RX2 as receiver channel for the
-receiver that is going to be used.
+receiver that is going to be used, then configure if the external input should be used only during RX, TX or both.
 
 ![CH -> RX mapping in Setup form](./resources/a439cba54074365622555ccec2c8991a7e11e642.png)
 
