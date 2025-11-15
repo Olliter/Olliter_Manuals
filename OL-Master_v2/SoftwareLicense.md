@@ -2,7 +2,7 @@
 
 # Olliter Community License (OCL)
 
-Version 1.0 — November 2025
+Version 1.1 — November 2025
 
 Copyright © 2025 Olliter SAgl. All rights reserved.
 
@@ -56,7 +56,7 @@ These libraries remain under their original licenses and are not covered by the 
 
 ## 7. Governing Law
 
-This license shall be governed by and construed in accordance with the laws of the European Union and the Republic of Italy, without regard to conflict of law principles.
+This license shall be governed by and construed in accordance with the laws of the European Union and the Swiss Confederation, without regard to conflict of law principles.
 
 ## 8. Summary
 
@@ -69,8 +69,6 @@ You cannot:
 
 - Sell or profit from it without Olliter’s permission.
 - Remove attribution or use Olliter’s name for unofficial versions.
-
-This license keeps OL-Master open to the community, yet protects the identity and integrity of the Olliter project.
 
 ## 9. Contact
 

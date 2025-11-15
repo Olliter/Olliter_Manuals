@@ -20,7 +20,7 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 
 These are the available manuals:
 
-* [Hardware and software licenses](./General/README.md)
+* [Safety and legal information](./General/README.md)
   * [Hardware License](./General/HardwareLicense.md)
 * [OL-Master v1.x](./OL-Master_v1/README.md)
   * [Software License](./OL-Master_v1/SoftwareLicense.md)
@@ -30,6 +30,7 @@ These are the available manuals:
   * [Troubleshooting](./OL-Master_v1/Troubleshooting.md)
 * [OL-Master v2.x](./OL-Master_v2/README.md)
   * [Software License](./OL-Master_v2/SoftwareLicense.md)
+  * [Configuring the firewall](./OL-Master_v2/ConfiguringFirewall.md)
   * [Frequently Asked Questions](./OL-Master_v2/FrequentlyAskedQuestions.md)
   * [General Recommendations](./OL-Master_v2/GeneralRecommendations.md)
   * [Additional Features](./OL-Master_v2/AdditionalFeatures.md)
