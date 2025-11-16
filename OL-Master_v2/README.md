@@ -68,7 +68,7 @@ As the OL-Master v2 software is no longer based on PowerSDR, the previous licens
 ## Introduction
 
 > [!WARNING]
-> OL-Master v2 is not yet being distributed, this version is still in beta testing and is not available for the general public. The information provided in this manual is preliminary and may change before the final release.
+> OL-Master v2 is not yet being distributed, this version is still in alpha testing and is not available for the general public. The information provided in this manual is preliminary and may change before the final release.
 
 The main purpose of this guide is to help you configuring for the first time your Olliter OL-Master software and the basic operations.
 
@@ -109,7 +109,7 @@ As any SDR device, one of the main components is the PC that is used to control 
 
 #### Operating system requirements
 
-The OL-Master application was developed for Microsoft Windows 10 or later. Virtualization of such operating systems is also supported if the host machine is capable enough.
+The OL-Master application was developed for Microsoft Windows 11 or later. Virtualization of such operating systems is also supported if the host machine is capable enough.
 
 > [!NOTE]
 > Compatibility with Microsoft Windows 8.1 or previous versions of Microsoft Windows cannot be ensured due to lack of support for the latest .NET modules which was used to develop the application.

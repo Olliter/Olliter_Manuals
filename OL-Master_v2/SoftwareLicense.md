@@ -2,7 +2,7 @@
 
 # Olliter Community License (OCL)
 
-Version 1.1 — November 2025
+Version 1.2 - November 2025
 
 Copyright © 2025 Olliter SAgl. All rights reserved.
 
@@ -14,13 +14,11 @@ This license allows the use, modification, and sharing of OL-Master and related 
 
 ## 2. Permission
 
-Under this license, you are granted permission, free of charge, to:
+Licensed amateur radio operators, as defined under applicable national laws, as well as officially recognized amateur radio associations, are granted the right to use, modify, adapt, and extend the Licensed Software solely for legitimate amateur radio experimentation, education, and non-commercial collaboration.
+No direct or indirect commercial use is permitted, including resale, paid services, or the integration of the Licensed Software into products or systems offered in exchange for money or other compensation.
 
-- Use, study, and modify the software and its source code for personal, educational, or non-commercial amateur radio activities.
-- Share modified or unmodified versions of the software, provided that:
-- This license text and copyright notice are included in all copies,
-- Attribution to Olliter as the original author is clearly visible, and
-- No commercial advantage, direct or indirect, is derived from such redistribution.
+Any use of the Licensed Software for financial gain or commercial advantage by any individual, organization, corporation, or entity, regardless of whether they are part of the amateur radio community, is strictly prohibited.
+Activities such as selling derivative works, paid support, cloud service offerings, subscription models, closed-source integration, or any form of monetization are forbidden unless prior, explicit, written authorization is granted by the Copyright Holder.
 
 ## 3. Restrictions
 
@@ -56,20 +54,26 @@ These libraries remain under their original licenses and are not covered by the 
 
 ## 7. Governing Law
 
-This license shall be governed by and construed in accordance with the laws of the European Union and the Swiss Confederation, without regard to conflict of law principles.
+This license shall be governed by and construed in accordance with the laws of the Swiss Confederation. Users are responsible for compliance with local laws applicable in their jurisdiction.
 
 ## 8. Summary
 
-You can:
+The Licensed Software is provided for experimentation and educational use within niche amateur radio technical environments. It is not intended for safety-critical, emergency, aviation, medical, military, commercial, or life-support applications. The Contributors and Copyright Holder make no warranties, express or implied, regarding functionality, reliability, compliance with radio regulations, emissions limits, or suitability for operational deployment. Use is entirely at the user’s own risk.
 
-- Use OL-Master freely for your personal, educational, or ham-radio projects.
-- Study how it works and share your experiments with others.
+You can:
+- Use OL-Master for personal, educational, or licensed amateur radio projects.
+- Study, modify, and share your experiments with others within non-commercial contexts.
 
 You cannot:
+- Sell, license, or otherwise profit from the Software or derivative works without explicit written permission from Olliter.
+- Remove attribution or imply official endorsement or affiliation with Olliter SAgl in redistributed versions.
 
-- Sell or profit from it without Olliter’s permission.
-- Remove attribution or use Olliter’s name for unofficial versions.
+This summary is provided for convenience only. In case of conflict or ambiguity, the full terms of this License shall prevail.
 
-## 9. Contact
+## 9. Additional notes
+
+This License covers only the Software and does not grant any authorization to operate radio transmission hardware or systems that may require certification, licensing, or regulatory approval under applicable law. The user is solely responsible for ensuring regulatory compliance of any hardware or radio system in which the Software is used.
+
+## 10. Contact
 
 For commercial licensing inquiries or partnership requests: [legal@olliter.com](mailto:legal@olliter.com)

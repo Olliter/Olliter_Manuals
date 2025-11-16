@@ -52,7 +52,7 @@ Use of these third-party services is entirely optional and at your own risk. We 
 Please refer to the software license agreement for the specific software version at the following links: 
 
 * [OL-Master V1 Software License Agreement](../OL-Master_v1/SoftwareLicense.md)
-* OL-Master V2 Software License Agreement (coming soon)
+* [OL-Master V2 Software License Agreement](../OL-Master_v2/SoftwareLicense.md)
 
 ## Hardware license
 

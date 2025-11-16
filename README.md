@@ -20,22 +20,26 @@ This repository contains the manuals for the software(s) and hardware(s) develop
 
 These are the available manuals:
 
-* [Safety and legal information](./General/README.md)
+* General
+  * [Safety and legal information](./General/README.md)
   * [Hardware License](./General/HardwareLicense.md)
-* [OL-Master v1.x](./OL-Master_v1/README.md)
+* OL-Master v1.x
+  * [User Manual](./OL-Master_v1/README.md)
   * [Software License](./OL-Master_v1/SoftwareLicense.md)
   * [Frequently Asked Questions](./OL-Master_v1/FrequentlyAskedQuestions.md)
   * [General Recommendations](./OL-Master_v1/GeneralRecommendations.md)
   * [Additional Features](./OL-Master_v1/AdditionalFeatures.md)
   * [Troubleshooting](./OL-Master_v1/Troubleshooting.md)
-* [OL-Master v2.x](./OL-Master_v2/README.md)
+* OL-Master v2.x (preview)
+  * [User Manual](./OL-Master_v2/README.md)
   * [Software License](./OL-Master_v2/SoftwareLicense.md)
   * [Configuring the firewall](./OL-Master_v2/ConfiguringFirewall.md)
   * [Frequently Asked Questions](./OL-Master_v2/FrequentlyAskedQuestions.md)
   * [General Recommendations](./OL-Master_v2/GeneralRecommendations.md)
   * [Additional Features](./OL-Master_v2/AdditionalFeatures.md)
   * [Troubleshooting](./OL-Master_v2/Troubleshooting.md)
-* [OL-SD20A](./OL-SD20A/README.md)
+* OL-SD20A
+  * [User Manual](./OL-SD20A/README.md)
   * [Changing IP address](./OL-SD20A/ChangingIpAddress.md)
 * OL-Remote (coming soon)
 * OL-SD300A (coming soon)
