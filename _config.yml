@@ -1,0 +1,15 @@
+# Jekyll configuration for GitHub Pages
+title: Olliter Manuals
+description: Documentation and manuals for Olliter products
+baseurl: "/Olliter_Manuals"
+url: "https://olliter.github.io"
+
+markdown: GFM 
+plugins:
+- jekyll-gfm-admonitions
+- jekyll-optional-front-matter
+
+exclude: 
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
