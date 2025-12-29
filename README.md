@@ -78,7 +78,7 @@ A dedicate page with all the different OL-SDR devices and accessories is availab
 
 This is the main source of information on how to configure third-party software (like WSJT-X, CW-Skimmer or DX-Lab).
 
-Link to the Olliter YouTube channel: [@OLLITER.LABORATORY](https://www.youtube.com/@OLLITER.LABORATORY)
+Link to the Olliter YouTube channel: [@OLLITER.LABORATORY](https://www.youtube.com/@OlliterLabs)
 
 OL-Master tutorials on YouTube: [Olliter video tutorials](https://www.olliter.com/video-tutorials-en.html)
 
