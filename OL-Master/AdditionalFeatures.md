@@ -496,6 +496,25 @@ Payload:
 }
 ```
 
+##### Setting the monitor volume to 60%
+
+> [!NOTE]
+> This feature requires OL-Master version 2.0.0.8 or later.
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+  "software_id": "OL-Master_PCNAME",
+  "command": "monitorvolume",
+  "action": "",
+  "value": "60",
+  "subreceiver": "false"
+}
+```
+
 ##### Decreasing the master volume
 
 Topic: `receivers/command/1`
@@ -508,6 +527,25 @@ Payload:
   "command": "mastervolume",
   "action": "-",
   "value": "10",
+  "subreceiver": ""
+}
+```
+
+##### Setting the master volume to 35%
+
+> [!NOTE]
+> This feature requires OL-Master version 2.0.0.8 or later.
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+  "software_id": "OL-Master_PCNAME",
+  "command": "mastervolume",
+  "action": "",
+  "value": "35",
   "subreceiver": ""
 }
 ```
