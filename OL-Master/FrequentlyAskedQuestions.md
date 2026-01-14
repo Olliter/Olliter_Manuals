@@ -45,3 +45,38 @@ Yes, the OL-SDR supports CAT (Computer Aided Transceiver) interfaces. It can con
 ## What radio models does the OL-SDR emulate for CAT control?
 
 The OL-SDR emulates a subset of commands from two different radio architectures: the Kenwood TS-2000 and the FlexRadio/PowerSDR. Because of the different radio designs, the TS-2000 command set is limited to the most important functions (like frequency tuning, VFO controls, RX and TX commands and more), while the FlexRadio/PowerSDR command set is quite extensive.
+
+## Why the reading on the Y axis of the spectrum does not match the signal strength indicated by the S-meter?
+
+This is expected: the spectrum (panadapter) and the S-meter are not measuring the same quantity.
+
+* **Spectrum / panadapter Y axis**: it is derived from an FFT. Each “pixel/bin” represents the power contained in a *small* frequency slice (the FFT **resolution bandwidth**, often called RBW). In practice this is closer to a **power spectral density** view (power per bin / per RBW), and it is also affected by FFT size, windowing (ENBW), averaging, min/max display modes, and any display “offset/scaling”.
+
+* **S-meter**: it estimates the *total* received power inside the **current receiver bandwidth** (i.e. after the RX DSP chain / demodulation filter and typically under AGC influence). Therefore, when you narrow the RX filter, the S-meter reading goes down because less noise is being integrated.
+
+### The key point: noise power depends on bandwidth
+
+Thermal noise has an approximately flat density, so the **integrated** noise power scales with bandwidth:
+
+$$P_{noise} \approx -174\,\text{dBm/Hz} + NF + 10\,\log_{10}(B)$$
+
+where $B$ is the measurement bandwidth in Hz and $NF$ is the receiver noise figure.
+
+So if you reduce bandwidth from $B_1$ to $B_2$, the S-meter should drop by:
+
+$$\Delta P = 10\,\log_{10}(B_2/B_1)$$
+
+Example: going from **192 kHz** to **500 Hz** reduces the integrated noise by about $10\log_{10}(500/192000) \approx -25.8\,\text{dB}$.
+
+### Why you might see a ~40 dB difference with an SSB filter on a 192 kHz span
+
+If the spectrum is effectively showing “noise per FFT bin” (RBW), while the S-meter is showing “noise integrated over the whole receiver bandwidth”, then:
+
+$$P_{S\text{-}meter} \approx P_{bin} + 10\log_{10}(B/RBW)$$
+
+With 192 kHz span, a typical RBW of ~20–25 Hz (e.g. an 8192-point FFT) gives $10\log_{10}(192000/23) \approx 39\,\text{dB}$, which matches the kind of discrepancy you might have noticed.
+
+### Also note
+
+* The **Panadapter** and **Spectrum** in OL-Master are not always “the same place” in the DSP chain: panadapter data are typically taken **before** some functions are applied, while spectrum data are taken **after** activated functions (filters, mode, NR, notches, etc.). This alone can create differences depending on what you’re looking at.
+* A spectrum Y axis that reads in “dBm” can still include a **display calibration offset**, so treat it as an approximate reference unless you have performed/confirmed absolute calibration.

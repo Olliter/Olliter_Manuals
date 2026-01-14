@@ -45,15 +45,11 @@ If you have any questions about these manuals, or to report any issue, please co
 
 ## Additional resources
 
-Some additional material was developed by our engineers to help you
-troubleshoot or configure some sections of the software, here are some
-links that every user should check out:
+Some additional material was developed by our engineers to help you troubleshoot or configure some sections of the software, here are some links that every user should check out:
 
 ### Olliter website
 
-This is the official website where all news are published, here you can
-find manuals, software and all the information that are created for our
-customers.
+This is the official website where all news are published, here you can find manuals, software and all the information that are created for our community.
 
 Olliter website:
 
@@ -84,14 +80,21 @@ OL-Master tutorials on YouTube: [Olliter video tutorials](https://www.olliter.co
 
 ### Olliter on Facebook
 
-Here you can find some news about our devices, plus some previews of the
-devices that are being developed or tested.
+Here you can find some news about our devices, plus some previews of the devices that are being developed or tested.
 
 Link to the Olliter Facebook page: [Olliter on Facebook](https://www.facebook.com/Olliter/)
 
 ### Olliter on Instagram
 
-Wanna see some cool stuff? Some pictures from events, presentations or
-our laboratories? Instagram is the place for you.
+Wanna see some cool stuff? Some pictures from events, presentations or our laboratories? Instagram is the place for you.
 
 Link to the Olliter Instagram page: [Olliter on Instagram](https://www.instagram.com/_olliter_/)
+
+### Community projects
+
+The Olliter community is made of many talented people that create tools, software and hardware to extend the capabilities of our devices. Here are some links to community projects:
+
+* [Olliter Remote Controller by IU2FRL](https://www.iu2frl.it/olliter-remote-controller/): a hardware remote touch-screen controller for OL-SDR devices
+* [Olliter StreamDeck Plugin by IU2FRL](https://www.iu2frl.it/plugin-olliter-per-streamdeck/): a plugin for Elgato StreamDeck (and other clones) to control OL-SDR devices
+
+If you have created a project for Olliter devices and want to share it with the community, please contact us at [hello@olliter.com](mailto:hello@olliter.com)
