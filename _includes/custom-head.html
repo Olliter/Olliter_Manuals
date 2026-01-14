@@ -1,0 +1,23 @@
+<!--
+  Enables LaTeX rendering on the generated GitHub Pages site.
+  GitHub's repo Markdown viewer renders math, but Jekyll sites do not unless you load a renderer.
+
+  This file is automatically included by the default Jekyll theme (minima) if present.
+-->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
