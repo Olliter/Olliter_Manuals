@@ -67,7 +67,7 @@ The downloads section of the website with manuals and resources is available at:
 
 A dedicate page with all the different OL-SDR devices and accessories is available at:
 
-* [Italian version](https://www.olliter.com/sdr.html)
+* [Italian version](https://www.olliter.com/ol-sdr.html)
 * [English version](https://www.olliter.com/ol-sdr-en.html)
 
 ### Olliter YouTube channel
