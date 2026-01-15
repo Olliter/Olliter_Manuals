@@ -430,6 +430,23 @@ A value of `0 dB` means all signals will be heard at the same loudness, regard
 
 In the `Setup > DSP > AGC` panel, you can choose whether to display the Gain Level and Hang Level lines, along with their corresponding square markers, on the panadapter. Enable or disable these visual aids according to your preference for easier adjustment and monitoring of AGC parameters.
 
+#### Preamplifiers and attenuators
+
+OL-Master allows controlling the preamplifier and attenuator settings of the Olliter SDR device. These settings can be adjusted in the main window of the software.
+
+Each hardware receiver chain has its own preamplifier and attenuator controls, these can be adjusted independently for each receiver window.
+
+* `PRE1` and `ATT1` control the preamplifier and attenuator for the receiver hardware chain 1.
+* `PRE2` and `ATT2` control the preamplifier and attenuator for the receiver hardware chain 2.
+
+> [!NOTE]
+> Mapping between logical receivers and hardware chains can be configured in the `Setup > General > Ant & CH Mapping` menu.
+
+Enabling a preamplifier will increase the signal being fed to the ADC, while enabling an attenuator will reduce the signal being fed to the ADC.
+
+> [!NOTE]
+> As both the preamplifier and attenuator gains are known by the SDR, the software will automatically compensate for those settings and display the actual signal intensity being measured at the input of the antenna connectors, so even if a preamplifier or attenuator is enabled, the signal strength will be displayed correctly and will not vary on the S-Meter or the panadapter screen.
+
 ## Firmware upgrade
 
 The upgrade procedure for the Olliter SDR firmware is performed using the OL-Master software. A detailed guide about the firmware upgrade procedure is available at: [Firmware Upgrade](./FirmwareUpgrade.md)
