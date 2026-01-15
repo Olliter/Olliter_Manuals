@@ -79,4 +79,6 @@ With 192 kHz span, a typical RBW of ~20–25 Hz (e.g. an 8192-point FFT) gives $
 ### Also note
 
 * The **Panadapter** and **Spectrum** in OL-Master are not always “the same place” in the DSP chain: panadapter data are typically taken **before** some functions are applied, while spectrum data are taken **after** activated functions (filters, mode, NR, notches, etc.). This alone can create differences depending on what you’re looking at.
+* The spectrum Y axis can be **normalized to 1 Hz** (see `Setup -> Display -> RX1`). If not normalized, it is referenced to the FFT bin width (RBW), which can also be adjusted on the same page.
 * A spectrum Y axis that reads in “dBm” can still include a **display calibration offset**, so treat it as an approximate reference unless you have performed/confirmed absolute calibration.
+* The **S-meter** reports total power after the IF/demodulation filters and is therefore influenced by the receiver passband; this is a key reason its reading can differ from the per-bin spectrum values.
