@@ -132,14 +132,14 @@ The telemetry data is read-only and cannot be used to control the transceiver.
 > [!NOTE]
 > The `monitor_vol` and `master_vol` fields were expressed as a float value between 0 and 1 in OL-Master version 1.x, starting from version 2.0.0.0 they are expressed as an integer value between 0 and 100.
 
-```javascript
+```json
 {
   "software_id": "OL-Master_PCNAME", // Read only unique identifier of the software instance
   "txpower": "0",                    // Read only current TX power in Watts
-  "monitor_vol": "0.3",              // Read only current monitor volume (0 to 100)
+  "monitor_vol": "30",               // Read only current monitor volume (0 to 100)
   "band": "B10M",                    // Read and write current band
   "swr": "1",                        // Read only current SWR value
-  "master_vol": "0.5",               // Read only current master volume (0 to 100)
+  "master_vol": "50",                // Read only current master volume (0 to 100)
   "temperature": "0.0",              // Read only current temperature in Celsius
   "current": "0.0",                  // Read only current consumption in Amperes
   "samplerate": "192000",            // Read and write current sample rate in Hz (throttled to one update every 30 seconds)
