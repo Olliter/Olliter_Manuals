@@ -9,6 +9,8 @@
 * [MQTT](#mqtt)
   * [Example of Eclipse Mosquitto configuration](#example-of-eclipse-mosquitto-configuration)
   * [MQTT Telemetry data](#mqtt-telemetry-data)
+    * [Telemetry configuration](#telemetry-configuration)
+    * [Additional notes about the telemetry data](#additional-notes-about-the-telemetry-data)
   * [MQTT Receiver control](#mqtt-receiver-control)
     * [MQTT Controls examples](#mqtt-controls-examples)
   * [MQTT Receivers commands](#mqtt-receivers-commands)
@@ -120,19 +122,9 @@ Using these settings, OL-Master (and any third party software needing to interac
 
 The telemetry data that is sent to the MQTT broker is a JSON object that contains the following fields:
 
-The telemetry data is sent to the MQTT broker at each interval as configured in the `Setup > COM > MQTT` menu of the OL-Master software.
+Topic: `receivers/get/[x]` where `[x]` is the receiver number, ranging from 1 to 4.
 
-The telemetry topic is `receivers/get/[x]` where `[x]` is the receiver number, ranging from 1 to 4.
-
-The telemetry data is read-only and cannot be used to control the transceiver.
-
-> [!TIP]
-> Please note the `software_id` field is a unique identifier for each OL-Master instance, it is recommended to use this field to distinguish between different transceivers when using multiple instances connected to the same MQTT broker. When sending a command, the software_id must match the one of the target OL-Master instance.
-
-> [!NOTE]
-> The `monitor_vol` and `master_vol` fields were expressed as a float value between 0 and 1 in OL-Master version 1.x, starting from version 2.0.0.0 they are expressed as an integer value between 0 and 100.
-
-```json
+```javascript
 {
   "software_id": "OL-Master_PCNAME", // Read only unique identifier of the software instance
   "txpower": "0",                    // Read only current TX power in Watts
@@ -172,6 +164,16 @@ The telemetry data is read-only and cannot be used to control the transceiver.
   }
 }
 ```
+
+#### Telemetry configuration
+
+The telemetry data is sent to the MQTT broker at each interval as configured in the `Setup > COM > MQTT` menu of the OL-Master software.
+
+#### Additional notes about the telemetry data
+
+* The `monitor_vol` and `master_vol` fields were expressed as a float value between 0 and 1 in OL-Master version 1.x, starting from version 2.0.0.0 they are expressed as an integer value between 0 and 100.
+* Please note the `software_id` field is a unique identifier for each OL-Master instance, it is recommended to use this field to distinguish between different transceivers when using multiple instances connected to the same MQTT broker. When sending a command, the software_id must match the one of the target OL-Master instance or the command will be ignored.
+* The telemetry data is read-only and cannot be used to control the transceiver.
 
 ### MQTT Receiver control
 
@@ -567,6 +569,25 @@ Payload:
 ```
 
 The frequency is in MHz, to decrease the frequency, set the `action` field to `-`.
+
+##### Setting the frequency of the first receiver
+
+> [!NOTE]
+> This feature requires OL-Master version 2.0.0.15 or later.
+
+Topic: `receivers/command/1`
+
+Payload:
+
+```json
+{
+  "software_id": "OL-Master_PCNAME",
+  "command": "frequency",
+  "action": "",
+  "value": "14.250000",
+ "subreceiver": "true"
+}
+```
 
 ##### Changing the receiver mode of the third transceiver
 
