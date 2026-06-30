@@ -26,7 +26,7 @@
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
       - [OC connector](#oc-connector)
-      - [Power connector](#power-connector)
+      - [DC Power connector](#dc-power-connector)
       - [Antenna connectors](#antenna-connectors)
       - [Ethernet connector](#ethernet-connector)
 3. [System requirements](#system-requirements)
@@ -207,6 +207,16 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 22. Band output (digital output)
 
 23. Ethernet interface (1Gbps only)
+
+24. Transverter 1 receiving line
+
+25. Transverter 2 receiving line
+
+26. External RF input (unfiltered, to be used with external devices that already have filters installed)
+
+27. Pure Signal input (to be connected to the Pure Signal output of the transceiver or external amplifier)
+
+28. 10MHz input from external reference (such as GPSDO)
 
 #### Connectors description
 
