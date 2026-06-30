@@ -34,8 +34,10 @@ These are the available manuals:
 * OL-SD20A
   * [User Manual](./OL-SD20A/README.md)
   * [Changing IP address](./OL-SD20A/ChangingIpAddress.md)
+* OL-SD300A
+  * [User Manual](./OL-SD300A/README.md)
+  * [Changing IP address](./OL-SD300A/ChangingIpAddress.md)
 * OL-Remote (coming soon)
-* OL-SD300A (coming soon)
 * RosPo (coming soon)
 * OL-POWER (coming soon)
 

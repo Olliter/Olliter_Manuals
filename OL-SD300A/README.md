@@ -1,8 +1,8 @@
 ![Olliter Logo](../resources/olliter-logo.png)
 
-# OL-SD20A SDR Transceiver User Manual
+# OL-SD300A SDR Transceiver User Manual
 
-![Olliter OL-SD20A](./resources/image2.jpg)
+![Olliter OL-SD300A](./resources/image2.jpg)
 
 ## Contents of this manual
 
@@ -26,7 +26,7 @@
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
       - [OC connector](#oc-connector)
-      - [DC Power connector](#dc-power-connector)
+      - [Power connector](#power-connector)
       - [Antenna connectors](#antenna-connectors)
       - [Ethernet connector](#ethernet-connector)
 3. [System requirements](#system-requirements)
@@ -91,7 +91,7 @@ This chapter covers the input and output of the Olliter SDR transceiver to guide
 - 8x LVCMOS output
 - 8x analog inputs
 - 4x digital inputs
-- 15W nominal TX power
+- 300W nominal TX power
 
 #### Technical specifications
 
@@ -158,61 +158,55 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 ### Back panel
 
+![back panel](./resources/back.jpeg)
+
 ![Back panel](./resources/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
 
-1. Receiving line for the transverter interface 1
+1. Antenna 1 receiving and transmitting connector
 
-2. Transmitting line for the transverter interface 1
+2. Antenna 2 receiving and transmitting connector
 
-3. Receiving line for the transverter interface 2
+3. Antenna 3 receiving and transmitting connector
 
-4. Transmitting line for the transverter interface 2
+4. Antenna 4 receiving and transmitting connector
 
-5. Pure signal input
+5. Power Amplifier cooling fan
 
-6. Pure signal output
+6. Power supply input (50V DC)
 
-7. EXT IN (unfiltered RF input)
+7. Transmitting line for the transverter interface 1
 
-8. 10MHz input from an external oscillator (GPSDO or rubidium  reference)
+8. Transmitting line for the transverter interface 2
 
-9. 10MHz output for external devices (such as transverters)
+9. Pure Signal output
 
-10. Open collector I/O (can be configured from OL-Master)
+10. 10MHz output for external devices (such as transverters)
 
 11. Speaker connection (high power output, designed for external 8-ohm speakers)
 
 12. Internal or external speaker selector
 
-13. Power supply input (13.8V DC)
+13. Open collector I/O (can be configured from OL-Master)
 
-14. Antenna 1 receiving and transmitting connector
+14. Remote power-on key
 
-15. Antenna 2 receiving and transmitting connector
+15. Transverter 1 interface (digital inputs and outputs to control external transverters)
 
-16. Antenna 3 receiving and transmitting connector
+16. Transverter 2 interface (digital inputs and outputs to control external transverters)
 
-17. Antenna 4 receiving and transmitting connector
+17. External accessories interface (digital inputs and outputs)
 
-18. Serial number location
+18. RCA audio output (low power output, to be sent to the line-in of external audio devices)
 
-19. Transverter 1 interface (digital inputs and outputs to control external transverters)
+19. RCA audio input (low power input, to be used as transmitting audio line)
 
-20. Transverter 2 interface (digital inputs and outputs to control external transverters)
+20. Open collector PTT output
 
-21. External accessories interface (digital inputs and outputs)
+21. External PTT input (active low)
 
-22. RCA audio output (low power output, to be sent to the line-in of external audio devices)
+22. Band output (digital output)
 
-23. RCA audio input (low power input, to be used as transmitting audio line)
-
-24. Open collector PTT output
-
-25. External PTT input (active low)
-
-26. Band output (digital output)
-
-27. Ethernet interface (1Gbps only)
+23. Ethernet interface (1Gbps only)
 
 #### Connectors description
 
@@ -332,7 +326,7 @@ For optimal performance, it is recommended to set external attenuators to limit 
 > The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
 
 > [!TIP]
-> We observed that most commercial amplifiers are producing a 0dBm (or -60dBc) power at the PureSignal output, this power level is enough to be used with the OL-SD20A
+> We observed that most commercial amplifiers are producing a 0dBm (or -60dBc) power at the PureSignal output, this power level is enough to be used with the OL-SD300A
 
 ##### PureSignal System Verification Procedure
 
@@ -425,32 +419,39 @@ Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9 have 
 
 #### OC connector
 
-This connector offers 8 open-collector outputs that can be used to drive external accessories like power amplifiers or antenna relays.
+This connector offers 16 open-collector outputs that can be used to drive external accessories like power amplifiers or antenna relays.
 
-- The maximum V~CE~ that can be used at the open-collector outputs is 48V DC.
+- The maximum V~CE~ that can be used at the open-collector outputs is 30V DC.
 - The maximum current that can be drawn from each output is 0.05A (50mA).
-- The 13.8V DC lines are derived from the main power supply and are protected by a 250mA resettable fuse.
-  - This line should not be used to power external devices, it is only provided to power low-current devices like opto-isolators.
 
-![DB15 standard pinout diagram](./resources/image11.png)
+![DB25 standard pinout diagram](./resources/image11.png)
 
-| DB15 Pin | Software Output |
-|----------|--------------------------|
-| 1 | GND |
+| DB25 Pin | Software Output |
+|---|---|
+| 1 | OUT 1 |
 | 2 | OUT 2 |
-| 3 | OUT 4 |
-| 4 | OUT 6 |
-| 5 | OUT 8 |
-| 6 | GND |
-| 7 | GND |
-| 8 | 13.8V |
-| 9 | OUT 1 |
-| 10 | OUT 3 |
-| 11 | OUT 5 |
-| 12 | OUT 7 |
-| 13 | Open-collector common |
-| 14 | GND |
-| 15 | 13.8V |
+| 3 | OUT 3 |
+| 4 | OUT 4 |
+| 5 | OUT 5 |
+| 6 | OUT 6 |
+| 7 | OUT 7 |
+| 8 | OUT 8 |
+| 9 | OUT 9 |
+| 10 | OUT 10 |
+| 11 | OUT 11 |
+| 12 | OUT 12 |
+| 13 | OUT 13 |
+| 14 | OUT 0 |
+| 15 | GND |
+| 16 | GND |
+| 17 | GND |
+| 18 | GND |
+| 19 | GND |
+| 20 | GND |
+| 21 | GND |
+| 22 | GND |
+| 23 | GND |
+| 24 | GND |
 
 External relay connection example:
 
@@ -460,9 +461,20 @@ External relay connection example:
 
 Please refer to the Connecting the power supply chapter for further information
 
+#### External power-on key
+
+> [!WARNING]
+> Do not apply any voltage to this input, it is designed to be used with a relay or a switch only. Applying voltage to this input can cause permanent damage to the transceiver and will void the warranty.
+
+![External power-on key wiring diagram](./resources/image10.png)
+
+This input is used to remotely power on the transceiver. The transceiver will turn on when this input is pulled to GND, and will turn off when the input is released.
+
+This connector will operate only if the transceiver is in Standby mode (meaning the red LED is ON). If the transceiver is already powered on, this input will have no effect.
+
 #### Antenna connectors
 
-These four BNC connectors are used by the transceiver to receive and transmit. Different bands can receive or transmit on different antennas, mapping between bands, mode and antenna can be done in the Setup menu of OL-Master.
+These four N-type connectors are used by the transceiver to receive and transmit. Different bands can receive or transmit on different antennas, mapping between bands, mode and antenna can be done in the Setup menu of OL-Master.
 
 Please refer to the Connecting the antenna for further information
 
@@ -498,11 +510,9 @@ Pure Signal is the name given to the theory and implementation of the clean tran
 
 The Pure Signal technology is enabled by connecting the PS IN with the PS OUT using the provided SMA to SMA coaxial cable.
 
-![Pure signal connectors on the back of the transceiver](./resources/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
-
 ### Connecting the power supply
 
-The Olliter SDR was designed to operate from a stable and constant power supply which is capable of continuously delivering 13.8V at 5A for the 20W model.
+The Olliter SDR was designed to operate from a stable and constant power supply which is capable of continuously delivering 50V at 15A for the 300W model.
 
 An integrated protection circuit is added to the transceiver which can help in protecting the radio from excessive voltage fluctuations by cutting the power line and turning off the device.
 
@@ -515,8 +525,6 @@ Connect the power supply to the Olliter SDR by using high-quality Anderson Power
 - Wires between 2 and 4 meters (6.5ft to 13ft) will require 4mm<sup>2</sup> wires
 - Wires longer than 4 meters (13ft) are not recommended as they may pick up excessive noise from the surrounding environment or cause excessive voltage fluctuations
 
-![DC plug on the back of the transceiver](./resources/9c765baa23b7e234fb8756753310f4326b3ebb4f.png)
-
 Make sure to connect all the needed wires before turning on the power supply.
 
 If the transceiver does not show the red (standby) light after applying power, please refer to the Troubleshooting chapter.
@@ -525,9 +533,7 @@ If the transceiver does not show the red (standby) light after applying power, p
 
 Up to 4 antennas can be connected to the Olliter SDR, these can be configured in software to allow receiving and transmitting on different bands with different antennas.
 
-To begin, connect an antenna using a male BNC connector to the ANT1 socket.
-
-![Antenna 1 connection](./resources/1f2934ee5ce799ba34a4df22e04ed915f853d283.png)
+To begin, connect an antenna using a male N-type connector to the ANT1 socket.
 
 ### Connecting the ethernet cable
 
@@ -561,7 +567,7 @@ The following schematic illustrates the recommended connection of the SDR device
 
 Management of the IP address is performed using OL-Master, if the default IP address (192.168.1.111) is not valid or available on your local network, follow this procedure to change it to a valid one.
 
-For the full procedure, please see: [Changing IP Address of a OL-SD20A transceiver](./ChangingIpAddress.md)
+For the full procedure, please see: [Changing IP Address of a OL-SD300A transceiver](./ChangingIpAddress.md)
 
 ## Usage of OL-Master
 
