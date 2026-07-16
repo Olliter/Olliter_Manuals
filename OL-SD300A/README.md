@@ -115,13 +115,13 @@ The following specifications were reported from laboratory measurements from our
 
 ![Front panel](./resources/3284ef3277303db02603912d273051ec195d35ad.png)
 
-1. Morse key input
+1. [Morse key input](#morse-key-jack)
 
-2. Headphones output
+2. [Headphones output](#headphones-output)
 
-3. Microphone input
+3. [Microphone input](#microphone-input)
 
-4. Connection LED
+4. [Connection LED](#front-panel-leds)
 
 5. Power button
 
@@ -129,9 +129,9 @@ The following specifications were reported from laboratory measurements from our
 
 7. Left speaker
 
-8. Standby LED
+8. [Standby LED](#front-panel-leds)
 
-9. Power-on LED
+9. [Power-on LED](#front-panel-leds)
 
 10. Right speaker
 
@@ -162,61 +162,61 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 ![Back panel](./resources/930b36d1c2b600f1abbde9dfbe439a3cb0f2817a.png)
 
-1. Antenna 1 receiving and transmitting connector
+1. [Antenna 1 receiving and transmitting connector](#antenna-connectors)
 
-2. Antenna 2 receiving and transmitting connector
+2. [Antenna 2 receiving and transmitting connector](#antenna-connectors)
 
-3. Antenna 3 receiving and transmitting connector
+3. [Antenna 3 receiving and transmitting connector](#antenna-connectors)
 
-4. Antenna 4 receiving and transmitting connector
+4. [Antenna 4 receiving and transmitting connector](#antenna-connectors)
 
 5. Power Amplifier cooling fan
 
-6. Power supply input (50V DC)
+6. [Power supply input (50V DC)](#dc-power-connector)
 
-7. Transmitting line for the transverter interface 1
+7. [Transmitting line for the transverter interface 1](#transverter-interfaces)
 
-8. Transmitting line for the transverter interface 2
+8. [Transmitting line for the transverter interface 2](#transverter-interfaces)
 
-9. Pure Signal output
+9. [Pure Signal output](#pure-signal)
 
-10. 10MHz output for external devices (such as transverters)
+10. [10MHz output for external devices (such as transverters)](#10mhz-references)
 
-11. Speaker connection (high power output, designed for external 8-ohm speakers)
+11. [Speaker connection](#speaker-connector) (high power output, designed for external 8-ohm speakers)
 
 12. Internal or external speaker selector
 
-13. Open collector I/O (can be configured from OL-Master)
+13. [Open collector I/O](#oc-connector) (can be configured from OL-Master)
 
-14. Remote power-on key
+14. [External power-on key](#external-power-on-key)
 
-15. Transverter 1 interface (digital inputs and outputs to control external transverters)
+15. [Transverter 1 interface](#transverter-interfaces) (digital inputs and outputs to control external transverters)
 
-16. Transverter 2 interface (digital inputs and outputs to control external transverters)
+16. [Transverter 2 interface](#transverter-interfaces) (digital inputs and outputs to control external transverters)
 
-17. External accessories interface (digital inputs and outputs)
+17. [External accessories interface](#acc-connector) (digital inputs and outputs)
 
 18. RCA audio output (low power output, to be sent to the line-in of external audio devices)
 
 19. RCA audio input (low power input, to be used as transmitting audio line)
 
-20. Open collector PTT output
+20. [Open collector PTT output](#ptt-output)
 
-21. External PTT input (active low)
+21. [External PTT input](#ptt-output) (active low)
 
-22. Band output (digital output)
+22. [Band output](#pa-band-connector) (digital output)
 
-23. Ethernet interface (1Gbps only)
+23. [Ethernet interface](#ethernet-connector) (1Gbps only)
 
-24. Transverter 1 receiving line
+24. [Transverter 1 receiving line](#transverter-interfaces)
 
-25. Transverter 2 receiving line
+25. [Transverter 2 receiving line](#transverter-interfaces)
 
-26. External RF input (unfiltered, to be used with external devices that already have filters installed)
+26. [External RF input](#ext-in) (unfiltered, to be used with external devices that already have filters installed)
 
-27. Pure Signal input (to be connected to the Pure Signal output of the transceiver or external amplifier)
+27. [Pure Signal input](#pure-signal) (to be connected to the Pure Signal output of the transceiver or external amplifier)
 
-28. 10MHz input from external reference (such as GPSDO)
+28. [10MHz input from external reference](#10mhz-references) (such as GPSDO)
 
 #### Connectors description
 
@@ -263,7 +263,7 @@ Selection between 5V, 8V or none can be toggled in the Setup menu of OL-Master.
 Advanced features (like up/down, scan, etc.) are not available.
 
 | Pin | Transceiver (Icom Wiring) | Icom SM-30 Dynamic Microphone |
-|-----|--------------------------------|------------------------------|
+| --- | --- | --- |
 | 1 | Microphone signal | Balanced input + |
 | 2 | +8V microphone power | N.C. |
 | 3 | N.C. | N.C. |
@@ -274,7 +274,7 @@ Advanced features (like up/down, scan, etc.) are not available.
 | 8 | N.C. | N.C. |
 
 | Pin | Transceiver (Yaesu Wiring) | Yaesu M-70 Dynamic Microphone |
-|-----|--------------------------------|------------------------------|
+| --- | --- | --- |
 | 1 | N.C. | N.C. |
 | 2 | +5V microphone power | N.C. |
 | 3 | N.C. | N.C. |
@@ -284,9 +284,9 @@ Advanced features (like up/down, scan, etc.) are not available.
 | 7 | Microphone GND | GND |
 | 8 | Microphone signal | Balanced input + |
 
-*Icom and the Icom logo are registered trademarks of Icom Incorporated (Japan)*
-
-*Yaesu and the Yaesu logo are registered trademarks of Yaesu Musen Co., Ltd.*
+_Icom and the Icom logo are registered trademarks of Icom Incorporated (Japan)_
+  
+_Yaesu and the Yaesu logo are registered trademarks of Yaesu Musen Co., Ltd._
 
 #### Transverter interfaces
 
@@ -324,7 +324,7 @@ The 10MHz input (labelled as GPS IN) is a 50Ω input between -15dBm and +5dBm. 
 
 The 10MHz output (labelled as OUT) provides a 3.3V CMOS output with a series resistance (used as short-circuit protection). This output can only be used as a frequency reference, and it was not designed to provide more than 20mA. This output comes from the internal TCXO when no external reference is applied.
 
-#### Pure Signal input
+#### Pure Signal
 
 PureSignal features an input level control loop with a 30 dB range to minimize spurious emissions and get cleaner RF output emissions. At full power, with an input level of 3 dBm, the automatic attenuation stabilizes around 20 dB.
 
@@ -387,7 +387,7 @@ The voltage that is provided by this port depends on the internal "3.3 -- 5V I/O
 ![DB9 Standard wiring diagram](./resources/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
 | DB9 Pin | Software Output |
-|---------|-----------------|
+| --- | --- |
 | 1 | Digital out 1 |
 | 2 | Digital out 2 |
 | 3 | Digital out 3 |
@@ -405,7 +405,7 @@ This connector offers some inputs to control several features of the SDR, such a
 The voltage that can be applied to the digital input port depends on the internal "3.3 -- 5V I/O" jumper. In any case, it should never exceed the configured voltage.
 
 | State | 3.3V I/O Range | 5V I/O Range |
-|------------|---------------|--------------|
+| --- | --- | --- |
 | Low state | 0V to 0.8V | 0V to 1.5V |
 | High state | 2V to 3.3V | 3.5V to 5V |
 
@@ -413,10 +413,10 @@ The voltage range for both ADC0 and ADC1 is 0V to 3.3V. Excessive voltage can ca
 
 Pins 6 and 8 have an internal 4.7KΩ pull-up resistor, while pins 7 and 9 have an internal 4.7KΩ pull-down resistor.
 
-![DB15 standard pinout](./resources/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
+![DB9 standard pinout](./resources/17ff5b2b219aae4071c907d38aa3c188a4a26941.png)
 
 | DB9 Pin | Software Output |
-|---------|---------------------------|
+| --- | --- |
 | 1 | GND |
 | 2 | N.C. |
 | 3 | ADC in 1 |
@@ -437,7 +437,7 @@ This connector offers 16 open-collector outputs that can be used to drive extern
 ![DB25 standard pinout diagram](./resources/image11.png)
 
 | DB25 Pin | Software Output |
-|---|---|
+| --- | --- |
 | 1 | OUT 1 |
 | 2 | OUT 2 |
 | 3 | OUT 3 |
@@ -466,6 +466,21 @@ This connector offers 16 open-collector outputs that can be used to drive extern
 External relay connection example:
 
 ![External relay wiring example](./resources/bdc84c5a3a727390a574e867f35eda82bcb6c5cd.png)
+
+#### Speaker connector
+
+This connector is used to connect external low-impedance speakers to the transceiver, it is designed to drive 8Ω speakers.
+
+> [!WARNING]
+> Do not ground any pin of the speaker output to the chassis of the transceiver, the power supply or any other point, this may cause severe damage to the internal circuitry.
+
+| Pin | Function |
+| --- | --- |
+| 1 | Left speaker positive |
+| 2 | Left speaker negative |
+| 3 | N.C. |
+| 4 | Right speaker positive |
+| 5 | Right speaker negative |
 
 #### DC Power connector
 
