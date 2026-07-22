@@ -21,7 +21,7 @@
       - [Transverter interfaces](#transverter-interfaces)
       - [EXT IN](#ext-in)
       - [10MHz references](#10mhz-references)
-      - [Pure Signal input](#pure-signal-input)
+      - [Pure Signal](#pure-signal)
       - [PTT Output](#ptt-output)
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
