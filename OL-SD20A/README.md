@@ -13,6 +13,7 @@
       - [Technical specifications](#technical-specifications)
     - [Front panel](#front-panel)
       - [Front panel LEDs](#front-panel-leds)
+      - [Front speakers](#front-speakers)
     - [Back panel](#back-panel)
       - [Connectors description](#connectors-description)
       - [Morse key jack](#morse-key-jack)
@@ -21,17 +22,18 @@
       - [Transverter interfaces](#transverter-interfaces)
       - [EXT IN](#ext-in)
       - [10MHz references](#10mhz-references)
-      - [Pure Signal](#pure-signal)
+      - [PureSignal](#puresignal)
       - [PTT Output](#ptt-output)
       - [PA Band connector](#pa-band-connector)
       - [ACC Connector](#acc-connector)
       - [OC connector](#oc-connector)
+      - [Speaker connector](#speaker-connector)
       - [DC Power connector](#dc-power-connector)
       - [Antenna connectors](#antenna-connectors)
       - [Ethernet connector](#ethernet-connector)
 3. [System requirements](#system-requirements)
 4. [Wiring the transceiver](#wiring-the-transceiver)
-    - [Connecting of the PureSignal cable](#connecting-of-the-puresignal-cable)
+    - [Connecting the PureSignal cable](#connecting-the-puresignal-cable)
     - [Connecting the power supply](#connecting-the-power-supply)
     - [Connecting the antenna](#connecting-the-antenna)
     - [Connecting the ethernet cable](#connecting-the-ethernet-cable)
@@ -63,7 +65,7 @@ For the full hardware and software license, please refer to the following docume
 
 ## Introduction
 
-The main purpose of this guide is to help you configuring for the first time your Olliter SDR Transceiver.
+The main purpose of this guide is to help you configure your Olliter SDR Transceiver for the first time.
 
 This guide may not fully cover the hardware configuration of the device or every feature available on the software, it will cover the first steps to connect the SDR transceiver, receive and transmit.
 
@@ -76,15 +78,15 @@ This chapter covers the input and output of the Olliter SDR transceiver to guide
 #### General specifications
 
 - Direct sampling SDR
-  - 2x 16 bit dual-channsl RX ADC
+  - 2x 16 bit dual-channel RX ADC
   - 1x 16 bit TX DAC
 - Up to 8 receivers
   - Each of the 4 hardware receiver channels can be split into two receivers on the same band for a total of 8 receivers on 4 different bands at the same time
 - Full duplex capabilities
-- Up to 1.5MHz of receive bandwitdh (per receiver)
+- Up to 1.5MHz of receive bandwidth (per receiver)
 - Ultra-low-noise master oscillator (122.88MHz)
 - Thermally compensated reference oscillator (10MHz)
-- 100KHz - 55MHz guaranteed continuous receive range
+- 100 kHz - 55 MHz guaranteed continuous receive range
 - Adjustable power output (maximum power depends on selected model)
 - 2x 7W RMS audio output
 - 8x open collector output
@@ -137,8 +139,7 @@ The following specifications were reported from laboratory measurements from our
 
 #### Front panel LEDs
 
-The front panel offers four different LEDs, each LED have a different
-meaning
+The front panel offers four different LEDs, and each LED has a different meaning.
 
 ![Front panel LEDs](./resources/5288649ad2f90e07cfae2b4b325fb21509bb6626.png)
 
@@ -154,7 +155,7 @@ If the Power-on LED is not turning on when pressing the power button, please ref
 
 #### Front speakers
 
-These speakers are controlled by OL-Master and can be used to play the demodulated signal that is tuned. The onboard speakers can be enabled or disabled from OL-Master, volume control is also provided by the software
+These speakers are controlled by OL-Master and can be used to play the demodulated signal being received. The onboard speakers can be enabled or disabled from OL-Master, and volume control is also provided by the software.
 
 ### Back panel
 
@@ -168,9 +169,9 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 4. [Transmitting line for the transverter interface 2](#transverter-interfaces)
 
-5. [Pure signal input](#pure-signal)
+5. [PureSignal input](#puresignal)
 
-6. [Pure signal output](#pure-signal)
+6. [PureSignal output](#puresignal)
 
 7. [EXT IN](#ext-in) (unfiltered RF input)
 
@@ -212,7 +213,7 @@ These speakers are controlled by OL-Master and can be used to play the demodulat
 
 26. [Band output](#pa-band-connector) (digital output)
 
-27. [Ethernet interface](#ethernet-connector) (1Gbps only)
+27. [Ethernet interface](#ethernet-connector) (1 Gbps only)
 
 #### Connectors description
 
@@ -228,24 +229,23 @@ Here is a description of the inputs and outputs of the Olliter SDR transceiver. 
 
 This ¼ inch (6.35mm) jack is used to connect either a paddle or a straight key. When using a paddle, the DOT and DASHES can be swapped from the CW menu of OL-Master settings.
 
-This connector uses either 5V or 3V3 pull-up resistors. Voltage can be selected by moving the internal "3.3 -- 5V I/O" jumper.
+This connector uses either 5V or 3.3V pull-up resistors. Voltage can be selected by moving the internal "3.3 -- 5V I/O" jumper.
 
 ![Morse key jack wiring diagram](./resources/image8.png)
 
 #### Headphones output
 
-This output is designed to drive standard headphones with a nominal
-impedance of 16Ω impedance, output level is 50mW for a -75dB THD.
+This output is designed to drive standard headphones with a nominal impedance of 16Ω, and the output level is 50mW for a -75dB THD.
 
 > [!WARNING]
-> Prolonged use of headphones at high volume can cause permanent hearing dagame. Adjust the volume to a safe level to protect your ears.
+> Prolonged use of headphones at high volume can cause permanent hearing damage. Adjust the volume to a safe level to protect your ears.
 
 ![Headphones jack wiring diagram](./resources/image9.png)
 
 #### Microphone input
 
 > [!WARNING]
-> If the transceiver was ordered with a Icom wiring, a Yaesu microphone cannot be used and vice-versa. Using a different microphone style can damage the transceiver and/or the microphone.
+> If the transceiver was ordered with an Icom wiring, a Yaesu microphone cannot be used and vice-versa. Using a different microphone style can damage the transceiver and/or the microphone.
 
 This input should be chosen when placing the order for the Olliter SDR transceiver. This input is designed to work with either Icom (such as the SM-30) or Yaesu (such as M-70) microphones.
 
@@ -254,7 +254,7 @@ In addition to the microphone wiring that was requested, and independently from 
 > [!WARNING]
 > Before connecting any kind of microphone to the transceiver, please adjust the voltage settings in the Setup menu of OL-Master software. Incorrect voltage settings may damage the transceiver and/or the microphone.
 
-Selection between 5V, 8V or none can be toggled in the Setup menu of OL-Master.
+Selection between 5V, 8V, or none can be toggled in the Setup menu of OL-Master.
 
 Advanced features (like up/down, scan, etc.) are not available.
 
@@ -297,7 +297,7 @@ Transverters can be configured using the dedicated section of the OL-Master soft
 #### EXT IN
 
 > [!WARNING]
-> The EXT IN connector provide direct access to the ADC2 device
+> The EXT IN connector provides direct access to the ADC2 device
 > inside the transceiver, excessive power input can permanently
 > damage the internal circuits
 
@@ -305,8 +305,7 @@ This input provides an unfiltered path to the CH2 line of the
 transceiver, it is typically used to interface with external devices
 where filters are already installed (such as panadapter interfaces).
 
-To enable this feature please select RX2 as receiver channel for the
-receiver that is going to be used, then configure if the external input should be used only during RX, TX or both.
+To enable this feature, please select RX2 as the receiver channel for the receiver that is going to be used, then configure whether the external input should be used only during RX, TX, or both.
 
 ![CH -> RX mapping in Setup form](./resources/a439cba54074365622555ccec2c8991a7e11e642.png)
 
@@ -320,9 +319,9 @@ The 10MHz input (labelled as GPS IN) is a 50Ω input between -15dBm and +5dBm. 
 
 The 10MHz output (labelled as OUT) provides a 3.3V CMOS output with a series resistance (used as short-circuit protection). This output can only be used as a frequency reference, and it was not designed to provide more than 20mA. This output comes from the internal TCXO when no external reference is applied.
 
-#### Pure Signal
+#### PureSignal
 
-PureSignal features an input level control loop with a 30 dB range to minimize spurious emissions and get cleaner RF output emissions. At full power, with an input level of 3 dBm, the automatic attenuation stabilizes around 20 dB.
+PureSignal features an input level control loop with a 30 dB range to minimize spurious emissions and produce cleaner RF output. At full power, with an input level of 3 dBm, the automatic attenuation stabilizes around 20 dB.
 
 This means that PureSignal can still correct the amplifier even when the output power is only one-hundredth of its maximum value. This is particularly useful when the instantaneous voice level is low.
 
@@ -332,7 +331,7 @@ For optimal performance, it is recommended to set external attenuators to limit 
 > The maximum level before the PureSignal receive chain saturates is approximately +10 dBm, equivalent to 0.7 Vrms or 1 Vpk. Exceeding these values can cause permanent damage to the transceiver boards.
 
 > [!TIP]
-> We observed that most commercial amplifiers are producing a 0dBm (or -60dBc) power at the PureSignal output, this power level is enough to be used with the OL-SD20A
+> We observed that most commercial amplifiers produce 0 dBm (or -60 dBc) at the PureSignal output, and this power level is enough to be used with the OL-SD20A.
 
 ##### PureSignal System Verification Procedure
 
@@ -365,14 +364,14 @@ The radio features a PTT OUT output located on the back panel, designed for exte
 When controlling a relay, it is essential to place a flyback diode in parallel with the relay coil to prevent voltage spikes that could damage the internal FET.
 
 > [!TIP]
-> Most amplifiers includes an internal 4.7KΩ pull-up resistor to its internal 5V supply. As a result, it can be directly connected to the OL-SDR PTT OUT without requiring additional components. For optimal performance and minimal interference, it is recommended to use a shielded cable with an RCA connector.
+> Most amplifiers include an internal 4.7KΩ pull-up resistor to their internal 5V supply. As a result, the PTT OUT can be directly connected to the Olliter SDR without requiring additional components. For optimal performance and minimal interference, it is recommended to use a shielded cable with an RCA connector.
 
 > [!TIP]
 > In Setup → Options, the radio can be configured to activate an adjustable delay for RF output after PTT ON activation. This feature ensures that external relays have sufficient time to switch the antenna connection before transmission begins.
 
 #### PA Band connector
 
-This connector offers some digital outputs that can be used to drive external antenna switches or amplifiers.
+This connector offers digital outputs that can be used to drive external antenna switches or amplifiers.
 
 These outputs can be programmed by the user using the Setup menu of OL-Master.
 
@@ -396,7 +395,7 @@ The voltage that is provided by this port depends on the internal "3.3 -- 5V I/O
 
 #### ACC Connector
 
-This connector offers some inputs to control several features of the SDR, such as PTT controls for RX2, RX3 and RX4, an external inhibit line, and two additional analog inputs that can be used to get information from external devices (like temperature probes or flow meters).
+This connector offers inputs to control several features of the SDR, such as PTT controls for RX2, RX3, and RX4, an external inhibit line, and two additional analog inputs that can be used to get information from external devices such as temperature probes or flow meters.
 
 The voltage that can be applied to the digital input port depends on the internal "3.3 -- 5V I/O" jumper. In any case, it should never exceed the configured voltage.
 
@@ -486,9 +485,9 @@ Please refer to the Connecting the antenna for further information
 #### Ethernet connector
 
 > [!WARNING]
-> The transceiver does not accept any link speed slower than 1Gbps. Network devices running at 10/100Mbps are not supported and will not work.
+> The transceiver does not accept any link speed slower than 1 Gbps. Network devices running at 10/100 Mbps are not supported and will not work.
 
-The ethernet port is used to communicate with the OL-Master application through local network, make sure to use high-quality shielded wires to achieve best performances.
+The ethernet port is used to communicate with the OL-Master application through the local network. Make sure to use high-quality shielded cables to achieve the best performance.
 
 ## System requirements
 
@@ -503,17 +502,17 @@ A detailed description of the hardware and software requirements needed to run t
 > - Avoid static-inducing clothing: avoid wearing synthetic materials that generate static electricity 
 > - Handle components with care: touch components only by their edges or the grounding case avoiding touching pins and circuitry
 
-Connecting the transceiver is simple but a couple of considerations and safety measures are needed, please read carefully the wiring instructions to prevent damages to the Olliter SDR.
+Connecting the transceiver is simple, but a couple of considerations and safety measures are needed. Please read the wiring instructions carefully to prevent damage to the Olliter SDR.
 
-### Connecting of the PureSignal cable
+### Connecting the PureSignal cable
 
-To achieve optimal transmission quality and reduce the spurious emissions, the Pure Signal technology is supported by the Olliter SDR transceiver.
+To achieve optimal transmission quality and reduce spurious emissions, PureSignal technology is supported by the Olliter SDR transceiver.
 
 ![Pure Signal-2](./resources/4d6ae272de1fb31734e5f8f39ca9f65014f99fa4.png)
 
-Pure Signal is the name given to the theory and implementation of the clean transmission logic developed by the OpenHPSDR team and implemented in both the Olliter SDR software and transceiver. The algorithm behind the Pure Signal technology is quite simple, when both the drive applied to the Digital-to-analogue converter (DAC) and the output as measured at the antenna are known it is possible to modify the drive so that the output is as clean as possible.
+PureSignal is the name given to the theory and implementation of the clean transmission logic developed by the OpenHPSDR team and implemented in both the Olliter SDR software and transceiver. The algorithm behind the PureSignal technology is quite simple: when both the drive applied to the digital-to-analogue converter (DAC) and the output measured at the antenna are known, it is possible to modify the drive so that the output is as clean as possible.
 
-The Pure Signal technology is enabled by connecting the PS IN with the PS OUT using the provided SMA to SMA coaxial cable.
+The PureSignal technology is enabled by connecting the PS IN and the PS OUT using the provided SMA-to-SMA coaxial cable.
 
 ![Pure signal connectors on the back of the transceiver](./resources/18f623e9b4d484981f3da0bde7dacb2cbee21dd1.png)
 
@@ -556,29 +555,29 @@ Each device comes with a dedicated microphone wiring which should be selected wh
 
 ## Connection of the SDR to the PC
 
-Connection of the transceiver to the PC is performed using an Ethernet/IP protocol, make sure to use high quality network equipment and cables to achieve best results.
+Connection of the transceiver to the PC is performed using an Ethernet/IP-based connection. Make sure to use high-quality network equipment and cables to achieve the best results.
 
 ### Default Olliter SDR IP address
 
-The transceiver comes with a preconfigured IP address set to 192.168.1.111, if this address is valid on your local network (meaning your local network has an address family like 192.168.1.X and the subnet mask is 255.255.255.0), you can just plug the device to the local etwork and skip the IP address setup guide.
+The transceiver comes with a preconfigured IP address set to 192.168.1.111. If this address is valid on your local network (meaning your local network has an address range like 192.168.1.X and the subnet mask is 255.255.255.0), you can just plug the device into the local network and skip the IP address setup guide.
 
 > [!WARNING]
 > Before applying any voltage to the SDR, connect the device to your home switch/router using a high-quality CAT5 (or superior) ethernet cable
 
 > [!WARNING]
-> The transceiver can only communicate at 1Gbps, if the switch/router or the master PC does not support such speed, the connection may be unavailable or unstable 
+> The transceiver can only communicate at 1 Gbps. If the switch/router or the PC does not support that speed, the connection may be unavailable or unstable.
 
 ### Sample Ethernet connection
 
 The following schematic illustrates the recommended connection of the SDR device to the PC.
 
-> ![Ethernet connection](./resources/a42f45266f8b697997a33d50c3cad1939f357c95.png)
+![Ethernet connection](./resources/a42f45266f8b697997a33d50c3cad1939f357c95.png)
 
 ### Changing the Olliter SDR IP address
 
-Management of the IP address is performed using OL-Master, if the default IP address (192.168.1.111) is not valid or available on your local network, follow this procedure to change it to a valid one.
+Management of the IP address is performed using OL-Master. If the default IP address (192.168.1.111) is not valid or available on your local network, follow this procedure to change it to a valid one.
 
-For the full procedure, please see: [Changing IP Address of a OL-SD20A transceiver](./ChangingIpAddress.md)
+For the full procedure, please see: [Changing IP Address of an OL-SD20A transceiver](./ChangingIpAddress.md)
 
 ## Usage of OL-Master
 
